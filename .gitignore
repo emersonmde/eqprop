@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# SPICE output
+*.raw
+*.log
+
+# KiCad (for future use)
+*-backups/
+fp-info-cache
+*.kicad_prl
+
+# Arduino
+*.elf
+*.hex
+
+# IDE / tools
+.claude/
+.vscode/

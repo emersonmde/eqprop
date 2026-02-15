@@ -1,0 +1,55 @@
+* sim1_activation.cir -- Activation Function Visualization
+* =========================================================
+* Single weight path with antiparallel Schottky diode clamp.
+* DC sweep of input voltage shows the diode clamping curve,
+* which IS the hidden neuron's activation function.
+*
+* HOW TO RUN IN LTSPICE (Mac):
+*   1. File -> Open -> select this file
+*   2. Simulate -> Run (or click the running-man icon)
+*   3. A blank plot window appears
+*   4. Right-click (Ctrl+click on Mac) in the plot -> Add Trace
+*   5. Type V(h1) in the expression box, click OK
+*   6. Right-click again -> Add Trace -> type V(x1)
+*      (this adds the raw input sweep for comparison)
+*
+* WHAT YOU SHOULD SEE:
+*   V(x1) is a straight diagonal line from 0V to 5V (the sweep).
+*   V(h1) is an S-shaped curve centered at 2.5V:
+*     - Flat near ~2.2V for low inputs (lower diode clamping)
+*     - Rises through 2.5V in the middle (linear region)
+*     - Flat near ~2.7V for high inputs (upper diode clamping)
+*   The ~0.6V linear region between the clamp points is what
+*   gives the network its nonlinearity -- essential for XOR.
+*
+* CIRCUIT:
+*   V_X1 (swept) --> 1.2k --> 20k --> node H1 --> diode pair --> 2.5V
+*
+* =========================================================
+
+* --- BAT42 Schottky Diode Model ---
+* Source: Vishay BAT42 datasheet parameters
+.model BAT42 D(Is=1e-7 Rs=12 N=1.1 Cjo=15p Vj=0.25 M=0.5)
+
+* --- Input Voltage (will be swept by .dc command) ---
+V_X1 x1 0 0
+
+* --- Diode reference rail (V_MID = 2.5V) ---
+V_MID vmid 0 2.5
+
+* --- Weight path: X1 -> H1 ---
+* 1.2k series protection resistor + 20k weight (mid-range pot tap)
+R_series x1 mid1 1.2k
+R_weight mid1 h1 20k
+
+* --- Antiparallel Schottky diode pair (activation function) ---
+* D1a: anode=H1, cathode=VMID  (conducts when H1 > VMID + ~0.3V)
+* D1b: anode=VMID, cathode=H1  (conducts when H1 < VMID - ~0.3V)
+D1a h1 vmid BAT42
+D1b vmid h1 BAT42
+
+* --- DC Sweep Analysis ---
+* Sweeps V_X1 from 0V to 5V in 10mV steps (501 data points)
+.dc V_X1 0 5 0.01
+
+.end
