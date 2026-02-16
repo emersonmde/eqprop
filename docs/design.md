@@ -11,14 +11,14 @@ This document specifies a hybrid analog/digital neural network that learns XOR u
 
 **Architecture:** 6-2-2 MLP (6 inputs → 2 hidden → 2 outputs, differential encoding)
 - 4 signal inputs: X1, X1_comp, X2, X2_comp (complementary pairs)
-- 2 bias inputs: V_LOW (1.0V), V_HIGH (4.0V)
+- 2 bias inputs: V_LOW (≈1.0V), V_HIGH (≈4.0V)
 - 2 hidden neurons: H1, H2
 - 2 output nodes: Y+, Y− (prediction = Y+ − Y−)
 - 16 total weights (12 first-layer, 4 second-layer)
 
 **Why complementary inputs:** Positive-only conductances (resistors) cannot produce negative effective weights. Complementary inputs X1_comp = 5−X1 enable effective negative weights via conductance differences: w_eff = g(X1→H) − g(X1_comp→H). This is required for XOR.
 
-**Why V_LOW/V_HIGH bias (not V_MID):** With antiparallel diodes centered at V_MID=2.5V, a single bias at V_MID contributes zero net current, making the network function odd: f(−x) = −f(x). Since XOR patterns (0,1) and (1,0) are negatives in centered coordinates, pred(0,1) = −pred(1,0) always — making XOR mathematically impossible with 2 hidden nodes. Asymmetric bias inputs (V_LOW=1.0V, V_HIGH=4.0V) break this symmetry.
+**Why V_LOW/V_HIGH bias (not V_MID):** With antiparallel diodes centered at V_MID=2.5V, a single bias at V_MID contributes zero net current, making the network function odd: f(−x) = −f(x). Since XOR patterns (0,1) and (1,0) are negatives in centered coordinates, pred(0,1) = −pred(1,0) always — making XOR mathematically impossible with 2 hidden nodes. Asymmetric bias inputs (V_LOW≈1.0V, V_HIGH≈4.0V) break this symmetry.
 
 ---
 
@@ -50,20 +50,20 @@ MCP6004 #1, section C is **spare** (previously used for V_BIAS buffer — no lon
 
 The three independent V_MID buffers eliminate cross-coupling between hidden neurons and isolate pump current demands from activation function references. Without this, current drawn by H1's diodes through a shared V_MID rail shifts the operating point of H2's diodes — a parasitic interaction that corrupts gradient measurements (the shift is the same order of magnitude as the gradient signal).
 
-**V_LOW = 1.0V:** 8kΩ / 2kΩ 1% divider from 5V, buffered by MCP6004 #1 section A. 100nF decoupling.
+**V_LOW ≈ 1.0V:** 33kΩ / 8.2kΩ 1% divider from 5V (actual: 0.995V), buffered by MCP6004 #1 section A. 100nF decoupling.
 
-**V_HIGH = 4.0V:** 2kΩ / 8kΩ 1% divider from 5V, buffered by MCP6004 #1 section B. 100nF decoupling.
+**V_HIGH ≈ 4.0V:** 8.2kΩ / 33kΩ 1% divider from 5V (actual: 4.005V), buffered by MCP6004 #1 section B. 100nF decoupling.
 
-**Why MCP6004 (not LM324) for V_LOW/V_HIGH buffers:** The LM324's output can only reach ~3.5V on a 5V supply (NPN common-emitter high-side output needs ~1.5V headroom), and its input common-mode range is limited to VCC−1.5V = 3.5V. The 4.0V V_HIGH_RAW voltage exceeds both limits, causing the buffer to saturate or phase-invert. The MCP6004 is a pin-compatible DIP-14 quad op-amp with rail-to-rail I/O (output swings to within 25mV of either rail, input common-mode includes both rails). It outputs 4.0V cleanly on a 5V supply.
+**Why MCP6004 (not LM324) for V_LOW/V_HIGH buffers:** The LM324's output can only reach ~3.5V on a 5V supply (NPN common-emitter high-side output needs ~1.5V headroom), and its input common-mode range is limited to VCC−1.5V = 3.5V. The ≈4.0V V_HIGH_RAW voltage exceeds both limits, causing the buffer to saturate or phase-invert. The MCP6004 is a pin-compatible DIP-14 quad op-amp with rail-to-rail I/O (output swings to within 25mV of either rail, input common-mode includes both rails). It outputs ≈4.0V cleanly on a 5V supply.
 
 ### XOR Input Encoding
 
 | Pattern | X1 | X1_comp | X2 | X2_comp | V_LOW | V_HIGH | Target (Y+ − Y−) |
-|---------|------|---------|------|---------|-------|--------|-------------------|
-| 0,0 | 1.0V | 4.0V | 1.0V | 4.0V | 1.0V | 4.0V | 0V |
-| 0,1 | 1.0V | 4.0V | 4.0V | 1.0V | 1.0V | 4.0V | +0.3V |
-| 1,0 | 4.0V | 1.0V | 1.0V | 4.0V | 1.0V | 4.0V | +0.3V |
-| 1,1 | 4.0V | 1.0V | 4.0V | 1.0V | 1.0V | 4.0V | 0V |
+|---------|-------|---------|-------|---------|--------|--------|-------------------|
+| 0,0 | ≈1.0V | ≈4.0V | ≈1.0V | ≈4.0V | ≈1.0V | ≈4.0V | 0V |
+| 0,1 | ≈1.0V | ≈4.0V | ≈4.0V | ≈1.0V | ≈1.0V | ≈4.0V | +0.3V |
+| 1,0 | ≈4.0V | ≈1.0V | ≈1.0V | ≈4.0V | ≈1.0V | ≈4.0V | +0.3V |
+| 1,1 | ≈4.0V | ≈1.0V | ≈4.0V | ≈1.0V | ≈1.0V | ≈4.0V | 0V |
 
 Target of ±0.3V (not ±1.0V) is realistic given diode clamping limits hidden nodes to ~2.2–2.8V range, yielding max ~0.4V output differential. The Python simulation (`python -m eqprop.xor` from the `sim/` directory) confirms convergence with 0.3V targets.
 
@@ -80,14 +80,14 @@ Target of ±0.3V (not ±1.0V) is realistic given diode clamping limits hidden no
 
 ### Series Protection Resistor
 
-Each pot channel has a **1.2kΩ 1% metal film resistor** in series.
+Each pot channel has a **1.21kΩ 1% metal film resistor** in series (1.21kΩ is the nearest E96 value to 1.2kΩ, available in 1% metal film).
 
 **Effective resistance range:**
-- Minimum (tap 256, wiper at terminal A): ~390Ω wiper + 1,200Ω series = **1,590Ω**
-- Maximum (tap 1, wiper near terminal B): ~100kΩ + 1,200Ω = **101,200Ω**
-- Conductance range: 9.9µS to 629µS — **63:1 ratio**
+- Minimum (tap 256, wiper at terminal A): ~390Ω wiper + 1,210Ω series = **1,600Ω**
+- Maximum (tap 1, wiper near terminal B): ~100kΩ + 1,210Ω = **101,210Ω**
+- Conductance range: 9.9µS to 625µS — **63:1 ratio**
 
-**Current limit verification:** Worst-case 3.0V drop / 1,590Ω = 1.89mA (within 2.5mA limit, 24% margin).
+**Current limit verification:** Worst-case 3.0V drop / 1,600Ω = 1.88mA (within 2.5mA limit, 25% margin).
 
 **Firmware enforces minimum tap = 1.** Tap 0 gives only 6% current margin.
 
@@ -219,7 +219,7 @@ With 0.1% resistors, theoretical Z_out is extremely high. Practical Z_out on bre
 
 ### Primary ADC: ADS1115 (16-bit, 4-channel, I2C)
 
-**PGA setting: ±6.144V** (NOT ±4.096V — the tighter range clips voltages near V_HIGH = 4.0V and provides no headroom for transients).
+**PGA setting: ±6.144V** (NOT ±4.096V — the tighter range clips voltages near V_HIGH ≈ 4.0V and provides no headroom for transients).
 
 At ±6.144V: LSB = 187.5µV. Full 0–5V range covered with headroom.
 
@@ -264,12 +264,12 @@ Resolution ~5mV — adequate for input nodes where voltage drops across weights 
 Both CD4053 chips share the same control pins (D2, D3). The second chip has V_LOW and V_HIGH **swapped** on its analog inputs, automatically generating complement voltages with no extra pins or logic.
 
 **CD4053 #1 — Direct inputs:**
-- Channel A: Selects X1 between V_LOW (1.0V) and V_HIGH (4.0V). Control: Arduino D2.
+- Channel A: Selects X1 between V_LOW (≈1.0V) and V_HIGH (≈4.0V). Control: Arduino D2.
 - Channel B: Selects X2 between V_LOW and V_HIGH. Control: Arduino D3.
 - Channel C: Unused. Tie control pin low, tie common to ground.
 
 **CD4053 #2 — Complementary inputs (V_LOW/V_HIGH swapped):**
-- Channel A: Selects X1_comp between V_HIGH (4.0V) and V_LOW (1.0V). Control: Arduino D2.
+- Channel A: Selects X1_comp between V_HIGH (≈4.0V) and V_LOW (≈1.0V). Control: Arduino D2.
 - Channel B: Selects X2_comp between V_HIGH and V_LOW. Control: Arduino D3.
 - Channel C: Unused. Tie control pin low, tie common to ground.
 
@@ -277,7 +277,7 @@ Both powered from 5V, V_EE tied to GND. On-resistance: ~100Ω typical.
 
 When D2 goes HIGH, CD4053 #1 routes V_HIGH → X1 (4.0V), while CD4053 #2 routes V_LOW → X1_comp (1.0V). Complements are always correct, generated by physics, no firmware computation needed during analog settling.
 
-**Source impedance at input nodes:** Buffer output (~1Ω) + CD4053 R_on (~100Ω) = ~101Ω. This is 6% of minimum weight resistance (1,590Ω). The Arduino's built-in ADC measures actual voltage at the network node, capturing any sag.
+**Source impedance at input nodes:** Buffer output (~1Ω) + CD4053 R_on (~100Ω) = ~101Ω. This is 6% of minimum weight resistance (1,600Ω). The Arduino's built-in ADC measures actual voltage at the network node, capturing any sag.
 
 ### Inference Mode: Toggle Switches
 
@@ -400,12 +400,12 @@ This section describes the complete analog network for LTspice schematic entry.
 
 | Node Name | Type | Voltage Range | Connected To |
 |-----------|------|---------------|--------------|
-| X1 | Input (driven) | 1.0V or 4.0V | W1, W2 (through series R) |
-| X1_comp | Input (driven) | 4.0V or 1.0V | W3, W4 (through series R) |
-| X2 | Input (driven) | 1.0V or 4.0V | W5, W6 (through series R) |
-| X2_comp | Input (driven) | 4.0V or 1.0V | W7, W8 (through series R) |
-| V_LOW | Bias (fixed) | 1.0V | W9, W10 (through series R) |
-| V_HIGH | Bias (fixed) | 4.0V | W11, W12 (through series R) |
+| X1 | Input (driven) | ≈1.0V or ≈4.0V | W1, W2 (through series R) |
+| X1_comp | Input (driven) | ≈4.0V or ≈1.0V | W3, W4 (through series R) |
+| X2 | Input (driven) | ≈1.0V or ≈4.0V | W5, W6 (through series R) |
+| X2_comp | Input (driven) | ≈4.0V or ≈1.0V | W7, W8 (through series R) |
+| V_LOW | Bias (fixed) | ≈1.0V | W9, W10 (through series R) |
+| V_HIGH | Bias (fixed) | ≈4.0V | W11, W12 (through series R) |
 | H1 | Hidden (floating) | ~2.0–3.0V | W1,W3,W5,W7,W9,W11 (input side) + W13,W14 (output side) + D1a/D1b to V_MID_H1 |
 | H2 | Hidden (floating) | ~2.0–3.0V | W2,W4,W6,W8,W10,W12 (input side) + W15,W16 (output side) + D2a/D2b to V_MID_H2 |
 | Y+ | Output (floating) | ~2.0–3.5V | W13, W15 + Howland pump A output |
@@ -413,27 +413,27 @@ This section describes the complete analog network for LTspice schematic entry.
 
 ### Connection List (Each Weight)
 
-Each weight is: **input_node → 1.2kΩ series R → MCP4251 pot (variable R) → output_node**
+Each weight is: **input_node → 1.21kΩ series R → MCP4251 pot (variable R) → output_node**
 
-For LTspice simulation, replace each MCP4251 channel with a simple variable resistor. The series 1.2kΩ resistor is always present.
+For LTspice simulation, replace each MCP4251 channel with a simple variable resistor. The series 1.21kΩ resistor is always present.
 
 ```
-X1 ──── 1.2kΩ ─── [R_W1:  1.59k to 101.2k] ─── H1
-X1 ──── 1.2kΩ ─── [R_W2:  1.59k to 101.2k] ─── H2
-X1c ─── 1.2kΩ ─── [R_W3:  1.59k to 101.2k] ─── H1
-X1c ─── 1.2kΩ ─── [R_W4:  1.59k to 101.2k] ─── H2
-X2 ──── 1.2kΩ ─── [R_W5:  1.59k to 101.2k] ─── H1
-X2 ──── 1.2kΩ ─── [R_W6:  1.59k to 101.2k] ─── H2
-X2c ─── 1.2kΩ ─── [R_W7:  1.59k to 101.2k] ─── H1
-X2c ─── 1.2kΩ ─── [R_W8:  1.59k to 101.2k] ─── H2
-V_LOW ─ 1.2kΩ ─── [R_W9:  1.59k to 101.2k] ─── H1
-V_LOW ─ 1.2kΩ ─── [R_W10: 1.59k to 101.2k] ─── H2
-V_HI ── 1.2kΩ ─── [R_W11: 1.59k to 101.2k] ─── H1
-V_HI ── 1.2kΩ ─── [R_W12: 1.59k to 101.2k] ─── H2
-H1 ──── 1.2kΩ ─── [R_W13: 1.59k to 101.2k] ─── Y+
-H1 ──── 1.2kΩ ─── [R_W14: 1.59k to 101.2k] ─── Y−
-H2 ──── 1.2kΩ ─── [R_W15: 1.59k to 101.2k] ─── Y+
-H2 ──── 1.2kΩ ─── [R_W16: 1.59k to 101.2k] ─── Y−
+X1 ──── 1.21kΩ ── [R_W1:  1.6k to 101.21k] ─── H1
+X1 ──── 1.21kΩ ── [R_W2:  1.6k to 101.21k] ─── H2
+X1c ─── 1.21kΩ ── [R_W3:  1.6k to 101.21k] ─── H1
+X1c ─── 1.21kΩ ── [R_W4:  1.6k to 101.21k] ─── H2
+X2 ──── 1.21kΩ ── [R_W5:  1.6k to 101.21k] ─── H1
+X2 ──── 1.21kΩ ── [R_W6:  1.6k to 101.21k] ─── H2
+X2c ─── 1.21kΩ ── [R_W7:  1.6k to 101.21k] ─── H1
+X2c ─── 1.21kΩ ── [R_W8:  1.6k to 101.21k] ─── H2
+V_LOW ─ 1.21kΩ ── [R_W9:  1.6k to 101.21k] ─── H1
+V_LOW ─ 1.21kΩ ── [R_W10: 1.6k to 101.21k] ─── H2
+V_HI ── 1.21kΩ ── [R_W11: 1.6k to 101.21k] ─── H1
+V_HI ── 1.21kΩ ── [R_W12: 1.6k to 101.21k] ─── H2
+H1 ──── 1.21kΩ ── [R_W13: 1.6k to 101.21k] ─── Y+
+H1 ──── 1.21kΩ ── [R_W14: 1.6k to 101.21k] ─── Y−
+H2 ──── 1.21kΩ ── [R_W15: 1.6k to 101.21k] ─── Y+
+H2 ──── 1.21kΩ ── [R_W16: 1.6k to 101.21k] ─── Y−
 ```
 
 ### Diode Connections
@@ -465,8 +465,8 @@ CONSTANTS:
   MAX_TAP = 256
   DAC_MIDPOINT = 2500  // DAC code for 2.5V output
   XOR_TARGETS = [0.0, 0.3, 0.3, 0.0]  // patterns 00, 01, 10, 11
-  V_LOW_NOM = 1.0      // Nominal V_LOW (measured at startup)
-  V_HIGH_NOM = 4.0     // Nominal V_HIGH (measured at startup)
+  V_LOW_NOM = 0.995    // Nominal V_LOW from 33k/8.2k divider (measured at startup)
+  V_HIGH_NOM = 4.005   // Nominal V_HIGH from 8.2k/33k divider (measured at startup)
 
 setup():
   Initialize SPI (Mode 0, 1MHz), I2C, Serial
@@ -563,12 +563,12 @@ loop():
     G_new = G_current - LEARNING_RATE * gradient
 
     // Prevent negative/zero conductance
-    G_new = max(G_new, 1.0 / 101200.0)  // max resistance
-    G_new = min(G_new, 1.0 / 1590.0)    // min resistance
+    G_new = max(G_new, 1.0 / 101210.0)  // max resistance
+    G_new = min(G_new, 1.0 / 1600.0)    // min resistance
 
     // Convert to tap
     R_new = 1.0 / G_new
-    R_pot = R_new - 1200.0  // subtract series resistor
+    R_pot = R_new - 1210.0  // subtract series resistor
     tap_new = round((100000.0 - R_pot) * 256.0 / 100000.0)
     tap_new = clamp(tap_new, MIN_TAP, MAX_TAP)
 
@@ -640,9 +640,9 @@ The 0.053 V² signal is computed from ADC readings. Individual measurements that
 | ADS1115 | ~0.2mA |
 | 2× CD4053 | ~0.2mA |
 | 3× LEDs (2 output + 1 power) | ~15mA |
-| Voltage dividers | ~1.5mA |
+| Voltage dividers | ~0.5mA |
 | Network currents | ~8mA worst case |
-| **Total** | **~49mA** |
+| **Total** | **~48mA** |
 
 Well within USB supply capability.
 
@@ -663,14 +663,14 @@ Well within USB supply capability.
 | BAT42 Schottky diode | 4 | DO-35 | Activation functions |
 | USB-C connector (power only) | 1 | SMD | Board power input |
 | SPDT toggle switch | 2 | Through-hole | Inference input selection |
-| 1.2kΩ 1% metal film resistor | 16 | Axial | Pot series protection |
+| 1.21kΩ 1% metal film resistor | 16 | Axial | Pot series protection |
 | 10kΩ 0.1% metal film resistor | 8 | Axial | Howland pump feedback (4 per pump) |
 | 1MΩ 0.1% metal film resistor | 2 | Axial | Howland R_set |
 | 10kΩ 1% resistor | 13 | Axial | V_MID divider (2) + CS pull-ups (9) + switch isolation (2) |
 | 5.1kΩ 1% resistor | 2 | Axial | USB-C CC1/CC2 pull-downs |
 | 4.7kΩ resistor | 2 | Axial | I2C pull-ups (SDA, SCL) |
-| 8kΩ 1% resistor | 2 | Axial | V_LOW / V_HIGH dividers |
-| 2kΩ 1% resistor | 2 | Axial | V_LOW / V_HIGH dividers |
+| 33kΩ 1% resistor | 2 | Axial | V_LOW / V_HIGH dividers |
+| 8.2kΩ 1% resistor | 2 | Axial | V_LOW / V_HIGH dividers |
 | 1kΩ resistor | 1 | Axial | Power LED current limiting |
 | 470Ω resistor | 2 | Axial | Output LED current limiting (active-low) |
 | Green LED (3mm) | 2 | T-1 | XOR=1 indicator + power indicator |
@@ -745,7 +745,7 @@ Use LTspice parametric simulation to sweep weight values. Post-process with Pyth
 
 ### LTspice Component Models
 - **BAT42:** Built-in SPICE model (or use `.model BAT42 D(Is=1e-7 Rs=12 N=1.1 Cjo=15p Vj=0.25 M=0.5)`)
-- **Resistors:** Standard, include 1.2kΩ series in each weight path
+- **Resistors:** Standard, include 1.21kΩ series in each weight path
 - **Current source:** Use behavioral source `B1 Y+ 0 I=(V(Vctrl)-2.5)/1e6` for Howland pump
 - **Voltage sources:** Ideal DC sources for V_LOW, V_HIGH, V_MID rails
 - **Op-amps (if modeling comparators):** Use LM324 subcircuit or ideal comparator model

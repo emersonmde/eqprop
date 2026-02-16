@@ -15,26 +15,26 @@
 | U12 | `Potentiometer_Digital:MCP4251-xxxx-P` | `CS_POT7` | W13, W14 | H1→YP, H1→YN |
 | U13 | `Potentiometer_Digital:MCP4251-xxxx-P` | `CS_POT8` | W15, W16 | H2→YP, H2→YN |
 
-### 16x 1.2kΩ Series Protection Resistors
+### 16x 1.21kΩ Series Protection Resistors
 
 | Ref | Value | Weight | Input-Side Net | Resistor → Pot Terminal |
 |-----|-------|--------|---------------|------------------------|
-| R_W1 | 1.2kΩ 1% | W1 | `X1` | → U6 P0A |
-| R_W2 | 1.2kΩ 1% | W2 | `X1` | → U6 P1A |
-| R_W3 | 1.2kΩ 1% | W3 | `X1_COMP` | → U7 P0A |
-| R_W4 | 1.2kΩ 1% | W4 | `X1_COMP` | → U7 P1A |
-| R_W5 | 1.2kΩ 1% | W5 | `X2` | → U8 P0A |
-| R_W6 | 1.2kΩ 1% | W6 | `X2` | → U8 P1A |
-| R_W7 | 1.2kΩ 1% | W7 | `X2_COMP` | → U9 P0A |
-| R_W8 | 1.2kΩ 1% | W8 | `X2_COMP` | → U9 P1A |
-| R_W9 | 1.2kΩ 1% | W9 | `V_LOW` | → U10 P0A |
-| R_W10 | 1.2kΩ 1% | W10 | `V_LOW` | → U10 P1A |
-| R_W11 | 1.2kΩ 1% | W11 | `V_HIGH` | → U11 P0A |
-| R_W12 | 1.2kΩ 1% | W12 | `V_HIGH` | → U11 P1A |
-| R_W13 | 1.2kΩ 1% | W13 | `H1` | → U12 P0A |
-| R_W14 | 1.2kΩ 1% | W14 | `H1` | → U12 P1A |
-| R_W15 | 1.2kΩ 1% | W15 | `H2` | → U13 P0A |
-| R_W16 | 1.2kΩ 1% | W16 | `H2` | → U13 P1A |
+| R_W1 | 1.21kΩ 1% | W1 | `X1` | → U6 P0A |
+| R_W2 | 1.21kΩ 1% | W2 | `X1` | → U6 P1A |
+| R_W3 | 1.21kΩ 1% | W3 | `X1_COMP` | → U7 P0A |
+| R_W4 | 1.21kΩ 1% | W4 | `X1_COMP` | → U7 P1A |
+| R_W5 | 1.21kΩ 1% | W5 | `X2` | → U8 P0A |
+| R_W6 | 1.21kΩ 1% | W6 | `X2` | → U8 P1A |
+| R_W7 | 1.21kΩ 1% | W7 | `X2_COMP` | → U9 P0A |
+| R_W8 | 1.21kΩ 1% | W8 | `X2_COMP` | → U9 P1A |
+| R_W9 | 1.21kΩ 1% | W9 | `V_LOW` | → U10 P0A |
+| R_W10 | 1.21kΩ 1% | W10 | `V_LOW` | → U10 P1A |
+| R_W11 | 1.21kΩ 1% | W11 | `V_HIGH` | → U11 P0A |
+| R_W12 | 1.21kΩ 1% | W12 | `V_HIGH` | → U11 P1A |
+| R_W13 | 1.21kΩ 1% | W13 | `H1` | → U12 P0A |
+| R_W14 | 1.21kΩ 1% | W14 | `H1` | → U12 P1A |
+| R_W15 | 1.21kΩ 1% | W15 | `H2` | → U13 P0A |
+| R_W16 | 1.21kΩ 1% | W16 | `H2` | → U13 P1A |
 
 ## MCP4251 Pin Connections (Same for All 8 Chips)
 
@@ -133,7 +133,7 @@ Firmware enforces minimum tap = 1.
 
 Each weight path looks like this:
 ```
-Input Node ─── 1.2kΩ (R_Wn) ─── PxA ─┤ MCP4251 ├─ PxW ─── Output Node
+Input Node ─── 1.21kΩ (R_Wn) ─── PxA ─┤ MCP4251 ├─ PxW ─── Output Node
                                        └─ PxB ───┘         (tied to PxW)
 ```
 

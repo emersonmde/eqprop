@@ -13,9 +13,12 @@ import numpy as np
 from .network import Network, solve_network
 
 # ─── Voltage Rails ──────────────────────────────────────────
-V_MID = 2.5     # Diode return rail (V)
-V_LOW = 1.0     # Low bias input (V)
-V_HIGH = 4.0    # High bias input (V)
+V_MID = 2.5     # Diode return rail (V) — 10k/10k divider from 5V
+# V_LOW/V_HIGH: 33kΩ/8.2kΩ divider from 5V (E24 standard values)
+_R_DIV_HI = 33e3
+_R_DIV_LO = 8.2e3
+V_LOW = 5.0 * _R_DIV_LO / (_R_DIV_HI + _R_DIV_LO)   # ≈ 0.9951V
+V_HIGH = 5.0 * _R_DIV_HI / (_R_DIV_HI + _R_DIV_LO)  # ≈ 4.0049V
 
 
 def make_xor_network(hardware=False):
@@ -87,10 +90,10 @@ def make_inputs(v_x1, v_x2):
 # Target 0.3V is achievable given diode clamping limits hidden nodes
 # to ~2.2-2.8V range, yielding max ~0.4V output differential.
 XOR_DATASET = [
-    (make_inputs(1.0, 1.0), 0.0),   # (0,0) -> 0
-    (make_inputs(1.0, 4.0), 0.3),   # (0,1) -> 1
-    (make_inputs(4.0, 1.0), 0.3),   # (1,0) -> 1
-    (make_inputs(4.0, 4.0), 0.0),   # (1,1) -> 0
+    (make_inputs(V_LOW, V_LOW), 0.0),     # (0,0) -> 0
+    (make_inputs(V_LOW, V_HIGH), 0.3),    # (0,1) -> 1
+    (make_inputs(V_HIGH, V_LOW), 0.3),    # (1,0) -> 1
+    (make_inputs(V_HIGH, V_HIGH), 0.0),   # (1,1) -> 0
 ]
 
 

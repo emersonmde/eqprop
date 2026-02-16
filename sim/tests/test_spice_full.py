@@ -16,7 +16,7 @@ from eqprop.spice_full import (
 )
 from eqprop.network import solve_network
 from eqprop.training import train
-from eqprop.xor import make_xor_network, make_inputs, XOR_DATASET
+from eqprop.xor import make_xor_network, make_inputs, XOR_DATASET, V_LOW, V_HIGH
 
 
 pytestmark = pytest.mark.skipif(
@@ -44,26 +44,26 @@ class TestVoltageReferences:
     """Verify that divider + buffer circuits produce correct reference voltages."""
 
     def test_vlow_reference(self, net, uniform_weights):
-        """V_LOW buffer output should be within 5mV of 1.0V."""
-        inputs = make_inputs(1.0, 1.0)
+        """V_LOW buffer output should be within 5mV of divider target."""
+        inputs = make_inputs(V_LOW, V_LOW)
         result = run_full_simulation(net, uniform_weights, inputs)
         assert result is not None, "ngspice failed"
         v_low = result.get("v(vlow)") or result.get("vlow")
         assert v_low is not None, "v(vlow) not found in output"
-        assert abs(v_low - 1.0) < 0.005, f"V_LOW={v_low:.4f}V, expected 1.000V"
+        assert abs(v_low - V_LOW) < 0.005, f"V_LOW={v_low:.4f}V, expected {V_LOW:.4f}V"
 
     def test_vhigh_reference(self, net, uniform_weights):
-        """V_HIGH buffer output should be within 5mV of 4.0V."""
-        inputs = make_inputs(1.0, 1.0)
+        """V_HIGH buffer output should be within 5mV of divider target."""
+        inputs = make_inputs(V_LOW, V_LOW)
         result = run_full_simulation(net, uniform_weights, inputs)
         assert result is not None, "ngspice failed"
         v_high = result.get("v(vhigh)") or result.get("vhigh")
         assert v_high is not None, "v(vhigh) not found in output"
-        assert abs(v_high - 4.0) < 0.005, f"V_HIGH={v_high:.4f}V, expected 4.000V"
+        assert abs(v_high - V_HIGH) < 0.005, f"V_HIGH={v_high:.4f}V, expected {V_HIGH:.4f}V"
 
     def test_vmid_references(self, net, uniform_weights):
         """V_MID buffers should be within 5mV of 2.5V."""
-        inputs = make_inputs(1.0, 1.0)
+        inputs = make_inputs(V_LOW, V_LOW)
         result = run_full_simulation(net, uniform_weights, inputs)
         assert result is not None, "ngspice failed"
         for name in ["vmid_h1", "vmid_h2", "vmid_pump"]:
@@ -77,22 +77,22 @@ class TestMuxVoltageSag:
 
     def test_input_node_sag(self, net, uniform_weights):
         """Input nodes through mux should sag slightly from ideal voltage."""
-        inputs = make_inputs(1.0, 4.0)  # X1=LOW, X2=HIGH
+        inputs = make_inputs(V_LOW, V_HIGH)  # X1=LOW, X2=HIGH
         result = run_full_simulation(net, uniform_weights, inputs)
         assert result is not None, "ngspice failed"
 
-        # X1 is driven through mux from vlow (1.0V)
+        # X1 is driven through mux from vlow
         # Sag should be small but nonzero due to 100Ω mux + load
         v_x1 = result.get("v(x1)") or result.get("x1")
         assert v_x1 is not None, "v(x1) not found"
         # With uniform 21.2k weights, current through mux is small
         # so sag should be under 20mV
-        assert abs(v_x1 - 1.0) < 0.020, f"X1={v_x1:.4f}V, sag too large"
+        assert abs(v_x1 - V_LOW) < 0.020, f"X1={v_x1:.4f}V, sag too large"
 
-        # X2 is driven through mux from vhigh (4.0V)
+        # X2 is driven through mux from vhigh
         v_x2 = result.get("v(x2)") or result.get("x2")
         assert v_x2 is not None, "v(x2) not found"
-        assert abs(v_x2 - 4.0) < 0.020, f"X2={v_x2:.4f}V, sag too large"
+        assert abs(v_x2 - V_HIGH) < 0.020, f"X2={v_x2:.4f}V, sag too large"
 
 
 class TestFullVsIdeal:
@@ -140,7 +140,7 @@ class TestHowlandPump:
 
     def test_zero_current_at_midpoint(self, net, uniform_weights):
         """DAC at 2.5V (midpoint) should produce ~0 pump output current."""
-        inputs = make_inputs(1.0, 1.0)
+        inputs = make_inputs(V_LOW, V_LOW)
         # No nudge → DAC at midpoint → zero current
         result_free = run_full_simulation(net, uniform_weights, inputs, nudge=None)
         assert result_free is not None, "ngspice failed"
@@ -161,7 +161,7 @@ class TestHowlandPump:
 
     def test_nudge_perturbs_output(self, net, uniform_weights):
         """Nonzero nudge current should measurably shift output node voltages."""
-        inputs = make_inputs(1.0, 4.0)
+        inputs = make_inputs(V_LOW, V_HIGH)
 
         # Free phase (no nudge)
         result_free = run_full_simulation(net, uniform_weights, inputs)
@@ -204,7 +204,7 @@ class TestPythonMuxResistance:
         wp = net_ideal.weight_params
         G_rand = rng.uniform(wp.G_min, wp.G_max, 16)
         weights = 1.0 / G_rand
-        inputs = make_inputs(1.0, 4.0)
+        inputs = make_inputs(V_LOW, V_HIGH)
 
         v_ideal = solve_network(net_ideal, inputs, weights)
         v_hw = solve_network(net_hw, inputs, weights)
@@ -224,7 +224,7 @@ class TestPythonMuxResistance:
         net_default = make_xor_network()
         net_explicit = make_xor_network(hardware=False)
         weights = np.full(16, 21200.0)
-        inputs = make_inputs(4.0, 1.0)
+        inputs = make_inputs(V_HIGH, V_LOW)
 
         v_default = solve_network(net_default, inputs, weights)
         v_explicit = solve_network(net_explicit, inputs, weights)

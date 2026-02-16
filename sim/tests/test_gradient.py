@@ -9,7 +9,7 @@ import pytest
 
 from eqprop.network import Network, solve_network
 from eqprop.training import eqprop_gradient
-from eqprop.xor import make_xor_network, make_inputs
+from eqprop.xor import make_xor_network, make_inputs, V_LOW, V_HIGH
 
 
 @pytest.fixture
@@ -47,9 +47,9 @@ def _numerical_gradient(net, inputs, weights, target, eps=1e-5):
 
 # Skip pattern (4,1) which has known solver sensitivity with seed=42
 @pytest.mark.parametrize("v_x1,v_x2,target", [
-    (1.0, 1.0, 0.0),   # (0,0)
-    (1.0, 4.0, 0.3),   # (0,1)
-    (4.0, 4.0, 0.0),   # (1,1)
+    (V_LOW, V_LOW, 0.0),    # (0,0)
+    (V_LOW, V_HIGH, 0.3),   # (0,1)
+    (V_HIGH, V_HIGH, 0.0),  # (1,1)
 ])
 def test_eqprop_vs_finite_difference(net, init_weights, v_x1, v_x2, target):
     """EqProp gradient should match numerical gradient within 50% per weight."""

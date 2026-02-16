@@ -23,7 +23,7 @@
 *   gives the network its nonlinearity -- essential for XOR.
 *
 * CIRCUIT:
-*   V_X1 (swept) --> 1.2k --> 20k --> node H1 --> diode pair --> 2.5V
+*   V_X1 (swept) --> 1.21k --> 20k --> node H1 --> diode pair --> 2.5V
 *
 * =========================================================
 
@@ -38,8 +38,8 @@ V_X1 x1 0 0
 V_MID vmid 0 2.5
 
 * --- Weight path: X1 -> H1 ---
-* 1.2k series protection resistor + 20k weight (mid-range pot tap)
-R_series x1 mid1 1.2k
+* 1.21k series protection resistor + 20k weight (mid-range pot tap)
+R_series x1 mid1 1.21k
 R_weight mid1 h1 20k
 
 * --- Antiparallel Schottky diode pair (activation function) ---

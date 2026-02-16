@@ -38,7 +38,7 @@ C_U16 (100nF): VDD to GND, placed as close to the IC as possible.
 - R_SCL (4.7kΩ): `I2C_SCL` → `+5V`
 
 ### PGA Setting Note (firmware, not schematic)
-Use ±6.144V PGA range (NOT ±4.096V). The tighter range clips voltages near V_HIGH=4.0V.
+Use ±6.144V PGA range (NOT ±4.096V). The tighter range clips voltages near V_HIGH≈4.0V.
 At ±6.144V: LSB = 187.5µV, full 0-5V range covered with headroom.
 
 ### PCB Note
@@ -119,10 +119,10 @@ The I2C bus only has one device (ADS1115). Connections:
 
 | Category | Count |
 |----------|-------|
-| ICs | 16 (1x MCP6004, 1x LM324, 8x MCP4251, 1x MCP4822, 1x MCP6002, 1x ADS1115, 2x CD4053B, 1x Arduino Nano) |
+| ICs + modules | 14 ICs + 1 Arduino module (1x MCP6004, 1x LM324, 8x MCP4251, 1x MCP4822, 1x MCP6002, 1x ADS1115, 2x CD4053B, 1x Arduino Nano) |
 | Diodes | 4x BAT42 |
 | LEDs | 3 (1x green power, 1x green XOR=1, 1x red XOR=0) |
-| Resistors | 54 (16x 1.2kΩ series, 9x 10kΩ CS pull-up, 8x 10kΩ 0.1% Howland, 2x 1MΩ 0.1% R_SET, 2x 10kΩ V_MID divider, 2x 8kΩ V_LOW/V_HIGH divider, 2x 2kΩ V_LOW/V_HIGH divider, 2x 5.1kΩ USB-C CC, 2x 4.7kΩ I2C, 1x 1kΩ power LED, 2x 470Ω output LEDs, 2x 10kΩ switch isolation, 4x 0Ω diode series) |
+| Resistors | 50 (16x 1.21kΩ series, 9x 10kΩ CS pull-up, 8x 10kΩ 0.1% Howland, 2x 1MΩ 0.1% R_SET, 2x 10kΩ V_MID divider, 2x 33kΩ V_LOW/V_HIGH divider, 2x 8.2kΩ V_LOW/V_HIGH divider, 2x 5.1kΩ USB-C CC, 2x 4.7kΩ I2C, 1x 1kΩ power LED, 2x 470Ω output LEDs, 2x 10kΩ switch isolation) + 4x solder bridge pads (diode series) |
 | Capacitors | 26 (20x 100nF ceramic [15 IC decoupling + 5 voltage ref output], 3x 10µF electrolytic [V_MID rails], 3x 100µF electrolytic [1 after USB-C + 2 near IC clusters]) |
 | Switches | 2x SPDT toggle |
 | Connectors | 1x USB-C + Arduino pin headers + test points |

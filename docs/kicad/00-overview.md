@@ -25,10 +25,10 @@ Reference: `docs/design.md` (v2 Final)
 
 ### Voltage Reference Nets
 - `V_MID_RAW` — 2.5V divider output (before buffers)
-- `V_LOW_RAW` — 1.0V divider output (before buffer)
-- `V_HIGH_RAW` — 4.0V divider output (before buffer)
-- `V_LOW` — 1.0V buffered output
-- `V_HIGH` — 4.0V buffered output
+- `V_LOW_RAW` — ≈1.0V divider output (before buffer)
+- `V_HIGH_RAW` — ≈4.0V divider output (before buffer)
+- `V_LOW` — ≈1.0V buffered output
+- `V_HIGH` — ≈4.0V buffered output
 - `V_MID_H1` — 2.5V buffer for H1 diode pair
 - `V_MID_H2` — 2.5V buffer for H2 diode pair
 - `V_MID_PUMP` — 2.5V buffer for Howland pumps
@@ -56,7 +56,7 @@ Reference: `docs/design.md` (v2 Final)
 1. `01-power-references.md` — USB-C, dividers, MCP6004/LM324 buffers, power LED
 2. `02-arduino.md` — Arduino Nano pin assignments and net labels
 3. `03-input-muxes.md` — 2x CD4053B, toggle switches
-4. `04-weight-resistors.md` — 8x MCP4251 + 16x 1.2kΩ series resistors
+4. `04-weight-resistors.md` — 8x MCP4251 + 16x 1.21kΩ series resistors
 5. `05-activation-diodes.md` — 4x BAT42 in antiparallel pairs
 6. `06-nudge-system.md` — MCP4822 DAC + MCP6002 Howland pumps
 7. `07-measurement-output.md` — ADS1115 ADC + LED comparators
@@ -71,6 +71,6 @@ signal flow left-to-right: inputs → muxes → weights → hidden nodes → wei
 
 - DIP sockets for all ICs (populate sockets, insert ICs by hand)
 - 2-pin headers or SIP sockets for BAT42 diodes (swappable to 1N4148)
-- Optional series resistor pads near each diode pair (0Ω default, swap to 100-500Ω)
+- Solder bridge pads near each diode pair (bridged by default, cut and add 100-500Ω to soften)
 - Test points on: H1, H2, YP, YN, V_MID_H1, V_MID_H2, V_MID_PUMP, V_LOW, V_HIGH
 - 100µF bulk caps near power entry and near IC clusters

@@ -4,7 +4,7 @@ Models the complete analog signal path as it exists on the PCB:
   - Voltage dividers generating V_LOW, V_HIGH, V_MID references
   - Op-amp buffers (MCP6004 rail-to-rail, LM324 limited swing)
   - CD4053B analog mux on-resistance (100 ohm typical)
-  - Weight resistors (1.2k series + variable pot)
+  - Weight resistors (1.21k series + variable pot)
   - BAT42 antiparallel diode pairs (activation functions)
   - Howland current pumps (MCP6002 + 4x10k + 1M per pump)
 
@@ -57,15 +57,15 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     ]
 
     # ── Voltage dividers + op-amp buffers ───────────────────────
-    # V_LOW: 8k/2k divider from VCC → 1.0V, buffered by MCP6004
-    # V_HIGH: 2k/8k divider from VCC → 4.0V, buffered by MCP6004
+    # V_LOW: 33k/8.2k divider from VCC → ~0.995V, buffered by MCP6004
+    # V_HIGH: 8.2k/33k divider from VCC → ~4.005V, buffered by MCP6004
     # V_MID: 10k/10k divider from VCC → 2.5V, buffered by LM324 (x3)
     lines += [
         "* Voltage reference dividers",
-        "R_div_low_hi vcc vlow_div 8000",
-        "R_div_low_lo vlow_div 0 2000",
-        "R_div_high_hi vcc vhigh_div 2000",
-        "R_div_high_lo vhigh_div 0 8000",
+        "R_div_low_hi vcc vlow_div 33000",
+        "R_div_low_lo vlow_div 0 8200",
+        "R_div_high_hi vcc vhigh_div 8200",
+        "R_div_high_lo vhigh_div 0 33000",
         "R_div_mid_hi vcc vmid_div 10000",
         "R_div_mid_lo vmid_div 0 10000",
         "",
@@ -83,7 +83,7 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     # ── CD4053B mux: route input voltages ───────────────────────
     # The mux selects between vlow and vhigh for each input node.
     # Each mux output has on-resistance in series.
-    # Input encoding: 1.0V = LOW, 4.0V = HIGH
+    # Input encoding: V_LOW ≈ 1.0V = LOW, V_HIGH ≈ 4.0V = HIGH
     lines.append("* CD4053B mux routing (on-resistance models)")
 
     # Map input node indices to which buffer they connect to
@@ -93,7 +93,7 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
         node_name = names[idx]
         v_in = inputs[idx]
         # Select which buffered voltage the mux routes
-        if abs(v_in - 1.0) < 0.1:
+        if v_in < 2.5:
             source = "vlow"
         else:
             source = "vhigh"

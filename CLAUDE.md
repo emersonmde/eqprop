@@ -41,9 +41,9 @@ docs/
 Nodes: 0=X1, 1=X1_comp, 2=X2, 3=X2_comp, 4=V_LOW, 5=V_HIGH, 6=H1, 7=H2, 8=YP, 9=YN
        ├── 6 fixed (clamped) ──┤  ├── 4 free (solved) ──┤
 
-Inputs:  X1 ∈ {1.0V, 4.0V},  X1_comp = 5.0 - X1
-         X2 ∈ {1.0V, 4.0V},  X2_comp = 5.0 - X2
-         V_LOW = 1.0V,  V_HIGH = 4.0V  (asymmetric bias pair)
+Inputs:  X1 ∈ {~0.995V, ~4.005V},  X1_comp = 5.0 - X1
+         X2 ∈ {~0.995V, ~4.005V},  X2_comp = 5.0 - X2
+         V_LOW ≈ 0.995V,  V_HIGH ≈ 4.005V  (33k/8.2k dividers from 5V)
 
 Output:  prediction = V(YP) - V(YN)
 Target:  0.0V for same-class, +0.3V for different-class
@@ -80,8 +80,8 @@ pytest tests/test_spice.py -v
 ```
 
 **Expected results:**
-- `pytest`: 23 tests pass (~7s). ngspice tests skip gracefully if not installed.
-- `python -m eqprop.xor`: Converges at ~epoch 1800 (seed=42). All 4 XOR patterns PASS.
+- `pytest`: 40 tests pass (~30s). ngspice tests skip gracefully if not installed.
+- `python -m eqprop.xor`: Converges at ~epoch 1770 (seed=42). All 4 XOR patterns PASS.
 
 **Training parameters:** lr=5e-9, beta=1e-5, patience=500. Plateau detection stops early if loss stalls.
 
@@ -98,14 +98,14 @@ N = 1.1         # Ideality factor
 VT = 0.02585    # Thermal voltage at 27C
 
 # MCP4251-104 digital potentiometer — see network.py WeightParams
-R_series = 1200.0    # Series protection resistor
-R_min = 1590.0       # Tap 256: 390 wiper + 1200 series
-R_max = 101200.0     # Tap 1: 100k + 1200 series
+R_series = 1210.0    # Series protection resistor (1.21kΩ E96)
+R_min = 1600.0       # Tap 256: 390 wiper + 1210 series
+R_max = 101210.0     # Tap 1: 100k + 1210 series
 
-# Voltage rails — see xor.py
-V_MID = 2.5    # Diode return rail
-V_LOW = 1.0    # Low bias input
-V_HIGH = 4.0   # High bias input
+# Voltage rails — see xor.py (computed from divider resistors)
+V_MID = 2.5          # Diode return rail (10k/10k divider)
+V_LOW ≈ 0.9951       # Low bias input (33k/8.2k divider)
+V_HIGH ≈ 4.0049      # High bias input (8.2k/33k divider)
 ```
 
 ## Hardware Summary (from design-v2.md)

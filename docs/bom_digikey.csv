@@ -1,0 +1,26 @@
+Manufacturer Part Number,Reference Designator,Quantity 1,Note
+MCP4251-104E/P,U6 U7 U8 U9 U10 U11 U12 U13,8,100k Dual Digital Pot SPI DIP-14
+MCP4822-E/P,U14,1,Dual 12-bit DAC SPI DIP-8
+MCP6002-I/P,U15,1,Dual Op-Amp Rail-to-Rail DIP-8
+MCP6004-I/P,U1,1,Quad Op-Amp Rail-to-Rail DIP-14
+LM324N/NOPB,U2,1,Quad Op-Amp DIP-14
+ADS1115IDGSR,U16,1,16-bit ADC I2C VSSOP-10
+CD4053BE,U4 U5,2,Triple 2:1 Analog Mux DIP-16
+BAT42-TAP,D1a D1b D2a D2b,4,Schottky Diode 200mA 30V DO-35
+RNF14FTD1K21,R_W1-R_W16,16,1.21k 1% 1/4W Metal Film Axial - series protection
+MFR-25FBF52-10K,R_PU1-R_PU9,9,10k 1% 1/4W Metal Film Axial - CS pull-ups
+RNF14FTD10K0,R_H1-R_H8,8,10k 0.1% 1/4W Metal Film Axial - Howland pump matched
+MFR-25FBF52-10K,R1 R2,2,10k 1% 1/4W Metal Film Axial - V_MID divider
+MFR-25FBF52-10K,R_SW1 R_SW2,2,10k 1% 1/4W Metal Film Axial - switch isolation
+CF14JT33K0,R3 R6,2,33k 5% 1/4W Axial - V_LOW top / V_HIGH bottom divider
+CF14JT8K20,R4 R5,2,8.2k 5% 1/4W Axial - V_LOW bottom / V_HIGH top divider
+CF14JT5K10,R_CC1 R_CC2,2,5.1k 5% 1/4W Axial - USB-C CC
+MFR-25FBF52-4K7,R_SDA R_SCL,2,4.7k 1% 1/4W Metal Film Axial - I2C pull-ups
+RNF14FTD1M00,R_SET_A R_SET_B,2,1M 0.1% 1/4W Metal Film Axial - Howland R_SET
+CF14JT1K00,R_LED1,1,1k 5% 1/4W Axial - power LED
+CF14JT470R,R_LED_G R_LED_R,2,470 5% 1/4W Axial - output LEDs
+WP710A10GD,D_PWR D_GRN,2,Green LED 3mm T-1 TH - power + XOR=1 indicator
+WP710A10ID,D_RED,1,Red LED 3mm T-1 TH - XOR=0 indicator
+C315C104M5U5TA,C2 C3 C5 C7 C9 C10 C11 C_U4 C_U5 C_U6-C_U13 C_U14 C_U15 C_U16,20,100nF 50V Ceramic TH
+ECA-1EM100,C4 C6 C8,3,10uF 25V Electrolytic Radial TH
+EEU-FR1E101,C1 C12 C13,3,100uF 25V Electrolytic Radial TH

@@ -9,7 +9,7 @@ import pytest
 
 from eqprop.network import Network, solve_network, resistive_initial_guess
 from eqprop.diode import BAT42
-from eqprop.xor import make_xor_network, make_inputs, V_MID
+from eqprop.xor import make_xor_network, make_inputs, V_MID, V_LOW, V_HIGH
 
 
 # ─── Helpers ────────────────────────────────────────────────
@@ -81,7 +81,7 @@ class TestSymmetry:
         """With uniform weights, H1 == H2 for any input pattern."""
         net = make_xor_network()
         weights = np.full(16, 21200.0)
-        for v_x1, v_x2 in [(1.0, 1.0), (1.0, 4.0), (4.0, 1.0), (4.0, 4.0)]:
+        for v_x1, v_x2 in [(V_LOW, V_LOW), (V_LOW, V_HIGH), (V_HIGH, V_LOW), (V_HIGH, V_HIGH)]:
             v = solve_network(net, make_inputs(v_x1, v_x2), weights)
             assert v[0] == pytest.approx(v[1], abs=1e-6), \
                 f"H1 != H2 for pattern ({v_x1}, {v_x2})"
@@ -90,7 +90,7 @@ class TestSymmetry:
         """With uniform weights, YP == YN (zero prediction)."""
         net = make_xor_network()
         weights = np.full(16, 21200.0)
-        for v_x1, v_x2 in [(1.0, 1.0), (1.0, 4.0), (4.0, 1.0), (4.0, 4.0)]:
+        for v_x1, v_x2 in [(V_LOW, V_LOW), (V_LOW, V_HIGH), (V_HIGH, V_LOW), (V_HIGH, V_HIGH)]:
             v = solve_network(net, make_inputs(v_x1, v_x2), weights)
             assert v[2] == pytest.approx(v[3], abs=1e-6), \
                 f"YP != YN for pattern ({v_x1}, {v_x2})"
@@ -103,7 +103,7 @@ class TestDiodeClamping:
         """H1, H2 stay in 1.8-3.2V with strong (low-R) weights."""
         net = make_xor_network()
         weights = np.full(16, 5000.0)
-        for v_x1, v_x2 in [(1.0, 1.0), (4.0, 4.0), (1.0, 4.0)]:
+        for v_x1, v_x2 in [(V_LOW, V_LOW), (V_HIGH, V_HIGH), (V_LOW, V_HIGH)]:
             v = solve_network(net, make_inputs(v_x1, v_x2), weights)
             assert 1.8 < v[0] < 3.2, f"H1={v[0]:.3f}V out of range"
             assert 1.8 < v[1] < 3.2, f"H2={v[1]:.3f}V out of range"
@@ -114,9 +114,10 @@ class TestDiodeClamping:
 class TestLTspiceReference:
     """Validate against known LTspice results from the original 3-input topology.
 
-    These reference values come from sim2_full_network.cir with uniform
-    21.2k weights. The generic solver with a 3-input Network instance
-    must match — no duplicated solver code.
+    These reference values come from the earlier sim2_full_network.cir
+    (superseded by xor_network.cir) with uniform 21.2k weights and
+    hardcoded 1.0V/4.0V/2.5V inputs. The generic solver with a 3-input
+    Network instance must match — no duplicated solver code.
     """
 
     @pytest.fixture

@@ -5,14 +5,14 @@
 | Ref | Component | KiCad Symbol | Value |
 |-----|-----------|-------------|-------|
 | J1 | USB-C connector | `Connector:USB_C_Receptacle_USB2.0` (or simpler power-only) | — |
-| U1 | MCP6004 #1 | `Amplifier_Operational:MCP6004-xP` | Rail-to-rail I/O (required for V_HIGH 4.0V buffer) |
+| U1 | MCP6004 #1 | `Amplifier_Operational:MCP6004-xP` | Rail-to-rail I/O (required for V_HIGH ≈4.0V buffer) |
 | U2 | LM324 #2 | `Amplifier_Operational:LM324` | OK for 2.5V V_MID buffers |
 | R1 | V_MID divider top | `Device:R` | 10kΩ 1% |
 | R2 | V_MID divider bottom | `Device:R` | 10kΩ 1% |
-| R3 | V_LOW divider top | `Device:R` | 8kΩ 1% |
-| R4 | V_LOW divider bottom | `Device:R` | 2kΩ 1% |
-| R5 | V_HIGH divider top | `Device:R` | 2kΩ 1% |
-| R6 | V_HIGH divider bottom | `Device:R` | 8kΩ 1% |
+| R3 | V_LOW divider top | `Device:R` | 33kΩ 1% |
+| R4 | V_LOW divider bottom | `Device:R` | 8.2kΩ 1% |
+| R5 | V_HIGH divider top | `Device:R` | 8.2kΩ 1% |
+| R6 | V_HIGH divider bottom | `Device:R` | 33kΩ 1% |
 | R_CC1 | USB-C CC1 pull-down | `Device:R` | 5.1kΩ |
 | R_CC2 | USB-C CC2 pull-down | `Device:R` | 5.1kΩ |
 | R_LED1 | Power LED resistor | `Device:R` | 1kΩ |
@@ -52,15 +52,17 @@ C1 (100µF polarized): `+5V` to `GND`, placed close to connector.
 +5V ─── R1 (10kΩ) ─── V_MID_RAW ─── R2 (10kΩ) ─── GND
 ```
 
-### V_LOW (1.0V)
+### V_LOW (≈1.0V)
 ```
-+5V ─── R3 (8kΩ) ─── V_LOW_RAW ─── R4 (2kΩ) ─── GND
++5V ─── R3 (33kΩ) ─── V_LOW_RAW ─── R4 (8.2kΩ) ─── GND
 ```
+Actual voltage: 5V × 8.2k / (33k + 8.2k) = 0.995V
 
-### V_HIGH (4.0V)
+### V_HIGH (≈4.0V)
 ```
-+5V ─── R5 (2kΩ) ─── V_HIGH_RAW ─── R6 (8kΩ) ─── GND
++5V ─── R5 (8.2kΩ) ─── V_HIGH_RAW ─── R6 (33kΩ) ─── GND
 ```
+Actual voltage: 5V × 33k / (33k + 8.2k) = 4.005V
 
 ## MCP6004 #1 (U1) — V_LOW/V_HIGH buffers + spare + comparator
 

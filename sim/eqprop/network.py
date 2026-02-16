@@ -11,9 +11,9 @@ from .diode import DiodeParams, BAT42, diode_current_into
 @dataclass(frozen=True)
 class WeightParams:
     """Physical constraints of the weight resistors (MCP4251-104 digital pots)."""
-    R_series: float = 1200.0    # Series protection resistor (ohm)
-    R_min: float = 1590.0       # Tap 256: 390 wiper + 1200 series
-    R_max: float = 101200.0     # Tap 1: 100k + 1200 series
+    R_series: float = 1210.0    # Series protection resistor (ohm) — 1.21kΩ E96
+    R_min: float = 1600.0       # Tap 256: 390 wiper + 1210 series
+    R_max: float = 101210.0     # Tap 1: 100k + 1210 series
     N_taps: int = 256           # MCP4251 tap positions
     R_pot_full: float = 100000.0  # Full-scale pot resistance (ohm)
 

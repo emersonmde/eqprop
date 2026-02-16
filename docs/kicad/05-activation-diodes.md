@@ -53,24 +53,26 @@ This allows hand-swapping BAT42 → 1N4148 if the Schottky activation proves too
 Both diodes are DO-35 (same package), so they're pin-compatible.
 
 ### Optional Series Softening Resistors
-Add pads for an optional series resistor in each diode path. Populate with 0Ω jumpers
-by default. If activation is too aggressive, replace with 100-500Ω to soften clamping.
+Add solder bridge pads in series with each diode path. By default, bridge each pad
+with a solder blob (zero resistance). If activation is too aggressive, cut the bridge
+and solder in a 100-500Ω through-hole resistor to soften clamping.
 
-In KiCad, add a resistor in series with each diode:
+In KiCad, add a resistor footprint in series with each diode (value = 0Ω, DNP):
 
 ```
-H1 ── R_D1a (0Ω) ── D1a anode ── D1a cathode ── V_MID_H1
-V_MID_H1 ── D1b anode ── D1b cathode ── R_D1b (0Ω) ── H1
+H1 ── SB_D1a ── D1a anode ── D1a cathode ── V_MID_H1
+V_MID_H1 ── D1b anode ── D1b cathode ── SB_D1b ── H1
 ```
 
-| Ref | Value | Purpose |
-|-----|-------|---------|
-| R_D1a | 0Ω (or 100-500Ω) | Series with D1a |
-| R_D1b | 0Ω (or 100-500Ω) | Series with D1b |
-| R_D2a | 0Ω (or 100-500Ω) | Series with D2a |
-| R_D2b | 0Ω (or 100-500Ω) | Series with D2b |
+| Ref | Default | Purpose |
+|-----|---------|---------|
+| SB_D1a | Solder bridge (or 100-500Ω) | Series with D1a |
+| SB_D1b | Solder bridge (or 100-500Ω) | Series with D1b |
+| SB_D2a | Solder bridge (or 100-500Ω) | Series with D2a |
+| SB_D2b | Solder bridge (or 100-500Ω) | Series with D2b |
 
-These add 4 more resistors but give significant debugging flexibility on a first-spin PCB.
+These use resistor pads but are bridged with solder by default — no 0Ω jumper
+components needed. Gives debugging flexibility on a first-spin PCB with no extra BOM cost.
 
 ## Test Points
 

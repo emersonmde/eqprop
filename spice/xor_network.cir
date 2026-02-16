@@ -26,10 +26,10 @@
 *   3. View -> SPICE Error Log to see all node voltages
 *
 * TRY DIFFERENT XOR INPUT PATTERNS:
-*   Pattern (0,0): V_X1=1.0  V_X1C=4.0  V_X2=1.0  V_X2C=4.0
-*   Pattern (0,1): V_X1=1.0  V_X1C=4.0  V_X2=4.0  V_X2C=1.0
-*   Pattern (1,0): V_X1=4.0  V_X1C=1.0  V_X2=1.0  V_X2C=4.0
-*   Pattern (1,1): V_X1=4.0  V_X1C=1.0  V_X2=4.0  V_X2C=1.0
+*   Pattern (0,0): V_X1=0.9951  V_X1C=4.0049  V_X2=0.9951  V_X2C=4.0049
+*   Pattern (0,1): V_X1=0.9951  V_X1C=4.0049  V_X2=4.0049  V_X2C=0.9951
+*   Pattern (1,0): V_X1=4.0049  V_X1C=0.9951  V_X2=0.9951  V_X2C=4.0049
+*   Pattern (1,1): V_X1=4.0049  V_X1C=0.9951  V_X2=4.0049  V_X2C=0.9951
 *
 * ===================================================================
 
@@ -46,12 +46,12 @@
 * INPUT VOLTAGES
 * =====================================================
 * Current pattern: (1,0) -- X1 high, X2 low
-V_X1   x1   0 4.0
-V_X1C  x1c  0 1.0
-V_X2   x2   0 1.0
-V_X2C  x2c  0 4.0
-V_LOW  vlow  0 1.0
-V_HIGH vhigh 0 4.0
+V_X1   x1   0 4.0049
+V_X1C  x1c  0 0.9951
+V_X2   x2   0 0.9951
+V_X2C  x2c  0 4.0049
+V_LOW  vlow  0 0.9951
+V_HIGH vhigh 0 4.0049
 
 * --- Reference Voltages ---
 * Separate V_MID for each hidden node (prevents crosstalk)
@@ -61,54 +61,54 @@ V_MID_H2 vmid_h2 0 2.5
 * =====================================================
 * FIRST LAYER: 6 Inputs -> 2 Hidden Nodes (12 weights)
 * =====================================================
-* Each weight = 1.2k series protection + variable pot resistance
+* Each weight = 1.21k series protection + variable pot resistance
 
 * W1: X1 -> H1
-R_s1 x1 w1m 1.2k
+R_s1 x1 w1m 1.21k
 R_W1 w1m h1 {Rw1}
 
 * W2: X1 -> H2
-R_s2 x1 w2m 1.2k
+R_s2 x1 w2m 1.21k
 R_W2 w2m h2 {Rw2}
 
 * W3: X1_comp -> H1
-R_s3 x1c w3m 1.2k
+R_s3 x1c w3m 1.21k
 R_W3 w3m h1 {Rw3}
 
 * W4: X1_comp -> H2
-R_s4 x1c w4m 1.2k
+R_s4 x1c w4m 1.21k
 R_W4 w4m h2 {Rw4}
 
 * W5: X2 -> H1
-R_s5 x2 w5m 1.2k
+R_s5 x2 w5m 1.21k
 R_W5 w5m h1 {Rw5}
 
 * W6: X2 -> H2
-R_s6 x2 w6m 1.2k
+R_s6 x2 w6m 1.21k
 R_W6 w6m h2 {Rw6}
 
 * W7: X2_comp -> H1
-R_s7 x2c w7m 1.2k
+R_s7 x2c w7m 1.21k
 R_W7 w7m h1 {Rw7}
 
 * W8: X2_comp -> H2
-R_s8 x2c w8m 1.2k
+R_s8 x2c w8m 1.21k
 R_W8 w8m h2 {Rw8}
 
 * W9: V_LOW -> H1
-R_s9 vlow w9m 1.2k
+R_s9 vlow w9m 1.21k
 R_W9 w9m h1 {Rw9}
 
 * W10: V_LOW -> H2
-R_s10 vlow w10m 1.2k
+R_s10 vlow w10m 1.21k
 R_W10 w10m h2 {Rw10}
 
 * W11: V_HIGH -> H1
-R_s11 vhigh w11m 1.2k
+R_s11 vhigh w11m 1.21k
 R_W11 w11m h1 {Rw11}
 
 * W12: V_HIGH -> H2
-R_s12 vhigh w12m 1.2k
+R_s12 vhigh w12m 1.21k
 R_W12 w12m h2 {Rw12}
 
 * =====================================================
@@ -130,19 +130,19 @@ D2b vmid_h2 h2 BAT42
 * No diodes on output nodes -- they float freely
 
 * W13: H1 -> Y+
-R_s13 h1 w13m 1.2k
+R_s13 h1 w13m 1.21k
 R_W13 w13m yp {Rw13}
 
 * W14: H1 -> Y-
-R_s14 h1 w14m 1.2k
+R_s14 h1 w14m 1.21k
 R_W14 w14m yn {Rw14}
 
 * W15: H2 -> Y+
-R_s15 h2 w15m 1.2k
+R_s15 h2 w15m 1.21k
 R_W15 w15m yp {Rw15}
 
 * W16: H2 -> Y-
-R_s16 h2 w16m 1.2k
+R_s16 h2 w16m 1.21k
 R_W16 w16m yn {Rw16}
 
 * --- DC Operating Point Analysis ---
