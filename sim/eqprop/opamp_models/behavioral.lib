@@ -1,0 +1,43 @@
+* Behavioral op-amp models for DC operating point analysis
+*
+* These subcircuits capture the properties that matter for .op simulation:
+*   - High open-loop gain
+*   - High input impedance
+*   - Finite output impedance
+*   - Output swing limits (rail-to-rail vs limited)
+*
+* Bandwidth and slew rate are irrelevant for .op and not modeled.
+
+* ─── Rail-to-rail op-amp (MCP6004, MCP6002) ───────────────────
+* Pins: inp inn vdd vss out
+* Output clamps to VSS..VDD (rail-to-rail)
+* Source: MCP6004 datasheet - Gain: 200k typ, Rin: >1TΩ, Rout: ~100Ω
+.subckt opamp_rr inp inn vdd vss out
+Rin inp inn 1e12
+Egain mid 0 inp inn 200000
+Rgain mid mid_clamp 1
+* Clamp output to rails using diode limiters
+Dhi mid_clamp hiref D_clamp
+Dlo loref mid_clamp D_clamp
+Vhi vdd hiref 0
+Vlo loref vss 0
+.model D_clamp D(Is=1e-12 N=0.001)
+Rout mid_clamp out 100
+.ends opamp_rr
+
+* ─── Limited-swing op-amp (LM324) ─────────────────────────────
+* Pins: inp inn vdd vss out
+* Output clamps to VSS..VDD-1.5V (LM324 VOH limit on 5V supply)
+* Source: LM324 datasheet - VOH=VCC-1.5V typ, Gain: 100k typ, Rout: ~100Ω
+.subckt opamp_lm324 inp inn vdd vss out
+Rin inp inn 1e6
+Egain mid 0 inp inn 100000
+Rgain mid mid_clamp 1
+* Clamp output: low = VSS, high = VDD - 1.5V
+Dhi mid_clamp hiref D_clamp2
+Dlo loref mid_clamp D_clamp2
+Vhi vdd hiref 1.5
+Vlo loref vss 0
+.model D_clamp2 D(Is=1e-12 N=0.001)
+Rout mid_clamp out 100
+.ends opamp_lm324

@@ -18,7 +18,7 @@ V_LOW = 1.0     # Low bias input (V)
 V_HIGH = 4.0    # High bias input (V)
 
 
-def make_xor_network():
+def make_xor_network(hardware=False):
     """Create the 16-weight complementary-input XOR network.
 
     Node numbering (global):
@@ -27,6 +27,11 @@ def make_xor_network():
 
     Free nodes (0-indexed into free array):
         0=H1, 1=H2, 2=YP, 3=YN
+
+    Args:
+        hardware: If True, include CD4053B mux on-resistance (100 ohm)
+            on the input connections (W1-W8). Default False preserves
+            existing ideal behavior.
     """
     connections = [
         (0, 6),   # W1:  X1 -> H1
@@ -47,6 +52,11 @@ def make_xor_network():
         (7, 9),   # W16: H2 -> YN
     ]
 
+    # CD4053B mux is on W1-W8 (input connections through mux)
+    # W9-W16 connect directly (bias rails, hidden-to-output)
+    mux_conns = frozenset(range(8)) if hardware else frozenset()
+    mux_r = 100.0 if hardware else 0.0
+
     return Network(
         n_fixed=6,
         n_free=4,
@@ -59,6 +69,8 @@ def make_xor_network():
             "x1", "x1c", "x2", "x2c", "vlow", "vhigh",
             "h1", "h2", "yp", "yn",
         ],
+        mux_connections=mux_conns,
+        mux_resistance=mux_r,
     )
 
 

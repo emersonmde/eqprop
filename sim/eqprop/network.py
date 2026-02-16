@@ -82,6 +82,8 @@ class Network:
     spice_names: List[str] = field(default_factory=list)
     diode_params: DiodeParams = field(default_factory=lambda: BAT42)
     weight_params: WeightParams = field(default_factory=lambda: MCP4251)
+    mux_connections: frozenset = field(default_factory=frozenset)
+    mux_resistance: float = 0.0
 
     @property
     def n_weights(self):
@@ -113,8 +115,9 @@ def resistive_initial_guess(net, inputs, weights):
     G_mat = np.zeros((net.n_free, net.n_free))
     I_vec = np.zeros(net.n_free)
 
-    for w, (i, j) in zip(weights, net.connections):
-        g = 1.0 / w
+    for w_idx, (w, (i, j)) in enumerate(zip(weights, net.connections)):
+        r_eff = w + (net.mux_resistance if w_idx in net.mux_connections else 0.0)
+        g = 1.0 / r_eff
         i_free = i - net.n_fixed if i >= net.n_fixed else -1
         j_free = j - net.n_fixed if j >= net.n_fixed else -1
 
@@ -156,8 +159,9 @@ def solve_network(net, inputs, weights, nudge=None, x0=None):
         I = np.zeros(net.n_free)
 
         # Resistive currents from weight connections
-        for w, (i, j) in zip(weights, net.connections):
-            current = (all_v[i] - all_v[j]) / w
+        for w_idx, (w, (i, j)) in enumerate(zip(weights, net.connections)):
+            r_eff = w + (net.mux_resistance if w_idx in net.mux_connections else 0.0)
+            current = (all_v[i] - all_v[j]) / r_eff
             if j >= net.n_fixed:
                 I[j - net.n_fixed] += current
             if i >= net.n_fixed:
