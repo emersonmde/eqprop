@@ -14,6 +14,8 @@ class WeightParams:
     R_series: float = 1200.0    # Series protection resistor (ohm)
     R_min: float = 1590.0       # Tap 256: 390 wiper + 1200 series
     R_max: float = 101200.0     # Tap 1: 100k + 1200 series
+    N_taps: int = 256           # MCP4251 tap positions
+    R_pot_full: float = 100000.0  # Full-scale pot resistance (ohm)
 
     @property
     def G_min(self):
@@ -22,6 +24,25 @@ class WeightParams:
     @property
     def G_max(self):
         return 1.0 / self.R_min
+
+    def resistance_to_tap(self, r):
+        """Map continuous resistance to nearest MCP4251 tap (1..N_taps)."""
+        r_pot = r - self.R_series
+        tap = round((self.R_pot_full - r_pot) * self.N_taps / self.R_pot_full)
+        return int(np.clip(tap, 1, self.N_taps))
+
+    def tap_to_resistance(self, tap):
+        """Map MCP4251 tap position to exact resistance."""
+        r_pot = self.R_pot_full * (1.0 - tap / self.N_taps)
+        return r_pot + self.R_series
+
+    def quantize_weights(self, weights):
+        """Round-trip weights through hardware tap positions.
+
+        Returns (quantized_weights, taps).
+        """
+        taps = [self.resistance_to_tap(r) for r in weights]
+        return np.array([self.tap_to_resistance(t) for t in taps]), taps
 
 
 # Standard MCP4251-104 parameters

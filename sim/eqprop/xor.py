@@ -106,11 +106,9 @@ def test_xor(net, weights, threshold=0.1):
         if not correct:
             ok = False
 
-    r_series = net.weight_params.R_series
     print(f"\n  Final weights:")
     for i, r in enumerate(weights):
-        tap = round((100000.0 - (r - r_series)) * 256.0 / 100000.0)
-        tap = int(np.clip(tap, 1, 256))
+        tap = net.weight_params.resistance_to_tap(r)
         print(f"    W{i+1:2d}: R={r:8.0f} ohm  (tap={tap:3d})")
 
     print(f"\n  XOR test: {'PASS' if ok else 'FAIL'}")
