@@ -46,13 +46,15 @@ A **green power LED** (3mm, through 1kΩ to GND from the 5V rail) indicates the 
 | V_MID_H2 | Return rail for H2 diode pair | LM324 #2, section B | 10µF electrolytic + 100nF ceramic |
 | V_MID_PUMP | Reference for both Howland pumps | LM324 #2, section C | 10µF electrolytic + 100nF ceramic |
 
-LM324 #1, section C is **spare** (previously used for V_BIAS buffer — no longer needed since bias is provided by V_LOW/V_HIGH directly).
+MCP6004 #1, section C is **spare** (previously used for V_BIAS buffer — no longer needed since bias is provided by V_LOW/V_HIGH directly).
 
 The three independent V_MID buffers eliminate cross-coupling between hidden neurons and isolate pump current demands from activation function references. Without this, current drawn by H1's diodes through a shared V_MID rail shifts the operating point of H2's diodes — a parasitic interaction that corrupts gradient measurements (the shift is the same order of magnitude as the gradient signal).
 
-**V_LOW = 1.0V:** 8kΩ / 2kΩ 1% divider from 5V, buffered by LM324 #1 section A. 100nF decoupling.
+**V_LOW = 1.0V:** 8kΩ / 2kΩ 1% divider from 5V, buffered by MCP6004 #1 section A. 100nF decoupling.
 
-**V_HIGH = 4.0V:** 2kΩ / 8kΩ 1% divider from 5V, buffered by LM324 #1 section B. 100nF decoupling.
+**V_HIGH = 4.0V:** 2kΩ / 8kΩ 1% divider from 5V, buffered by MCP6004 #1 section B. 100nF decoupling.
+
+**Why MCP6004 (not LM324) for V_LOW/V_HIGH buffers:** The LM324's output can only reach ~3.5V on a 5V supply (NPN common-emitter high-side output needs ~1.5V headroom), and its input common-mode range is limited to VCC−1.5V = 3.5V. The 4.0V V_HIGH_RAW voltage exceeds both limits, causing the buffer to saturate or phase-invert. The MCP6004 is a pin-compatible DIP-14 quad op-amp with rail-to-rail I/O (output swings to within 25mV of either rail, input common-mode includes both rails). It outputs 4.0V cleanly on a 5V supply.
 
 ### XOR Input Encoding
 
@@ -81,13 +83,15 @@ Target of ±0.3V (not ±1.0V) is realistic given diode clamping limits hidden no
 Each pot channel has a **1.2kΩ 1% metal film resistor** in series.
 
 **Effective resistance range:**
-- Minimum: tap 1 → ~390Ω wiper + 1,200Ω series = **1,590Ω**
-- Maximum: tap 256 → ~100kΩ + 1,200Ω = **101,200Ω**
+- Minimum (tap 256, wiper at terminal A): ~390Ω wiper + 1,200Ω series = **1,590Ω**
+- Maximum (tap 1, wiper near terminal B): ~100kΩ + 1,200Ω = **101,200Ω**
 - Conductance range: 9.9µS to 629µS — **63:1 ratio**
 
 **Current limit verification:** Worst-case 3.0V drop / 1,590Ω = 1.89mA (within 2.5mA limit, 24% margin).
 
 **Firmware enforces minimum tap = 1.** Tap 0 gives only 6% current margin.
+
+**SHDN and WP pins:** The MCP4251 DIP-14 has active-low SHDN (pin 12, hardware shutdown) and WP (pin 11, write protect) pins. Both must be tied to VDD for normal operation. If left floating, the device may enter shutdown (pots become open circuits) or block SPI writes to wiper registers.
 
 ### Weight Topology and Chip Assignment
 
@@ -301,9 +305,9 @@ X2 Toggle ─── 10kΩ ──┘     Throws: VDD (5V) = HIGH = X2 gets V_HIGH
 
 ## 7. Output Indication
 
-Two spare op-amp sections used as comparators for visual output, wired **active-low** to work around the LM324's weak high-side output (can only reach ~3.5V on 5V supply, too low to drive LEDs brightly). The LM324's low-side can sink to ~0.2V at up to 20mA.
+Two spare op-amp sections used as comparators for visual output, wired **active-low**. The LM324 (#2) can only reach ~3.5V output on 5V supply, too low to drive LEDs brightly. Active-low sinking (to ~0.2V at up to 20mA) works for both ICs. The MCP6004 (#1) could drive LEDs either way, but active-low is used for consistency.
 
-**Comparator A (LM324 #1, section D):**
+**Comparator A (MCP6004 #1, section D):**
 - Non-inverting input = Y−
 - Inverting input = Y+
 - Output LOW when Y+ > Y− → sinks current through **green LED**
@@ -317,23 +321,23 @@ Two spare op-amp sections used as comparators for visual output, wired **active-
 - LED wired: 5V → 470Ω → red LED anode → LED cathode → comparator output
 - Red = "XOR output is 0"
 
-**LED current:** (5V − ~2V LED drop − 0.2V output low) / 470Ω ≈ **6mA** — bright and clearly visible. When the comparator output is HIGH (~3.5V), only 1.5V remains across the LED + resistor, below any LED forward voltage — LED is fully off.
+**LED current:** (5V − ~2V LED drop − 0.2V output low) / 470Ω ≈ **6mA** — bright and clearly visible. When the comparator output is HIGH (~3.5V for LM324 #2, ~4.9V for MCP6004 #1), the LED is off (insufficient forward voltage across the LED for LM324; for MCP6004, only ~0.1V remains across LED + resistor).
 
-Works after training with no Arduino — pure analog readout. Comparators draw negligible current from output nodes (>1MΩ input impedance).
+Works after training with no Arduino — pure analog readout. Comparators draw negligible current from output nodes (>1MΩ input impedance for LM324, >10TΩ for MCP6004).
 
 ---
 
 ## 8. Op-Amp Allocation (Complete)
 
-11 of 12 sections allocated — one spare (LM324 #1 section C).
+11 of 12 sections allocated — one spare (MCP6004 #1 section C).
 
 | IC | Section A | Section B | Section C | Section D |
 |----|-----------|-----------|-----------|-----------|
-| LM324 #1 | V_LOW buffer | V_HIGH buffer | **Spare** | LED comparator (Y+ > Y−) |
+| MCP6004 #1 | V_LOW buffer | V_HIGH buffer | **Spare** | LED comparator (Y+ > Y−) |
 | LM324 #2 | V_MID_H1 buffer | V_MID_H2 buffer | V_MID_PUMP buffer | LED comparator (Y− > Y+) |
 | MCP6002 | Howland pump A (Y+) | Howland pump B (Y−) | — | — |
 
-LM324 #1 section C was previously the V_BIAS buffer — freed by replacing the single V_MID bias with V_LOW/V_HIGH pair (which already have their own buffers in sections A and B).
+MCP6004 #1 section C was previously the V_BIAS buffer — freed by replacing the single V_MID bias with V_LOW/V_HIGH pair (which already have their own buffers in sections A and B). MCP6004 is used instead of LM324 for #1 because the V_HIGH buffer (4.0V) exceeds the LM324's output swing and input common-mode range on a 5V supply.
 
 ---
 
@@ -631,7 +635,7 @@ The 0.053 V² signal is computed from ADC readings. Individual measurements that
 | Arduino Nano | ~20mA |
 | 8× MCP4251 | ~0.008mA |
 | MCP4822 | ~0.5mA |
-| 2× LM324 | ~3mA |
+| MCP6004 + LM324 | ~2.5mA |
 | MCP6002 | ~0.1mA |
 | ADS1115 | ~0.2mA |
 | 2× CD4053 | ~0.2mA |
@@ -648,9 +652,10 @@ Well within USB supply capability.
 
 | Component | Qty | Package | Function |
 |-----------|-----|---------|----------|
-| MCP4251-104 (100kΩ dual digipot) | 8 | DIP-14 | Weight resistors (16 weights) |
+| MCP4251-104 (100kΩ dual digipot) | 8 | DIP-14 | Weight resistors (16 weights). Tie SHDN and WP pins to VDD. |
 | MCP4822 (dual 12-bit DAC) | 1 | DIP-8 | Nudge current control |
-| LM324N (quad op-amp) | 2 | DIP-14 | Voltage refs + comparators |
+| MCP6004 (quad rail-to-rail op-amp) | 1 | DIP-14 | V_LOW/V_HIGH buffers + spare + LED comparator |
+| LM324N (quad op-amp) | 1 | DIP-14 | V_MID buffers + LED comparator |
 | MCP6002 (dual rail-to-rail op-amp) | 1 | DIP-8 | Howland current pumps |
 | ADS1115 (16-bit ADC) | 1 | MSOP-10 | Node voltage measurement |
 | CD4053 (triple 2:1 analog mux) | 2 | DIP-16 | Input + complement selection |
@@ -659,7 +664,7 @@ Well within USB supply capability.
 | USB-C connector (power only) | 1 | SMD | Board power input |
 | SPDT toggle switch | 2 | Through-hole | Inference input selection |
 | 1.2kΩ 1% metal film resistor | 16 | Axial | Pot series protection |
-| 10kΩ 0.1% metal film resistor | 10 | Axial | Howland pump networks (5 per pump) |
+| 10kΩ 0.1% metal film resistor | 8 | Axial | Howland pump feedback (4 per pump) |
 | 1MΩ 0.1% metal film resistor | 2 | Axial | Howland R_set |
 | 10kΩ 1% resistor | 13 | Axial | V_MID divider (2) + CS pull-ups (9) + switch isolation (2) |
 | 5.1kΩ 1% resistor | 2 | Axial | USB-C CC1/CC2 pull-downs |
@@ -670,7 +675,7 @@ Well within USB supply capability.
 | 470Ω resistor | 2 | Axial | Output LED current limiting (active-low) |
 | Green LED (3mm) | 2 | T-1 | XOR=1 indicator + power indicator |
 | Red LED (3mm) | 1 | T-1 | XOR=0 indicator |
-| 100nF ceramic capacitor | 14 | Radial | IC decoupling (one per IC) |
+| 100nF ceramic capacitor | 20 | Radial | IC decoupling (15, one per non-Arduino IC) + voltage ref output (5: V_MID_H1, V_MID_H2, V_MID_PUMP, V_LOW, V_HIGH) |
 | 10µF electrolytic capacitor | 3 | Radial | V_MID rail stiffening |
 | 100µF electrolytic capacitor | 3 | Radial | Power rail bulk decoupling (2 near ICs + 1 after USB-C) |
 
@@ -699,7 +704,7 @@ The 0.6V linear region may cause hidden nodes to saturate on every input pattern
 ### Risk 3: Weight dynamic range insufficient
 63:1 conductance range may not be enough for XOR, which needs some connections dominant and others negligible.
 
-**Diagnosis:** Weights clustering at tap 1 (minimum R) or tap 256 (maximum R) during training.
+**Diagnosis:** Weights clustering at tap 256 (minimum R) or tap 1 (maximum R) during training.
 
 **Fix:** Use MCP4251-504 (500kΩ pots) for wider range. Settling time increases (500kΩ × 50pF ≈ 25µs) but remains acceptable.
 

@@ -110,9 +110,10 @@ V_HIGH = 4.0   # High bias input
 
 ## Hardware Summary (from design-v2.md)
 
-- 8x MCP4251-104 (16 weight channels)
+- 8x MCP4251-104 (16 weight channels, SHDN+WP tied to VDD)
 - 2x CD4053 analog mux (direct + complement inputs, shared control pins)
-- 2x LM324N quad op-amp (voltage refs, LED comparators)
+- 1x MCP6004 quad op-amp (V_LOW/V_HIGH buffers + spare + LED comparator)
+- 1x LM324N quad op-amp (V_MID buffers + LED comparator)
 - 1x MCP6002 dual op-amp (Howland current pumps for nudge)
 - 1x MCP4822 dual DAC (nudge current control)
 - 1x ADS1115 16-bit ADC (node voltage measurement)
