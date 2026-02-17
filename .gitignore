@@ -9,10 +9,12 @@ __pycache__/
 *.raw
 *.log
 
-# KiCad (for future use)
+# KiCad
 *-backups/
 fp-info-cache
 *.kicad_prl
+*.lck
+\#auto_saved_files\#
 
 # Arduino
 *.elf
