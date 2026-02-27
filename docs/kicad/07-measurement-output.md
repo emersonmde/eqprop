@@ -8,10 +8,10 @@
 | R_SDA | I2C SDA pull-up | `Device:R` | 4.7kΩ |
 | R_SCL | I2C SCL pull-up | `Device:R` | 4.7kΩ |
 | C_U16 | ADC decoupling | `Device:C` | 100nF |
-| D_GRN | Green LED (XOR=1) | `Device:LED` | 3mm green |
-| D_RED | Red LED (XOR=0) | `Device:LED` | 3mm red |
-| R_LED_G | Green LED resistor | `Device:R` | 470Ω |
-| R_LED_R | Red LED resistor | `Device:R` | 470Ω |
+| D_GRN1 | Green LED (XOR=1) | `Device:LED` | 3mm green |
+| D_GRN2 | Green LED (XOR=0) | `Device:LED` | 3mm green |
+| R_LED_G1 | Green LED resistor (XOR=1) | `Device:R` | 470Ω |
+| R_LED_R1 | Green LED resistor (XOR=0) | `Device:R` | 470Ω |
 
 ## ADS1115 (U16) — 16-bit ADC
 
@@ -75,26 +75,26 @@ LED wiring:
 LED current: (5V - 2.0V LED drop - ~0.05V MCP6004 output low) / 470Ω ≈ 6.3mA (bright).
 When output is HIGH (~4.95V for MCP6004): only ~0.05V across LED+resistor → LED OFF.
 
-### Comparator B — Red LED "XOR = 0" (U2D, LM324 #2 Section D)
+### Comparator B — Green LED "XOR = 0" (U2D, LM324 #2 Section D)
 
 | U2D Pin | Net | Notes |
 |---------|-----|-------|
 | Non-inverting input (+) | `YP` | Y+ output node |
 | Inverting input (-) | `YN` | Y- output node |
-| Output | → D_RED cathode | Sinks current when Y- > Y+ |
+| Output | → D_GRN2 cathode | Sinks current when Y- > Y+ |
 
 When Y- > Y+ (negative or zero prediction):
 - (+) input (YP) < (-) input (YN) → output goes LOW → LED ON
 
 LED wiring:
 ```
-+5V ─── R_LED_R (470Ω) ─── D_RED anode ─── D_RED cathode ─── U2D output
++5V ─── R_LED_R1 (470Ω) ─── D_GRN2 anode ─── D_GRN2 cathode ─── U2D output
 ```
 
 ### LED Behavior Summary
 
-| Condition | Y+ vs Y- | Green LED | Red LED |
-|-----------|----------|-----------|---------|
+| Condition | Y+ vs Y- | D_GRN1 (XOR=1) | D_GRN2 (XOR=0) |
+|-----------|----------|-----------------|-----------------|
 | XOR = 1 (target 0.3V) | Y+ > Y- | ON | OFF |
 | XOR = 0 (target 0V) | Y+ ≈ Y- or Y- > Y+ | OFF | ON (or dim) |
 
@@ -121,7 +121,7 @@ The I2C bus only has one device (ADS1115). Connections:
 |----------|-------|
 | ICs + modules | 14 ICs + 1 Arduino module (1x MCP6004, 1x LM324, 8x MCP4251, 1x MCP4822, 1x MCP6002, 1x ADS1115, 2x CD4053B, 1x Arduino Nano) |
 | Diodes | 4x BAT42 |
-| LEDs | 3 (1x green power, 1x green XOR=1, 1x red XOR=0) |
+| LEDs | 3 (1x green power, 1x green XOR=1, 1x green XOR=0) |
 | Resistors | 50 (16x 1.21kΩ series, 9x 10kΩ CS pull-up, 8x 10kΩ 0.1% Howland, 2x 1MΩ 0.1% R_SET, 2x 10kΩ V_MID divider, 2x 33kΩ V_LOW/V_HIGH divider, 2x 8.2kΩ V_LOW/V_HIGH divider, 2x 5.1kΩ USB-C CC, 2x 4.7kΩ I2C, 1x 1kΩ power LED, 2x 470Ω output LEDs, 2x 10kΩ switch isolation) + 4x solder bridge pads (diode series) |
 | Capacitors | 26 (20x 100nF ceramic [15 IC decoupling + 5 voltage ref output], 3x 10µF electrolytic [V_MID rails], 3x 100µF electrolytic [1 after USB-C + 2 near IC clusters]) |
 | Switches | 2x SPDT toggle |

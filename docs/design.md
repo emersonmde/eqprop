@@ -317,9 +317,9 @@ Two spare op-amp sections used as comparators for visual output, wired **active-
 **Comparator B (LM324 #2, section D):**
 - Non-inverting input = Y+
 - Inverting input = Y−
-- Output LOW when Y− > Y+ → sinks current through **red LED**
-- LED wired: 5V → 470Ω → red LED anode → LED cathode → comparator output
-- Red = "XOR output is 0"
+- Output LOW when Y− > Y+ → sinks current through **green LED**
+- LED wired: 5V → 470Ω → green LED anode → LED cathode → comparator output
+- Green = "XOR output is 0"
 
 **LED current:** (5V − ~2V LED drop − 0.2V output low) / 470Ω ≈ **6mA** — bright and clearly visible. When the comparator output is HIGH (~3.5V for LM324 #2, ~4.9V for MCP6004 #1), the LED is off (insufficient forward voltage across the LED for LM324; for MCP6004, only ~0.1V remains across LED + resistor).
 
@@ -673,8 +673,7 @@ Well within USB supply capability.
 | 8.2kΩ 1% resistor | 2 | Axial | V_LOW / V_HIGH dividers |
 | 1kΩ resistor | 1 | Axial | Power LED current limiting |
 | 470Ω resistor | 2 | Axial | Output LED current limiting (active-low) |
-| Green LED (3mm) | 2 | T-1 | XOR=1 indicator + power indicator |
-| Red LED (3mm) | 1 | T-1 | XOR=0 indicator |
+| Green LED (3mm) | 3 | T-1 | Power indicator + XOR=1 indicator + XOR=0 indicator |
 | 100nF ceramic capacitor | 20 | Radial | IC decoupling (15, one per non-Arduino IC) + voltage ref output (5: V_MID_H1, V_MID_H2, V_MID_PUMP, V_LOW, V_HIGH) |
 | 10µF electrolytic capacitor | 3 | Radial | V_MID rail stiffening |
 | 100µF electrolytic capacitor | 3 | Radial | Power rail bulk decoupling (2 near ICs + 1 after USB-C) |

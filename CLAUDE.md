@@ -29,8 +29,13 @@ spice/                      SPICE netlists (LTspice / ngspice compatible)
   sim1_activation.cir       Single diode pair characterization
   xor_network.cir           16-weight complementary-input topology
 
+cad/
+  eqprop-xor/               KiCad 9 project (schematic + PCB)
+
 docs/
   design.md                 Complete hardware design specification
+  bom_digikey.csv           DigiKey BOM with verified part numbers
+  kicad/                    Schematic reference and per-section wiring details
 ```
 
 ## Network Topology (XOR)
