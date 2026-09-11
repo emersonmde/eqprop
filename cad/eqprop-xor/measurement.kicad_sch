@@ -1,0 +1,7206 @@
+(kicad_sch
+	(version 20250114)
+	(generator eeschema)
+	(generator_version "9.0")
+	(uuid "8b1662b7-7e58-50f2-8410-628aa54696f2")
+	(paper "A2")
+	(title_block
+		(title "Buffered measurement and classifier")
+		(date "2026-09-10")
+		(rev "B.1")
+	)
+	(lib_symbols
+		(symbol "Analog_ADC:ADS1115IDGS"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(symbol "ADS1115IDGS_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ADS1115IDGS_1_1"
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "AIN0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "AIN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "AIN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "AIN3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "ALERT/RDY"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "ADDR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+			(property "Reference" "U"
+				(at 2.54 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ADS1115IDGS"
+				(at 7.62 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
+				(at -1.27 -22.86 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "16 bit 4 channel I2C ADC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TSSOP*3x3mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+		)
+		(symbol "Amplifier_Operational:TLV9064"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV9064_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV9064_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV9064_3_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV9064_4_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV9064_5_1"
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TLV9064"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+				(at 1.27 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Quad Rail-to-Rail, Operational Amplifiers, 10MHz, SOIC-14/TSSOP-14"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "quad opamp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+		)
+		(symbol "EqProp:TLV3202"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV3202_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV3202_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV3202_3_1"
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TLV3202"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Analog_ADC:ADS1115IDGS")
+		(at 40.64 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef17975d-9098-50fa-a3d9-7f89ac1ec3fc")
+		(property "Reference" "U16"
+			(at 53.34 27.939999999999994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ADS1115IDGSR"
+			(at 53.34 30.479999999999993 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads1115.pdf"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "ADS1115IDGSR"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U16")
+					(unit 1)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "80ae66e0-74ea-5426-af32-afd9879df698")
+		)
+		(pin "5"
+			(uuid "9123b4b2-0bfb-58d1-84af-7635fb460fc6")
+		)
+		(pin "6"
+			(uuid "23fd1fcd-4d06-55b2-82ec-10d1beb9dc82")
+		)
+		(pin "7"
+			(uuid "6ad20ae8-bf78-57f0-94bb-b09a472f2d9e")
+		)
+		(pin "8"
+			(uuid "27231bf4-d937-5c83-a6cf-e9bfe8e461c1")
+		)
+		(pin "3"
+			(uuid "3a478350-7e06-5bb1-922c-268055b2210d")
+		)
+		(pin "2"
+			(uuid "19ec93f2-44f2-5baf-9d20-b0c5d5934045")
+		)
+		(pin "10"
+			(uuid "0b5ceb3c-0959-57c0-b044-c60fd2284cab")
+		)
+		(pin "9"
+			(uuid "29c47b74-0c00-59bc-bd01-0c55e059716c")
+		)
+		(pin "1"
+			(uuid "25ba06d5-369e-5144-a681-2e6b441aa113")
+		)
+	)
+	(wire
+		(pts
+			(xy 30.48 48.26)
+			(xy 20.32 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7f0de76-030e-5dc3-b0fd-646169f5b334")
+	)
+	(global_label "H1_ADC"
+		(shape bidirectional)
+		(at 20.32 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "66a0ef9a-476a-5311-8ade-c8fd55e31a9b")
+	)
+	(wire
+		(pts
+			(xy 30.48 50.8)
+			(xy 20.32 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6f6d092-0bb8-5f90-b8f9-9832fec74a60")
+	)
+	(global_label "H2_ADC"
+		(shape bidirectional)
+		(at 20.32 50.8 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "acc53cfc-7e89-5f5c-8f76-c338021d35c7")
+	)
+	(wire
+		(pts
+			(xy 30.48 53.339999999999996)
+			(xy 20.32 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be5c8eb8-7c16-58fc-8095-2879274a8cba")
+	)
+	(global_label "YP_ADC"
+		(shape bidirectional)
+		(at 20.32 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "869d1c54-bb19-51d2-9a66-1408d5ee71ae")
+	)
+	(wire
+		(pts
+			(xy 30.48 55.879999999999995)
+			(xy 20.32 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cced097-3b5c-5e94-8015-6a5225a90518")
+	)
+	(global_label "YN_ADC"
+		(shape bidirectional)
+		(at 20.32 55.88 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "5a3337ab-b41f-530a-ae2c-6a49395307bf")
+	)
+	(wire
+		(pts
+			(xy 40.64 38.099999999999994)
+			(xy 40.64 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fe6e4fc-3104-58d4-97e0-b8a9a53cbdb0")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 40.64 33.02 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "8f3b38db-6a75-52ee-afc6-4cf19b8d119c")
+	)
+	(wire
+		(pts
+			(xy 40.64 60.959999999999994)
+			(xy 40.64 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b9a6911-85ac-5e1f-b611-ff7a82300248")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 40.64 66.04 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6f783990-4442-5e09-8482-0a73d087c63d")
+	)
+	(no_connect
+		(at 50.8 45.72)
+		(uuid "6af949f9-344c-5a93-b98a-b6ca813c4239")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8)
+			(xy 60.96 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "827c1d76-b6d1-5076-81d6-e120124a6284")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 60.96 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ff753942-8503-5b52-b11e-b0f1cdd6c882")
+	)
+	(wire
+		(pts
+			(xy 50.8 53.339999999999996)
+			(xy 60.96 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "503be271-b3fb-5276-b56c-7d179a8f4438")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 60.96 53.34 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "c918e28d-7813-565b-b56d-74008fe43d6a")
+	)
+	(wire
+		(pts
+			(xy 50.8 55.879999999999995)
+			(xy 60.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b305f2aa-b87e-5e53-bef5-a4d1269aa87a")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 60.96 55.88 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "92f11302-8d2e-54c9-b03e-f9009626ab8d")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TLV9064")
+		(at 119.38 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f671fd52-402b-56e8-b46c-86ceed9686ee")
+		(property "Reference" "U17"
+			(at 132.07999999999998 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV9064IDR"
+			(at 132.07999999999998 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 119.38 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+			(at 119.38 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV9064IDR"
+			(at 119.38 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 119.38 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "9cc98888-796c-5544-8be3-a70767401bc4")
+		)
+		(pin "2"
+			(uuid "08014bd8-ffee-505a-b70e-a550db8b9118")
+		)
+		(pin "1"
+			(uuid "c6f49fa9-3f5c-5acc-a3ea-118f3ae27572")
+		)
+	)
+	(wire
+		(pts
+			(xy 111.75999999999999 48.26)
+			(xy 101.6 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a4584a2-02cd-5eeb-8088-36b8f6df2296")
+	)
+	(global_label "H1"
+		(shape bidirectional)
+		(at 101.6 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "874f4972-62c6-57ef-97e3-533e4b75e528")
+	)
+	(wire
+		(pts
+			(xy 111.75999999999999 53.339999999999996)
+			(xy 101.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a44d6921-804c-517b-a658-8384d90a00cc")
+	)
+	(global_label "H1_BUF"
+		(shape bidirectional)
+		(at 101.6 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a4fe3a2f-2d38-530a-9618-24f66ebdf565")
+	)
+	(wire
+		(pts
+			(xy 127.0 50.8)
+			(xy 137.16 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9b1a9eb-ec04-5fd8-b558-fa32e74e9969")
+	)
+	(global_label "H1_BUF"
+		(shape bidirectional)
+		(at 137.16 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "dd126547-4bd0-566b-a64a-2fdaad03c87e")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TLV9064")
+		(at 198.12 50.8 0)
+		(unit 2)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35522af0-6cdd-59d8-9fe2-6f2ffdc9ec7a")
+		(property "Reference" "U17"
+			(at 210.82 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV9064IDR"
+			(at 210.82 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 198.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+			(at 198.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV9064IDR"
+			(at 198.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 198.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U17")
+					(unit 2)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "3f0557a9-f8a7-5777-8c36-44947a7dacdb")
+		)
+		(pin "6"
+			(uuid "d2ca8de1-3dff-51b5-9106-4f109191cb17")
+		)
+		(pin "7"
+			(uuid "c30dab78-356f-5c98-b11f-23542e020dc3")
+		)
+	)
+	(wire
+		(pts
+			(xy 190.5 48.26)
+			(xy 180.34 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88087581-b9a8-55a9-832a-aebb15330bf5")
+	)
+	(global_label "H2"
+		(shape bidirectional)
+		(at 180.34 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "1ee9bf89-27c2-5d5a-b550-bac0b2ffde1b")
+	)
+	(wire
+		(pts
+			(xy 190.5 53.339999999999996)
+			(xy 180.34 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58e71708-3e5e-5a00-9490-8a0f0102deaa")
+	)
+	(global_label "H2_BUF"
+		(shape bidirectional)
+		(at 180.34 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "18db08f3-6d9c-5ab0-99b2-729d8acade3e")
+	)
+	(wire
+		(pts
+			(xy 205.74 50.8)
+			(xy 215.9 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1f1ee2c-35b7-5259-89d0-1790246d907a")
+	)
+	(global_label "H2_BUF"
+		(shape bidirectional)
+		(at 215.9 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "296c162f-59ac-5341-8fad-73ad430b20e4")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TLV9064")
+		(at 276.85999999999996 50.8 0)
+		(unit 3)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1c3fef36-83c4-58e9-9022-3af9d8c3538f")
+		(property "Reference" "U17"
+			(at 289.55999999999995 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV9064IDR"
+			(at 289.55999999999995 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 276.85999999999996 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+			(at 276.85999999999996 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV9064IDR"
+			(at 276.85999999999996 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 276.85999999999996 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U17")
+					(unit 3)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "4f301061-97d1-53e4-af0b-b76003d9f8cd")
+		)
+		(pin "9"
+			(uuid "bcb337c3-f1ca-5998-b576-030df5234975")
+		)
+		(pin "8"
+			(uuid "261bf662-3a3f-5ab2-823f-5d4640873fd9")
+		)
+	)
+	(wire
+		(pts
+			(xy 269.23999999999995 48.26)
+			(xy 259.08 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e42cbd20-8acc-5026-9505-90dcde39a255")
+	)
+	(global_label "YP"
+		(shape bidirectional)
+		(at 259.08 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a7a199a8-229d-569d-b007-cbca5a07413f")
+	)
+	(wire
+		(pts
+			(xy 269.23999999999995 53.339999999999996)
+			(xy 259.08 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7cd974f-5dd6-52e9-9ed0-0881b5f0036e")
+	)
+	(global_label "YP_BUF"
+		(shape bidirectional)
+		(at 259.08 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "b84acd10-1e0a-51bd-9564-61cb86e1d4ff")
+	)
+	(wire
+		(pts
+			(xy 284.47999999999996 50.8)
+			(xy 294.64 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5ad12c8-11d4-59c9-ba49-f70c48b1ebb0")
+	)
+	(global_label "YP_BUF"
+		(shape bidirectional)
+		(at 294.64 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "9d732ed2-0955-5601-9c88-e4763bb18f56")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TLV9064")
+		(at 355.59999999999997 50.8 0)
+		(unit 4)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1fa903a3-3c27-5c41-a8ee-7f93fabcabe7")
+		(property "Reference" "U17"
+			(at 368.29999999999995 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV9064IDR"
+			(at 368.29999999999995 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 355.59999999999997 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+			(at 355.59999999999997 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV9064IDR"
+			(at 355.59999999999997 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 355.59999999999997 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U17")
+					(unit 4)
+				)
+			)
+		)
+		(pin "12"
+			(uuid "14b18068-02eb-5b0c-8a20-64b8b3d76b70")
+		)
+		(pin "13"
+			(uuid "c06aa24c-7f13-56da-bd6a-3e42ebaf0bdf")
+		)
+		(pin "14"
+			(uuid "319e5700-9d11-5fbe-acea-fcf80780bdd8")
+		)
+	)
+	(wire
+		(pts
+			(xy 347.97999999999996 48.26)
+			(xy 337.82 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71f15bd6-0621-5cee-bafe-730f1175c736")
+	)
+	(global_label "YN"
+		(shape bidirectional)
+		(at 337.82 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "2a8e8586-3c4f-5386-a6af-2e5ee07fe0e5")
+	)
+	(wire
+		(pts
+			(xy 347.97999999999996 53.339999999999996)
+			(xy 337.82 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e66c0e6-d0e0-54dc-bf04-ead47268619f")
+	)
+	(global_label "YN_BUF"
+		(shape bidirectional)
+		(at 337.82 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "bb1b212c-5a46-547b-a6ba-a0a5258dccf7")
+	)
+	(wire
+		(pts
+			(xy 363.21999999999997 50.8)
+			(xy 373.38 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a703e168-653d-5767-995c-9e33d18f0fe9")
+	)
+	(global_label "YN_BUF"
+		(shape bidirectional)
+		(at 373.38 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "4678260b-1019-5cb0-8c28-d43b039b8ec2")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TLV9064")
+		(at 434.34 50.8 0)
+		(unit 5)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc41bbec-0935-5e2b-8062-a1e50360a6f5")
+		(property "Reference" "U17"
+			(at 447.03999999999996 33.019999999999996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV9064IDR"
+			(at 447.03999999999996 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 434.34 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9064.pdf"
+			(at 434.34 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV9064IDR"
+			(at 434.34 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 434.34 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U17")
+					(unit 5)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "52d0859b-361a-51d4-97b5-f33d0163307b")
+		)
+		(pin "11"
+			(uuid "ae08961e-d7c2-5135-8431-37685db9077c")
+		)
+	)
+	(wire
+		(pts
+			(xy 431.79999999999995 43.18)
+			(xy 431.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c01a04ac-be38-5c62-861c-606f7c0e742b")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 431.8 38.1 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "8e5684c0-f1d1-52e0-8ed2-37ab79703476")
+	)
+	(wire
+		(pts
+			(xy 431.79999999999995 58.419999999999995)
+			(xy 431.8 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e73616a4-d861-5243-8ce2-1c08e17db650")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 431.8 63.5 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "41529e15-bcde-5d84-afb8-dfb343e5a2a4")
+	)
+	(symbol
+		(lib_id "EqProp:TLV3202")
+		(at 513.0799999999999 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61bd1bf4-15b9-57ba-b83b-8c5542c345f8")
+		(property "Reference" "U18"
+			(at 525.78 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV3202AIDR"
+			(at 525.78 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 513.0799999999999 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3202.pdf"
+			(at 513.0799999999999 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV3202AIDR"
+			(at 513.0799999999999 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 513.0799999999999 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "242f86b0-66e9-55df-b6cf-cafce79d17c8")
+		)
+		(pin "2"
+			(uuid "f78bdc30-0433-5c9b-acab-72d5e0e22d78")
+		)
+		(pin "1"
+			(uuid "8ef99f2c-2eeb-53bf-b1bb-a547dcef92b2")
+		)
+	)
+	(wire
+		(pts
+			(xy 505.4599999999999 48.26)
+			(xy 495.3 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e50d3bfa-ade9-5b7d-906a-859d0b5b18bf")
+	)
+	(global_label "THRESHOLD_HYS"
+		(shape bidirectional)
+		(at 495.3 48.26 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ab3514ab-9075-5522-9514-52e063ef44fe")
+	)
+	(wire
+		(pts
+			(xy 505.4599999999999 53.339999999999996)
+			(xy 495.3 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11b9d88c-0a78-5bd8-8517-8a660ac66d27")
+	)
+	(global_label "PRED"
+		(shape bidirectional)
+		(at 495.3 53.34 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a75f41a7-381b-5c13-9bf9-78315fd5dc71")
+	)
+	(wire
+		(pts
+			(xy 520.6999999999999 50.8)
+			(xy 530.86 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a110ae25-c8b4-5098-bbcd-0dbe47facd7a")
+	)
+	(global_label "D_GRN1_K"
+		(shape bidirectional)
+		(at 530.86 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "01a3a92a-f088-5fe6-936d-e643e628aa65")
+	)
+	(symbol
+		(lib_id "EqProp:TLV3202")
+		(at 40.64 101.6 0)
+		(unit 2)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "96abf30a-ec28-54e9-9b1e-9cc08ec5d00a")
+		(property "Reference" "U18"
+			(at 53.34 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV3202AIDR"
+			(at 53.34 88.89999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 40.64 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3202.pdf"
+			(at 40.64 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV3202AIDR"
+			(at 40.64 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U18")
+					(unit 2)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "311cba12-c56a-55df-9b54-796edfc8e415")
+		)
+		(pin "6"
+			(uuid "5f450d71-9cd9-528d-8447-104d17b35b0e")
+		)
+		(pin "7"
+			(uuid "98308d90-dc6e-5cc9-b00c-31e1c6f38b38")
+		)
+	)
+	(wire
+		(pts
+			(xy 33.02 99.05999999999999)
+			(xy 22.86 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a95dbc5-4902-5c34-a189-085f907158af")
+	)
+	(global_label "V_MID_PUMP"
+		(shape bidirectional)
+		(at 22.86 99.06 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ce2cb9f7-b66e-5e8c-b696-53b0ce5ad066")
+	)
+	(wire
+		(pts
+			(xy 33.02 104.14)
+			(xy 22.86 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ced667f-1bee-525b-9bf4-d119d0a45ae8")
+	)
+	(global_label "D_GRN1_K"
+		(shape bidirectional)
+		(at 22.86 104.14 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6324fed7-ba61-50d1-a34f-b9fa2e53d9c1")
+	)
+	(wire
+		(pts
+			(xy 48.26 101.6)
+			(xy 58.42 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8ed3420-624a-5bdf-b309-f4a0a4f6dfac")
+	)
+	(global_label "D_GRN2_K"
+		(shape bidirectional)
+		(at 58.42 101.6 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "dfc830a9-1935-5e6b-acda-28832b5b98c6")
+	)
+	(symbol
+		(lib_id "EqProp:TLV3202")
+		(at 119.38 101.6 0)
+		(unit 3)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ee97ad5-0cb6-5bd3-8b29-aa2aeac751db")
+		(property "Reference" "U18"
+			(at 132.07999999999998 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV3202AIDR"
+			(at 132.07999999999998 86.35999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3202.pdf"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TLV3202AIDR"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "U18")
+					(unit 3)
+				)
+			)
+		)
+		(pin "8"
+			(uuid "ff011e42-4883-5b67-ad34-55539072df13")
+		)
+		(pin "4"
+			(uuid "3db2b6a4-3656-5e6a-ad19-fff0ca5f2be8")
+		)
+	)
+	(wire
+		(pts
+			(xy 116.83999999999999 93.97999999999999)
+			(xy 116.84 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a850fbfb-5b3a-5d27-a35c-f1959cb87014")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 116.84 88.9 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ae468a4d-d31e-54e6-a55c-92f53093797f")
+	)
+	(wire
+		(pts
+			(xy 116.83999999999999 109.22)
+			(xy 116.84 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef2f8956-837a-54cf-b0cd-aeb95fd7c4ca")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 116.84 114.3 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "8555fe88-85f9-5fcd-82f9-129bf326a3f2")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 198.12 101.6 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9dd2e76-8ce6-56cb-aa4c-00d2da08a047")
+		(property "Reference" "C10"
+			(at 187.96 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 187.96 102.86999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU"
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C102J5GACTU"
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33c3bd5c-00da-57e6-bf5f-b6daf502b2a9")
+		)
+		(pin "2"
+			(uuid "8f64f587-616d-5d4d-8fee-ed2e18700e3e")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 97.78999999999999)
+			(xy 198.12 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "821b066c-30a6-50f2-b9c1-a854e5acab2f")
+	)
+	(global_label "H1_ADC"
+		(shape bidirectional)
+		(at 198.12 92.71 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "fc57ab31-705b-56ea-b93f-fa8449a6b312")
+	)
+	(wire
+		(pts
+			(xy 198.12 105.41)
+			(xy 198.12 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "874eca98-e166-5db9-8799-a078c93d865e")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 198.12 110.49 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "7622c4fa-56e0-57bb-9b2b-76a13dbcc78c")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 276.85999999999996 101.6 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00b7c66e-9d00-5a89-b310-e7360d09cbf1")
+		(property "Reference" "C11"
+			(at 266.69999999999993 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 266.69999999999993 102.86999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 276.85999999999996 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU"
+			(at 276.85999999999996 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C102J5GACTU"
+			(at 276.85999999999996 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 276.85999999999996 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1573dd2b-e618-5b96-ad13-1bb81f227098")
+		)
+		(pin "2"
+			(uuid "04ac5643-edfb-59ba-a1b0-43f9e4bd32e7")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 97.78999999999999)
+			(xy 276.86 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b219d53d-158e-530d-8dce-348d864dbeeb")
+	)
+	(global_label "H2_ADC"
+		(shape bidirectional)
+		(at 276.86 92.71 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a334ae66-03ba-5167-aaf5-9510151518f6")
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 105.41)
+			(xy 276.86 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4372428-247f-512c-b4a6-659452f90f3f")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 276.86 110.49 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "7d5e3a9e-2276-5099-b31a-6cebcbf775f5")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 355.59999999999997 101.6 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c43ac153-b199-56e4-ace1-d7f2637a7e6a")
+		(property "Reference" "C17"
+			(at 345.43999999999994 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 345.43999999999994 102.86999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 355.59999999999997 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU"
+			(at 355.59999999999997 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C104K5RACTU"
+			(at 355.59999999999997 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 355.59999999999997 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88ef2075-2d4d-5162-a4d4-a924295177cb")
+		)
+		(pin "2"
+			(uuid "6c7890f7-8f1d-57f5-86be-5ba96b1037ec")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 97.78999999999999)
+			(xy 355.6 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1c87916-5daa-510c-b606-5f0409280968")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 355.6 92.71 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "42b7a2a6-06cd-56d2-b156-ad63178f344c")
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 105.41)
+			(xy 355.6 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77049ef4-3cc5-58aa-aacb-fa35ec78b6da")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 355.6 110.49 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "0e5ff279-aba6-5a2c-b924-14130cc145c0")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 434.34 101.6 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "230dacbf-736b-52ec-ad08-f27535db48d5")
+		(property "Reference" "C27"
+			(at 424.17999999999995 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 424.17999999999995 102.86999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 434.34 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU"
+			(at 434.34 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C102J5GACTU"
+			(at 434.34 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 434.34 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d65d5f6-b65a-56fd-b0aa-45bd90e6846d")
+		)
+		(pin "2"
+			(uuid "92db4710-9a33-54c1-a4da-5f7ee2a76934")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 97.78999999999999)
+			(xy 434.34 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0faa9102-fa4f-5f1c-a381-52728a7d718b")
+	)
+	(global_label "YP_ADC"
+		(shape bidirectional)
+		(at 434.34 92.71 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "643e10bd-b21a-5406-944f-dd9ebca0ab4c")
+	)
+	(wire
+		(pts
+			(xy 434.34 105.41)
+			(xy 434.34 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb68e7f4-4258-5df6-854f-90e9397e6db6")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 434.34 110.49 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "d6d2ff31-c185-52b1-834e-5d560df4e845")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 513.0799999999999 101.6 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dcd33ef1-34bf-5f89-8b42-41ba98630833")
+		(property "Reference" "C28"
+			(at 502.9199999999999 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 502.9199999999999 102.86999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 513.0799999999999 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU"
+			(at 513.0799999999999 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C102J5GACTU"
+			(at 513.0799999999999 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 513.0799999999999 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f1007c2a-7fb2-54d9-a737-2898ca754f58")
+		)
+		(pin "2"
+			(uuid "3e85018e-b88d-5afc-ab5f-38cc7cc09e95")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 97.78999999999999)
+			(xy 513.08 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41f919cf-70bd-5431-9577-1d548711a1ad")
+	)
+	(global_label "YN_ADC"
+		(shape bidirectional)
+		(at 513.08 92.71 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "d7160338-236c-5ad1-8c01-e3ca92cf2b2c")
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 105.41)
+			(xy 513.08 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c87a858-f82b-5e91-98bc-ebce32df9608")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 513.08 110.49 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "0be61cbc-3a39-5d8d-a156-38033984da4b")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 40.64 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4607dbb7-bc5b-5e5b-8fca-8bf1de7c64af")
+		(property "Reference" "C31"
+			(at 30.48 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 30.48 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 40.64 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU"
+			(at 40.64 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C104K5RACTU"
+			(at 40.64 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1f7cc762-3e5c-5596-81b9-d191063d8337")
+		)
+		(pin "2"
+			(uuid "c6a7de53-52f4-5c3e-90f2-13febb23b0a5")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 148.58999999999997)
+			(xy 40.64 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "374b6283-e689-5726-b8f2-e3761fb64727")
+	)
+	(global_label "THRESHOLD"
+		(shape bidirectional)
+		(at 40.64 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "fea643d2-34e2-55ad-8c82-9db191936da3")
+	)
+	(wire
+		(pts
+			(xy 40.64 156.20999999999998)
+			(xy 40.64 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebae8590-38c4-5a5a-b6b5-53695abbb0a4")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 40.64 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a4c0e54a-9d7c-59b0-a363-504bb5195595")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 119.38 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "82523bed-5b16-5be6-8397-b7e6379afddd")
+		(property "Reference" "C5"
+			(at 109.22 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 109.22 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 119.38 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU"
+			(at 119.38 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C104K5RACTU"
+			(at 119.38 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 119.38 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c9f23553-0094-59a8-be28-5dc4bdcd957c")
+		)
+		(pin "2"
+			(uuid "8dfdcab3-152c-55f7-904e-0e2416e37d6f")
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 148.58999999999997)
+			(xy 119.38 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62005569-8700-51db-816d-f30dbdb4777d")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 119.38 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "273195db-99f9-546e-bd53-34d6f48eb8af")
+	)
+	(wire
+		(pts
+			(xy 119.38 156.20999999999998)
+			(xy 119.38 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d00e5ba-adbb-5e06-928a-59d0403194a4")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 119.38 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a6578fcf-6197-5e57-b2d7-4af2dd837bad")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 198.12 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3eafce1d-d0e3-5d02-8326-bed4c73a5a24")
+		(property "Reference" "C7"
+			(at 187.96 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 187.96 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 198.12 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU"
+			(at 198.12 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0805C104K5RACTU"
+			(at 198.12 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 198.12 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "180497e9-f468-51d0-b1ad-01c4c37556f2")
+		)
+		(pin "2"
+			(uuid "74163e0d-aa0d-5279-b93f-de33e98a6baa")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 148.58999999999997)
+			(xy 198.12 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3207936-89ad-571e-87ee-0c03ce11c001")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 198.12 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "0c1ac215-3f6c-5223-ade9-796f859e3d1e")
+	)
+	(wire
+		(pts
+			(xy 198.12 156.20999999999998)
+			(xy 198.12 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc9731ac-96b3-52d8-95b4-e2e789e6cbeb")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 198.12 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "06a497f3-cb87-5b82-be26-f579bcdb6b81")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 276.85999999999996 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8edeec88-e295-57d8-8f22-d510f131d42c")
+		(property "Reference" "R20"
+			(at 266.69999999999993 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 266.69999999999993 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 276.85999999999996 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 276.85999999999996 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08054K70FKEA"
+			(at 276.85999999999996 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 276.85999999999996 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f8a87411-8c2c-515a-8dee-1695907bbd40")
+		)
+		(pin "2"
+			(uuid "bc469543-6afd-52f9-b969-ca789562a136")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 148.58999999999997)
+			(xy 276.86 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "803ac276-56c9-583f-8308-79b9cce64efa")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 276.86 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "cf0ad43d-4827-55cf-ab7d-b88e59b75f60")
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 156.20999999999998)
+			(xy 276.86 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d54e0d3e-7f09-5eb1-b3fe-8040e0b1ebe0")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 276.86 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "99e0fe12-5324-5693-847e-9fe6684469d9")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 355.59999999999997 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e827383-4820-515c-8582-0a37462e6f9b")
+		(property "Reference" "R21"
+			(at 345.43999999999994 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 345.43999999999994 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 355.59999999999997 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 355.59999999999997 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08054K70FKEA"
+			(at 355.59999999999997 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 355.59999999999997 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3507048-c838-561e-98de-f5172c5ac209")
+		)
+		(pin "2"
+			(uuid "8cd331e1-a465-5a02-b317-b46952198425")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 148.58999999999997)
+			(xy 355.6 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f66df23-0c9b-5807-8218-995a6593dceb")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 355.6 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6fe2e207-db3f-5f82-b3fd-6be967e06a0c")
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 156.20999999999998)
+			(xy 355.6 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf2ee0cc-afaa-5085-8c49-baccf55ea16e")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 355.6 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ee68a85d-f76c-54e7-bdf1-e8ed24787492")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 434.34 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b47781ba-5404-5917-9992-a3ad7de7dd64")
+		(property "Reference" "R_ADC1"
+			(at 424.17999999999995 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 424.17999999999995 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 434.34 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 434.34 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW0805100RFKEA"
+			(at 434.34 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 434.34 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_ADC1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "55e8b00f-6ba0-5610-9166-40d3421681b5")
+		)
+		(pin "2"
+			(uuid "77bced0a-8661-55b2-80a6-9e41d03682f3")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 148.58999999999997)
+			(xy 434.34 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9c92142-d760-5d43-a5cf-8af42646a948")
+	)
+	(global_label "H1_BUF"
+		(shape bidirectional)
+		(at 434.34 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "d02de01b-a958-5d0e-8840-05cdf2a001b8")
+	)
+	(wire
+		(pts
+			(xy 434.34 156.20999999999998)
+			(xy 434.34 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "641a2e3b-16a4-5161-b750-ba6829ebf98e")
+	)
+	(global_label "H1_ADC"
+		(shape bidirectional)
+		(at 434.34 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a6685708-fd79-5bfd-808d-45be814167e9")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 513.0799999999999 152.39999999999998 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f28e845-1abb-5571-91c1-baf7ae31261c")
+		(property "Reference" "R_ADC2"
+			(at 502.9199999999999 151.12999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 502.9199999999999 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 513.0799999999999 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 513.0799999999999 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW0805100RFKEA"
+			(at 513.0799999999999 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 513.0799999999999 152.39999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_ADC2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e1de97a-aaf4-54b1-8a6b-3384bcdf1ee8")
+		)
+		(pin "2"
+			(uuid "a6493c8d-8eb2-5fe2-82eb-ffd89f86d58e")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 148.58999999999997)
+			(xy 513.08 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aef4f3a7-773d-5353-97e2-e664c9bc0cbc")
+	)
+	(global_label "H2_BUF"
+		(shape bidirectional)
+		(at 513.08 143.51 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "aa38a7d0-be35-581f-b165-b4a1d4f925b2")
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 156.20999999999998)
+			(xy 513.08 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d782f1b7-b17c-560d-bfd5-630f03da6ca4")
+	)
+	(global_label "H2_ADC"
+		(shape bidirectional)
+		(at 513.08 161.29 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "e1dfe61c-0d7a-5896-9e39-8526ae34bd8d")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e6fc2af9-56a7-56b9-b3f9-3ddec8999c82")
+		(property "Reference" "R_ADC3"
+			(at 30.48 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 30.48 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 40.64 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 40.64 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW0805100RFKEA"
+			(at 40.64 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 40.64 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_ADC3")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fefc4fa6-c0b3-5c0f-8274-25e78b8cd66b")
+		)
+		(pin "2"
+			(uuid "110ab8d6-f053-515d-b4b8-f1f7a6d23fef")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 199.39)
+			(xy 40.64 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f2dc9f0-6488-528c-b65f-68a4abddd975")
+	)
+	(global_label "YP_BUF"
+		(shape bidirectional)
+		(at 40.64 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "49048fa8-bde7-5814-8813-05089f484493")
+	)
+	(wire
+		(pts
+			(xy 40.64 207.01)
+			(xy 40.64 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5340f0d1-0b2a-5f48-b30a-281a7e0f2ff1")
+	)
+	(global_label "YP_ADC"
+		(shape bidirectional)
+		(at 40.64 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "19fb5187-da6c-5b30-b6ab-e2c3cd01eb57")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "df2be4dc-2f65-53b3-b097-d433b994b539")
+		(property "Reference" "R_ADC4"
+			(at 109.22 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 109.22 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 119.38 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 119.38 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW0805100RFKEA"
+			(at 119.38 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 119.38 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_ADC4")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e635d660-9609-5db0-87d9-508fe3184b4d")
+		)
+		(pin "2"
+			(uuid "26e97c68-de37-5195-b978-58d90c10ad8f")
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 199.39)
+			(xy 119.38 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d52f499f-70fb-52fc-b90b-e355901dd20e")
+	)
+	(global_label "YN_BUF"
+		(shape bidirectional)
+		(at 119.38 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "417a203d-eeb8-5fd9-90fd-4752536a6505")
+	)
+	(wire
+		(pts
+			(xy 119.38 207.01)
+			(xy 119.38 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0ca8cdd-7947-55c9-80c2-6547b39bc87b")
+	)
+	(global_label "YN_ADC"
+		(shape bidirectional)
+		(at 119.38 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a4e9e25e-9442-5289-babd-b46937dc1158")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 198.12 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "340d33bf-abf3-5281-9820-d6df0cbe24e5")
+		(property "Reference" "R_D1"
+			(at 187.96 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 187.96 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 198.12 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 198.12 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW0805100KBEEA"
+			(at 198.12 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 198.12 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_D1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "818ac878-43dd-58dc-92f4-33bd46ad8a69")
+		)
+		(pin "2"
+			(uuid "a0ff5a28-6235-5f81-aed0-b8f5eaa6a8f3")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 199.39)
+			(xy 198.12 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fdd7c25-55ff-5a1e-bd7c-d8c1597ea508")
+	)
+	(global_label "YP_BUF"
+		(shape bidirectional)
+		(at 198.12 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "c49545c5-ff8a-5aa3-8ac5-6f6da80313f8")
+	)
+	(wire
+		(pts
+			(xy 198.12 207.01)
+			(xy 198.12 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "249a25d2-a97c-56c2-ba49-9544df4d0664")
+	)
+	(global_label "PRED_PLUS"
+		(shape bidirectional)
+		(at 198.12 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "192868a2-b104-5d8f-b6c7-9e046b0ca729")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 276.85999999999996 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ae4cc1d-89d6-52b7-9d48-637182591d85")
+		(property "Reference" "R_D2"
+			(at 266.69999999999993 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 266.69999999999993 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 276.85999999999996 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 276.85999999999996 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW0805100KBEEA"
+			(at 276.85999999999996 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 276.85999999999996 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_D2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4912b6fa-a0b5-5f85-95bd-5eb5a9523824")
+		)
+		(pin "2"
+			(uuid "de3594f6-2734-5d30-80a1-095752774302")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 199.39)
+			(xy 276.86 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0aa2ab3-1754-5960-9df8-6f430c14a161")
+	)
+	(global_label "V_MID_PUMP"
+		(shape bidirectional)
+		(at 276.86 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "5a3514de-51a3-50cb-bcbd-23fb0afaa40a")
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 207.01)
+			(xy 276.86 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "750c5845-f9d8-5839-b870-c1d9bc5d6acf")
+	)
+	(global_label "PRED_PLUS"
+		(shape bidirectional)
+		(at 276.86 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "f0671db8-d63f-5ead-bcac-dae58203c388")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 355.59999999999997 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06eaab95-d244-5bbd-b254-3ca5d1c060cb")
+		(property "Reference" "R_D3"
+			(at 345.43999999999994 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 345.43999999999994 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 355.59999999999997 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 355.59999999999997 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW0805100KBEEA"
+			(at 355.59999999999997 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 355.59999999999997 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_D3")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91b3b987-483e-5cad-b87c-5eb9ae5f9c89")
+		)
+		(pin "2"
+			(uuid "a8576487-4f10-5fd6-9c48-9803354ca605")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 199.39)
+			(xy 355.6 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1aa6e526-7cf2-5078-a6e6-3c55cd535ac6")
+	)
+	(global_label "YN_BUF"
+		(shape bidirectional)
+		(at 355.6 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ac9677bb-5eab-5451-8cf2-2938021b54e3")
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 207.01)
+			(xy 355.6 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659ef78d-722c-5137-b7b2-f497babc271c")
+	)
+	(global_label "PRED_MINUS"
+		(shape bidirectional)
+		(at 355.6 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "39795482-0afa-5a04-a77c-1e11d42a9dee")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 434.34 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e03e22c4-40ed-5dd6-8482-f5da0964bae0")
+		(property "Reference" "R_D4"
+			(at 424.17999999999995 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 424.17999999999995 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 434.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 434.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW0805100KBEEA"
+			(at 434.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 434.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_D4")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "261e18b8-c1fd-5b84-a631-92483e41253c")
+		)
+		(pin "2"
+			(uuid "543d6f8b-6827-5d86-b3ae-a6d6ccf6a4c9")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 199.39)
+			(xy 434.34 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d03548c-89e5-5cfa-bd27-3cd876e48d95")
+	)
+	(global_label "PRED"
+		(shape bidirectional)
+		(at 434.34 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "c3e6d613-f70c-55f0-b3f9-0c720c832f1b")
+	)
+	(wire
+		(pts
+			(xy 434.34 207.01)
+			(xy 434.34 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a12f0557-2d85-5555-987e-88288be85fc6")
+	)
+	(global_label "PRED_MINUS"
+		(shape bidirectional)
+		(at 434.34 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "3eb83c88-f596-54c2-81c3-184bfc59371a")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 513.0799999999999 203.2 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33e5c286-f781-5259-ba2a-88100abfe692")
+		(property "Reference" "R_HYS1"
+			(at 502.9199999999999 201.92999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 502.9199999999999 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 513.0799999999999 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 513.0799999999999 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW080510K0FKEA"
+			(at 513.0799999999999 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 513.0799999999999 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_HYS1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "19c80958-6c2c-5dba-92fe-166a6aed51c0")
+		)
+		(pin "2"
+			(uuid "fd1198de-aa05-5778-9228-5dc8afc61f20")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 199.39)
+			(xy 513.08 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05b2b5de-d667-532b-bcb5-df825e910842")
+	)
+	(global_label "THRESHOLD"
+		(shape bidirectional)
+		(at 513.08 194.31 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "b3ec18a4-e090-5a99-99fd-e78340c8785a")
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 207.01)
+			(xy 513.08 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a076b496-0089-5dd4-ac90-e98a6308cf49")
+	)
+	(global_label "THRESHOLD_HYS"
+		(shape bidirectional)
+		(at 513.08 212.09 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "4fc0dee0-dd38-5ebe-babe-c2b550837ffb")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 254.0 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35580a44-171f-51e7-85ea-161c04a5a52c")
+		(property "Reference" "R_HYS2"
+			(at 30.48 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2M"
+			(at 30.48 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 40.64 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 40.64 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08052M00FKEA"
+			(at 40.64 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 40.64 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_HYS2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2846821c-4003-5dcf-a1f3-120a29b69d41")
+		)
+		(pin "2"
+			(uuid "7d2287db-5427-54da-a6e6-0ba483177df0")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 250.19)
+			(xy 40.64 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cef9b5d-35d8-59c0-8b01-cbde5f5dce06")
+	)
+	(global_label "D_GRN1_K"
+		(shape bidirectional)
+		(at 40.64 245.11 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "d0e8affc-16da-5ff6-9172-b4542bdb5a9d")
+	)
+	(wire
+		(pts
+			(xy 40.64 257.81)
+			(xy 40.64 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4d95a07-10d6-5ca2-b896-02729e70e3ba")
+	)
+	(global_label "THRESHOLD_HYS"
+		(shape bidirectional)
+		(at 40.64 262.89 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "57194481-db4e-51b4-bcfa-ffe258f746ef")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 254.0 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00503433-3931-53ba-8a2b-c7ccc2733b9d")
+		(property "Reference" "R_LED_G1"
+			(at 109.22 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 109.22 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 119.38 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 119.38 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08052K20FKEA"
+			(at 119.38 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 119.38 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_LED_G1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "307a46b8-6279-576f-ba23-e48c16c78458")
+		)
+		(pin "2"
+			(uuid "8b32f735-9e93-590e-8afc-279ec3bae17c")
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 250.19)
+			(xy 119.38 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f217374a-e3b5-5282-88a9-98be35c9e3ea")
+	)
+	(global_label "D_GRN1_A"
+		(shape bidirectional)
+		(at 119.38 245.11 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "4fadca29-e010-5dc4-85e3-acedd555779c")
+	)
+	(wire
+		(pts
+			(xy 119.38 257.81)
+			(xy 119.38 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8825c1d-f83c-56b6-8c3c-3e9a3bf7786a")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 119.38 262.89 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "c52a6396-3e2a-57ff-bacd-d5efd8a8e919")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 198.12 254.0 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b74466b9-1f72-5e80-871a-fa2c1d656e7b")
+		(property "Reference" "R_LED_R1"
+			(at 187.96 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 187.96 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 198.12 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 198.12 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08052K20FKEA"
+			(at 198.12 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 198.12 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_LED_R1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d224038-61ca-5172-bb55-74d21e44ab5d")
+		)
+		(pin "2"
+			(uuid "f136fe83-bd64-552a-ac44-f9c141496dd5")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 250.19)
+			(xy 198.12 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23dc2fd4-2ec0-5f86-aed3-cd98306fa235")
+	)
+	(global_label "D_GRN2_A"
+		(shape bidirectional)
+		(at 198.12 245.11 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6ed1b429-e7f1-5bbd-8a9e-61f5a05880ff")
+	)
+	(wire
+		(pts
+			(xy 198.12 257.81)
+			(xy 198.12 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebd7440f-6aa8-5572-93ae-e34b0039b104")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 198.12 262.89 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "fc471440-3673-53db-b7bf-a246f64e4573")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 276.85999999999996 254.0 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3a90a53f-33ad-5d21-a2a4-abc634e07688")
+		(property "Reference" "R_TH1"
+			(at 266.69999999999993 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.99k"
+			(at 266.69999999999993 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 276.85999999999996 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 276.85999999999996 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW08054K99BEEA"
+			(at 276.85999999999996 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 276.85999999999996 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_TH1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bcd23e2d-ca77-5fab-9b62-5736bd0c5ea4")
+		)
+		(pin "2"
+			(uuid "c032d39b-5001-53f3-ae86-5581d0b204b5")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 250.19)
+			(xy 276.86 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38030439-ba0f-5bce-865d-17fad8830990")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 276.86 245.11 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "312b78f2-9767-596e-a697-153bf2734570")
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 257.81)
+			(xy 276.86 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d0fc23f-0037-5739-a134-0446243c8352")
+	)
+	(global_label "THRESHOLD"
+		(shape bidirectional)
+		(at 276.86 262.89 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "f18c8bf7-26d3-5201-bc95-d2794ffd92be")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 355.59999999999997 254.0 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9053583-7092-58b9-92a5-a5f4e0ab5bb2")
+		(property "Reference" "R_TH2"
+			(at 345.43999999999994 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.62k"
+			(at 345.43999999999994 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 355.59999999999997 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/28758/tnpw_e3.pdf"
+			(at 355.59999999999997 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "TNPW08055K62BEEA"
+			(at 355.59999999999997 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 355.59999999999997 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "R_TH2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0a5f3ac7-c75f-5421-b048-1389c1057d56")
+		)
+		(pin "2"
+			(uuid "bed23513-28db-53b8-98b9-b93637564c0e")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 250.19)
+			(xy 355.6 245.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0778fe7-7804-5481-9d00-52b8d1f8ad03")
+	)
+	(global_label "THRESHOLD"
+		(shape bidirectional)
+		(at 355.6 245.11 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6e173f81-a2d5-5ce3-bb4c-d244da1d35f3")
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 257.81)
+			(xy 355.6 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66cf3032-2777-5e6f-b7ab-820c8f3e796f")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 355.6 262.89 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a8ff5ce6-3183-5e7e-9461-a82399c00adc")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 434.34 254.0 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0d7f1f3-679f-5bdf-bad9-aa23e34089a9")
+		(property "Reference" "TP1"
+			(at 424.17999999999995 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 424.17999999999995 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 434.34 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 434.34 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 434.34 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 434.34 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "633b4570-0287-5ed3-b151-0f39f873d890")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 254.0)
+			(xy 434.34 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f1f1159-55c5-5204-b80b-9000384c0010")
+	)
+	(global_label "V_LOW"
+		(shape bidirectional)
+		(at 434.34 259.08 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "acb3bb64-f3a9-5a00-85f7-9a5d3811d61c")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 513.0799999999999 254.0 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "516da25d-d1db-5898-ac5c-b53e48197857")
+		(property "Reference" "TP10"
+			(at 502.9199999999999 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 502.9199999999999 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 513.0799999999999 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.0799999999999 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 513.0799999999999 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 513.0799999999999 254.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "716a7131-7cbe-5029-bb64-4a647f26b034")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 254.0)
+			(xy 513.08 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "005b0a1f-146f-518d-9a43-031f40ee4efa")
+	)
+	(global_label "YP"
+		(shape bidirectional)
+		(at 513.08 259.08 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "ac18af11-74ad-571d-94e4-28cbcc11fce5")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3be3c93-5c47-5536-b4da-22c9536740f8")
+		(property "Reference" "TP11"
+			(at 30.48 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 30.48 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 40.64 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 40.64 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2fe64d4-a3d5-52ee-abea-4a4a9f12cc4f")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 304.8)
+			(xy 40.64 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2912655-cb00-5da0-a5eb-5fd5efb6b481")
+	)
+	(global_label "YN"
+		(shape bidirectional)
+		(at 40.64 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "a59dd283-02f8-5962-b0b3-879c975cf5b1")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 119.38 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e687b71-66f3-5ca6-805a-a8f78ead9e80")
+		(property "Reference" "TP12"
+			(at 109.22 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 109.22 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 119.38 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 119.38 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 119.38 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5be7b3a2-885b-56f7-9beb-9290720558e9")
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 304.8)
+			(xy 119.38 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea5933aa-74c7-50f7-a167-e9eec65a4390")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 119.38 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "0a663682-613e-546b-8680-346e40530a00")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 198.12 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "e541d6cd-3965-5ca0-94a9-0429188887f7")
+		(property "Reference" "TP13"
+			(at 187.96 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 187.96 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 198.12 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 198.12 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 198.12 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1dc39daf-808f-57ab-bfb6-5c9f427b151a")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 304.8)
+			(xy 198.12 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1165346-9237-58e7-97ad-1c72067dd396")
+	)
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 198.12 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "43842724-1b98-51a0-9d26-52e5516663e0")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 276.85999999999996 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1ff23e3-3d21-5eeb-aa74-0fc759aaf4e3")
+		(property "Reference" "TP14"
+			(at 266.69999999999993 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 266.69999999999993 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 276.85999999999996 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.85999999999996 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 276.85999999999996 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 276.85999999999996 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a7f8d61e-bf62-5454-b20e-2721ec8797cb")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 304.8)
+			(xy 276.86 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a0e7066-6f8d-5651-b355-4d351e993982")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 276.86 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "88ec72f1-c6d7-5ad6-81e2-3601c99c873e")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 355.59999999999997 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "21059f48-0a5a-565c-b0ea-059214263623")
+		(property "Reference" "TP15"
+			(at 345.43999999999994 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 345.43999999999994 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 355.59999999999997 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.59999999999997 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 355.59999999999997 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 355.59999999999997 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a6043f7-51df-5520-9df1-bc29b0464aca")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 304.8)
+			(xy 355.6 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb47f93f-2f54-54cd-8f00-8a100764f703")
+	)
+	(global_label "PRED"
+		(shape bidirectional)
+		(at 355.6 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "2b618a81-aa5b-5f60-8e15-e13e6a9e656f")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 434.34 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "c23d39dd-fee6-5cb7-a79a-32ad7ba41c56")
+		(property "Reference" "TP16"
+			(at 424.17999999999995 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 424.17999999999995 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 434.34 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 434.34 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 434.34 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 434.34 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e59aece5-ba69-5b44-aa4a-21d97dea6b1f")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 304.8)
+			(xy 434.34 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0215ceef-500a-5f25-867e-6905e4afd1e9")
+	)
+	(global_label "THRESHOLD"
+		(shape bidirectional)
+		(at 434.34 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "b3ba7837-8db2-5f1d-a6bb-bc6ad24fd0d8")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 513.0799999999999 304.8 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "979dfea7-676b-5ef8-9ed5-400606031d25")
+		(property "Reference" "TP2"
+			(at 502.9199999999999 303.53000000000003 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 502.9199999999999 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 513.0799999999999 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.0799999999999 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 513.0799999999999 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 513.0799999999999 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c01e6fb6-0dbe-5c98-82d4-48e5db0537b0")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 304.8)
+			(xy 513.08 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1df2942c-1f1a-5fd0-8b51-1d993a5d12dc")
+	)
+	(global_label "V_HIGH"
+		(shape bidirectional)
+		(at 513.08 309.88 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "87d06f7c-64ed-5353-917e-b8102bb7a908")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "92b8baf4-3ce0-5465-8330-b738fbf7604d")
+		(property "Reference" "TP3"
+			(at 30.48 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 30.48 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 40.64 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 40.64 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46c0b30d-76d9-5efa-8f79-bc305a744a8a")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 355.59999999999997)
+			(xy 40.64 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dd2d078-5090-546d-a622-f387e82eb0e3")
+	)
+	(global_label "V_MID_H1"
+		(shape bidirectional)
+		(at 40.64 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "6604576b-319b-560c-ab8e-bbc2cf077d97")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 119.38 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0ea658b-c05b-525b-8901-5a867a8f1d5c")
+		(property "Reference" "TP4"
+			(at 109.22 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 109.22 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 119.38 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 119.38 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 119.38 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "61d59ccc-2191-564a-a31f-6e84dcea6bdc")
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 355.59999999999997)
+			(xy 119.38 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3074888f-f3fb-52ce-8553-e52752a2ebdb")
+	)
+	(global_label "V_MID_H2"
+		(shape bidirectional)
+		(at 119.38 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "aa9fe983-7186-5690-9c5e-135910fc461a")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 198.12 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "89e493e2-a412-58a4-99f4-0d1795ca1e05")
+		(property "Reference" "TP5"
+			(at 187.96 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 187.96 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 198.12 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 198.12 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 198.12 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ecf626cf-180a-5c25-a82e-83dd471a8286")
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 355.59999999999997)
+			(xy 198.12 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fbf0fa4-4847-5c16-97ee-bb4d18809acc")
+	)
+	(global_label "V_MID_PUMP"
+		(shape bidirectional)
+		(at 198.12 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "d976a529-4ff9-520f-b89c-f3513b83bf7b")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 276.85999999999996 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "974e051f-d525-5ba4-a0d3-a718b4853073")
+		(property "Reference" "TP6"
+			(at 266.69999999999993 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 266.69999999999993 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 276.85999999999996 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.85999999999996 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 276.85999999999996 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 276.85999999999996 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f2bcc647-c16d-51b3-9875-f85995491445")
+		)
+	)
+	(wire
+		(pts
+			(xy 276.85999999999996 355.59999999999997)
+			(xy 276.86 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63d085c2-57df-5d56-b787-52f87441765d")
+	)
+	(global_label "H1"
+		(shape bidirectional)
+		(at 276.86 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "7005538a-afe9-56fd-a52c-6e2ff65f7b08")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 355.59999999999997 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f7c2319-b3d6-5511-93a5-69fe9daee376")
+		(property "Reference" "TP7"
+			(at 345.43999999999994 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 345.43999999999994 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 355.59999999999997 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.59999999999997 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 355.59999999999997 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 355.59999999999997 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "abe679b0-ed57-546a-83e3-75aeb0a81c58")
+		)
+	)
+	(wire
+		(pts
+			(xy 355.59999999999997 355.59999999999997)
+			(xy 355.6 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63b41d1d-b672-58a0-9562-8db90f1753fa")
+	)
+	(global_label "H2"
+		(shape bidirectional)
+		(at 355.6 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "3a2b7d3c-b4b0-540b-b590-5291b53f4e8c")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 434.34 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "598c917c-6952-5e8a-8f5f-a968b3bc5d61")
+		(property "Reference" "TP8"
+			(at 424.17999999999995 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 424.17999999999995 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 434.34 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 434.34 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 434.34 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 434.34 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c3ed47e-4bca-5b12-a22e-acf8472d2d06")
+		)
+	)
+	(wire
+		(pts
+			(xy 434.34 355.59999999999997)
+			(xy 434.34 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d95dc29-494a-5fba-ba45-e8a9771d0212")
+	)
+	(global_label "DAC_OUTA"
+		(shape bidirectional)
+		(at 434.34 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "392817a0-adb2-58c7-ad9f-78b581631108")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 513.0799999999999 355.59999999999997 0)
+		(unit 1)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "948a7df2-b23c-5b1b-9e70-7014092f5d4e")
+		(property "Reference" "TP9"
+			(at 502.9199999999999 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 502.9199999999999 356.86999999999995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 513.0799999999999 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.0799999999999 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PCB copper feature (no component)"
+			(at 513.0799999999999 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 513.0799999999999 355.59999999999997 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0348e5de-c81e-5278-a402-c10666a9dd4f")
+		)
+	)
+	(wire
+		(pts
+			(xy 513.0799999999999 355.59999999999997)
+			(xy 513.08 360.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbcc33f9-2fb5-5ca4-9179-567dce6eb764")
+	)
+	(global_label "DAC_OUTB"
+		(shape bidirectional)
+		(at 513.08 360.68 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "1f1b93d1-da7e-548e-aaff-b6f362f8efae")
+	)
+	(text "Buffered measurement and classifier — see docs/ee-review.md for equations, limits and sources."
+		(at 20 15 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "cc847402-e6d1-5be9-b0e4-7410a2cdd75d")
+	)
+	(text "PRED = V_MID_PUMP + YP_BUF - YN_BUF. Nominal threshold: 0.02969 * supply above V_MID; DC hysteresis ~31 mV at 5V."
+		(at 20 23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f3e652ba-91f5-5d21-b11f-c208262c9234")
+	)
+)

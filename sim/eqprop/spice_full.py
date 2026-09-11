@@ -1,12 +1,13 @@
 """Full-circuit SPICE netlist generator with hardware non-idealities.
 
-Models the complete analog signal path as it exists on the PCB:
+DC approximation of the revision B analog core. Does not prove stability,
+startup, protection, ADC acquisition, offset drift, or assembly correctness. Includes:
   - Voltage dividers generating V_LOW, V_HIGH, V_MID references
-  - Op-amp buffers (MCP6004 rail-to-rail, LM324 limited swing)
-  - CD4053B analog mux on-resistance (100 ohm typical)
-  - Weight resistors (1.21k series + variable pot)
+  - Op-amp buffers (TLV906x rail-to-rail, generic DC model)
+  - TMUX1133 analog mux on-resistance (2 ohm typical)
+  - Weight resistors (2.49k series + variable pot)
   - BAT42 antiparallel diode pairs (activation functions)
-  - Howland current pumps (MCP6002 + 4x10k + 1M per pump)
+  - Howland current pumps (TLV9062 + balanced 1M/1M/1M/10k/20k network)
 
 Imports run_ngspice and parse_raw_file from spice.py (no duplication).
 """
@@ -25,7 +26,7 @@ def _lib_path():
     )
 
 
-def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0):
+def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=2.0):
     """Generate a full-circuit SPICE netlist including hardware non-idealities.
 
     Args:
@@ -34,7 +35,7 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
         inputs: Voltages for fixed (clamped) nodes.
         nudge: Optional current injection array (length n_free).
             When None, Howland pumps are included with DAC at midpoint (zero current).
-        mux_resistance: CD4053B on-resistance in ohms (default 100).
+        mux_resistance: TMUX1133 on-resistance in ohms (default 2).
 
     Returns:
         SPICE netlist as a string.
@@ -57,9 +58,9 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     ]
 
     # ── Voltage dividers + op-amp buffers ───────────────────────
-    # V_LOW: 33k/8.2k divider from VCC → ~0.995V, buffered by MCP6004
-    # V_HIGH: 8.2k/33k divider from VCC → ~4.005V, buffered by MCP6004
-    # V_MID: 10k/10k divider from VCC → 2.5V, buffered by LM324 (x3)
+    # V_LOW: 33k/8.2k divider from VCC → ~0.995V, buffered by TLV9064
+    # V_HIGH: 8.2k/33k divider from VCC → ~4.005V, buffered by TLV9064
+    # V_MID: 10k/10k divider from VCC → 2.5V, buffered by TLV9064 (x3)
     lines += [
         "* Voltage reference dividers",
         "R_div_low_hi vcc vlow_div 33000",
@@ -70,21 +71,21 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
         "R_div_mid_lo vmid_div 0 10000",
         "",
         "* Op-amp buffers (voltage followers)",
-        "* MCP6004 rail-to-rail: V_LOW and V_HIGH",
+        "* TLV9064 rail-to-rail: V_LOW and V_HIGH",
         "X_buf_vlow vlow_div vlow vcc 0 vlow opamp_rr",
         "X_buf_vhigh vhigh_div vhigh vcc 0 vhigh opamp_rr",
-        "* LM324 limited swing: V_MID for H1, H2, and Howland pump",
-        "X_buf_vmid_h1 vmid_div vmid_h1 vcc 0 vmid_h1 opamp_lm324",
-        "X_buf_vmid_h2 vmid_div vmid_h2 vcc 0 vmid_h2 opamp_lm324",
-        "X_buf_vmid_pump vmid_div vmid_pump vcc 0 vmid_pump opamp_lm324",
+        "* TLV9064 rail-to-rail: V_MID for H1, H2, and Howland pump",
+        "X_buf_vmid_h1 vmid_div vmid_h1 vcc 0 vmid_h1 opamp_rr",
+        "X_buf_vmid_h2 vmid_div vmid_h2 vcc 0 vmid_h2 opamp_rr",
+        "X_buf_vmid_pump vmid_div vmid_pump vcc 0 vmid_pump opamp_rr",
         "",
     ]
 
-    # ── CD4053B mux: route input voltages ───────────────────────
+    # ── TMUX1133 mux: route input voltages ───────────────────────
     # The mux selects between vlow and vhigh for each input node.
     # Each mux output has on-resistance in series.
     # Input encoding: V_LOW ≈ 1.0V = LOW, V_HIGH ≈ 4.0V = HIGH
-    lines.append("* CD4053B mux routing (on-resistance models)")
+    lines.append("* TMUX1133 mux routing (on-resistance models)")
 
     # Map input node indices to which buffer they connect to
     # Nodes 0-3 are X1, X1c, X2, X2c — routed through mux
@@ -139,17 +140,17 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
 
     # ── Howland current pumps ───────────────────────────────────
     # Always included. DAC voltage controls nudge current:
-    #   I_out = (V_dac - V_MID) / R_SET = (V_dac - 2.5) / 1e6
+    #   I_out = (V_dac - V_MID) * 2e-6 = (V_dac - 2.5) / 500000
     # Free phase: V_dac = 2.5V → I_out = 0
-    lines.append("* Howland current pumps (MCP6002 + precision resistors)")
+    lines.append("* Howland current pumps (TLV9062 + precision resistors)")
 
     if nudge is not None and np.any(nudge != 0):
         # Compute DAC voltages from nudge currents
         # nudge[2] = current into YP, nudge[3] = current into YN
         i_yp = nudge[net.output_pos_idx] if len(nudge) > net.output_pos_idx else 0.0
         i_yn = nudge[net.output_neg_idx] if len(nudge) > net.output_neg_idx else 0.0
-        v_dac_a = i_yp * 1e6 + 2.5  # I = (V_dac - 2.5) / 1M
-        v_dac_b = i_yn * 1e6 + 2.5
+        v_dac_a = i_yp * 500000 + 2.5  # I = (V_dac - 2.5) / 500k
+        v_dac_b = i_yn * 500000 + 2.5
     else:
         v_dac_a = 2.5
         v_dac_b = 2.5
@@ -157,11 +158,11 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     # Pump A → YP node
     lines += [
         f"V_DAC_A dac_a 0 {v_dac_a}",
-        "R_H1 dac_a pump_a_inp 10000",
+        "R_H1 dac_a pump_a_inp 1e6",
         "R_SET_A pump_a_inp yp 1e6",
         "R_H2 vmid_pump pump_a_inn 10000",
-        "R_H3 pump_a_out pump_a_inn 10000",
-        "R_H4 pump_a_out yp 10000",
+        "R_H3 pump_a_out pump_a_inn 20000",
+        "R_H4 pump_a_out yp 1e6",
         "X_pump_a pump_a_inp pump_a_inn vcc 0 pump_a_out opamp_rr",
         "",
     ]
@@ -169,11 +170,11 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     # Pump B → YN node
     lines += [
         f"V_DAC_B dac_b 0 {v_dac_b}",
-        "R_H5 dac_b pump_b_inp 10000",
+        "R_H5 dac_b pump_b_inp 1e6",
         "R_SET_B pump_b_inp yn 1e6",
         "R_H6 vmid_pump pump_b_inn 10000",
-        "R_H7 pump_b_out pump_b_inn 10000",
-        "R_H8 pump_b_out yn 10000",
+        "R_H7 pump_b_out pump_b_inn 20000",
+        "R_H8 pump_b_out yn 1e6",
         "X_pump_b pump_b_inp pump_b_inn vcc 0 pump_b_out opamp_rr",
         "",
     ]
@@ -195,7 +196,7 @@ def generate_full_netlist(net, weights, inputs, nudge=None, mux_resistance=100.0
     return "\n".join(lines)
 
 
-def run_full_simulation(net, weights, inputs, nudge=None, mux_resistance=100.0):
+def run_full_simulation(net, weights, inputs, nudge=None, mux_resistance=2.0):
     """Generate full-circuit netlist, run ngspice, return voltages.
 
     Returns:

@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "EqProp")(type "KiCad")(uri "${KIPRJMOD}/EqProp.pretty")(options "")(descr "USB connector silk adapted for board edge")))

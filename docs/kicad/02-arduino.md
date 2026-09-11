@@ -1,82 +1,19 @@
-# Section 2: Arduino Nano
+# Revision B.1: arduino
 
-## Component
+Use the native hierarchical schematic. Older wiring instructions do not apply to this revision. See [design](../design.md) and [bring-up](../bring-up.md).
 
-| Ref | Component | KiCad Symbol |
-|-----|-----------|-------------|
-| U3 | Arduino Nano v3.x | `MCU_Module:Arduino_Nano_v3.x` |
+| Reference | Value / MPN | Pin-to-net map |
+|---|---|---|
+| D_GRN1 | Green low-current 3mm / WP710A10LZGCK | 1=D_GRN1_K, 2=D_GRN1_A |
+| R_SW1 | 10k / CRCW080510K0FKEA | 1=MUX_A, 2=SW1_B |
+| R_SW2 | 10k / CRCW080510K0FKEA | 1=MUX_B, 2=SW2_B |
+| SW1 | SW_SPDT / EG1271A | 1=+5V, 2=SW1_B, 3=GND |
+| D_GRN2 | Green low-current 3mm / WP710A10LZGCK | 1=D_GRN2_K, 2=D_GRN2_A |
+| U3 | Arduino_Nano_v3.x / A000005 | 4=GND, 5=MUX_A, 6=MUX_B, 7=CS_POT1, 8=CS_POT2, 9=CS_POT3, 10=CS_POT4, 11=CS_POT5, 12=CS_DAC, 13=CS_POT6, 14=SPI_MOSI, 15=SPI_MISO, 16=SPI_SCK, 19=X1, 20=X2, 21=CS_POT7, 22=CS_POT8, 23=I2C_SDA, 24=I2C_SCL, 25=LEARN_BUTTON, 27=+5V, 29=GND |
+| SW2 | SW_SPDT / EG1271A | 1=+5V, 2=SW2_B, 3=GND |
+| D_PWR1 | Green low-current 3mm / WP710A10LZGCK | 1=GND, 2=D_PWR1_A |
 
-## Power Connections
+| SW3 | LEARN / STOP / B3U-1000P | 1=LEARN_BUTTON, 2=GND |
+| R_BUTTON1 | 2.2k / CRCW08052K20FKEA | 1=+5V, 2=LEARN_BUTTON |
 
-- 5V pin → `+5V` (board powers the Nano through this pin)
-- GND pins (there are 2) → `GND`
-- VIN → leave unconnected (not used; board power comes via 5V pin)
-
-Note: The Arduino's own USB port is only used for serial monitoring and firmware upload
-during training. The board's USB-C provides the actual 5V power to the circuit.
-
-## Pin Assignments — All Net Labels
-
-| Arduino Pin | KiCad Pin Name | Net Label | Direction | Function |
-|-------------|---------------|-----------|-----------|----------|
-| D2 | D2 | `MUX_A` | OUTPUT | CD4053 control A (X1/X1_comp select) |
-| D3 | D3 | `MUX_B` | OUTPUT | CD4053 control B (X2/X2_comp select) |
-| D4 | D4 | `CS_POT1` | OUTPUT | MCP4251 #1 CS (W1, W2) |
-| D5 | D5 | `CS_POT2` | OUTPUT | MCP4251 #2 CS (W3, W4) |
-| D6 | D6 | `CS_POT3` | OUTPUT | MCP4251 #3 CS (W5, W6) |
-| D7 | D7 | `CS_POT4` | OUTPUT | MCP4251 #4 CS (W7, W8) |
-| D8 | D8 | `CS_POT5` | OUTPUT | MCP4251 #5 CS (W9, W10) |
-| D9 | D9 | `CS_DAC` | OUTPUT | MCP4822 CS |
-| D10 | D10 | `CS_POT6` | OUTPUT | MCP4251 #6 CS (W11, W12) |
-| D11 | D11 | `SPI_MOSI` | OUTPUT | SPI MOSI (shared bus) |
-| D12 | D12 | `SPI_MISO` | INPUT | SPI MISO (shared bus) |
-| D13 | D13 | `SPI_SCK` | OUTPUT | SPI SCK (shared bus) |
-| A0 | A0 | `X1` | ANALOG IN | X1 voltage measurement (connects to X1 mux output net) |
-| A1 | A1 | `X2` | ANALOG IN | X2 voltage measurement (connects to X2 mux output net) |
-| A2 | A2 | `CS_POT7` | OUTPUT | MCP4251 #7 CS (W13, W14) |
-| A3 | A3 | `CS_POT8` | OUTPUT | MCP4251 #8 CS (W15, W16) |
-| A4 | A4 | `I2C_SDA` | BIDIR | ADS1115 SDA |
-| A5 | A5 | `I2C_SCL` | BIDIR | ADS1115 SCL |
-
-## Unused Pins
-
-- D0, D1 — Serial TX/RX (reserved for USB serial, leave unconnected on PCB)
-- A6, A7 — Spare analog inputs (leave unconnected)
-- AREF — leave unconnected
-- RST — leave unconnected (has internal pull-up)
-
-## CS Pull-Up Resistors
-
-Each CS line gets a 10kΩ pull-up to `+5V`. This ensures all SPI devices are
-deselected during Arduino reset/boot (CS is active LOW).
-
-| Resistor | From | To |
-|----------|------|----|
-| R_PU1 (10kΩ) | `CS_POT1` | `+5V` |
-| R_PU2 (10kΩ) | `CS_POT2` | `+5V` |
-| R_PU3 (10kΩ) | `CS_POT3` | `+5V` |
-| R_PU4 (10kΩ) | `CS_POT4` | `+5V` |
-| R_PU5 (10kΩ) | `CS_POT5` | `+5V` |
-| R_PU6 (10kΩ) | `CS_POT6` | `+5V` |
-| R_PU7 (10kΩ) | `CS_POT7` | `+5V` |
-| R_PU8 (10kΩ) | `CS_POT8` | `+5V` |
-| R_PU9 (10kΩ) | `CS_DAC` | `+5V` |
-
-Total: 9x 10kΩ pull-up resistors.
-
-## Notes on KiCad Symbol
-
-The Arduino Nano v3.x symbol in KiCad is a single unit with all pins on one symbol.
-Pin names on the symbol should match standard Arduino naming (D0-D13, A0-A7, 5V, GND, VIN, etc.).
-Place the Arduino at the left side of the schematic, with signal nets radiating right toward
-the components they connect to.
-
-The symbol's footprint includes the full Nano module outline with dual-row pin headers.
-On the PCB, use female pin header sockets so the Nano is removable.
-
-## Sense Connections for X1/X2
-
-Arduino A0 and A1 connect directly to the `X1` and `X2` nets (the mux common outputs
-from Section 3). No separate net names needed — just label the wire from A0 as `X1`
-and from A1 as `X2`. The Arduino's ADC input impedance is ~100MΩ, so loading on
-the mux output is negligible.
+A6 is analog-only. See [button firmware contract](../usability-revision.md).

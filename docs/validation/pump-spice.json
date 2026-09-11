@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "channel": "A",
+      "dac": 2,
+      "load": 2.2,
+      "current_uA": -1.0000389988016318,
+      "expected_uA": -1.0,
+      "amp_output": 1.299961001198369
+    },
+    {
+      "channel": "A",
+      "dac": 2,
+      "load": 2.5,
+      "current_uA": -1.0000524983915964,
+      "expected_uA": -1.0,
+      "amp_output": 1.7499475016084034
+    },
+    {
+      "channel": "A",
+      "dac": 2,
+      "load": 2.8,
+      "current_uA": -1.0000659979968682,
+      "expected_uA": -1.0,
+      "amp_output": 2.1999340020031326
+    },
+    {
+      "channel": "A",
+      "dac": 2.5,
+      "load": 2.2,
+      "current_uA": -6.149811364097113e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.049938501886359
+    },
+    {
+      "channel": "A",
+      "dac": 2.5,
+      "load": 2.5,
+      "current_uA": -7.499768980748044e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.499925002310192
+    },
+    {
+      "channel": "A",
+      "dac": 2.5,
+      "load": 2.8,
+      "current_uA": -8.849735328699297e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.9499115026467138
+    },
+    {
+      "channel": "A",
+      "dac": 3,
+      "load": 2.2,
+      "current_uA": 0.9999160025590437,
+      "expected_uA": 1.0,
+      "amp_output": 2.799916002559044
+    },
+    {
+      "channel": "A",
+      "dac": 3,
+      "load": 2.5,
+      "current_uA": 0.9999025029246698,
+      "expected_uA": 1.0,
+      "amp_output": 3.2499025029246695
+    },
+    {
+      "channel": "A",
+      "dac": 3,
+      "load": 2.8,
+      "current_uA": 0.9998890033347033,
+      "expected_uA": 1.0,
+      "amp_output": 3.699889003334704
+    },
+    {
+      "channel": "B",
+      "dac": 2,
+      "load": 2.2,
+      "current_uA": -1.0000389988016318,
+      "expected_uA": -1.0,
+      "amp_output": 1.299961001198369
+    },
+    {
+      "channel": "B",
+      "dac": 2,
+      "load": 2.5,
+      "current_uA": -1.0000524983915964,
+      "expected_uA": -1.0,
+      "amp_output": 1.7499475016084034
+    },
+    {
+      "channel": "B",
+      "dac": 2,
+      "load": 2.8,
+      "current_uA": -1.0000659979968682,
+      "expected_uA": -1.0,
+      "amp_output": 2.1999340020031326
+    },
+    {
+      "channel": "B",
+      "dac": 2.5,
+      "load": 2.2,
+      "current_uA": -6.149811364097113e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.049938501886359
+    },
+    {
+      "channel": "B",
+      "dac": 2.5,
+      "load": 2.5,
+      "current_uA": -7.499768980748044e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.499925002310192
+    },
+    {
+      "channel": "B",
+      "dac": 2.5,
+      "load": 2.8,
+      "current_uA": -8.849735328699297e-05,
+      "expected_uA": 0.0,
+      "amp_output": 2.9499115026467138
+    },
+    {
+      "channel": "B",
+      "dac": 3,
+      "load": 2.2,
+      "current_uA": 0.9999160025590437,
+      "expected_uA": 1.0,
+      "amp_output": 2.799916002559044
+    },
+    {
+      "channel": "B",
+      "dac": 3,
+      "load": 2.5,
+      "current_uA": 0.9999025029246698,
+      "expected_uA": 1.0,
+      "amp_output": 3.2499025029246695
+    },
+    {
+      "channel": "B",
+      "dac": 3,
+      "load": 2.8,
+      "current_uA": 0.9998890033347033,
+      "expected_uA": 1.0,
+      "amp_output": 3.699889003334704
+    }
+  ],
+  "scope": "DC finite-gain model; no AC stability or physical-device validation"
+}

@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 import numpy as np
-from scipy.optimize import root
+from scipy.optimize import root, least_squares
 
 from .diode import DiodeParams, BAT42, diode_current_into
 
@@ -11,11 +11,21 @@ from .diode import DiodeParams, BAT42, diode_current_into
 @dataclass(frozen=True)
 class WeightParams:
     """Physical constraints of the weight resistors (MCP4251-104 digital pots)."""
-    R_series: float = 1210.0    # Series protection resistor (ohm) — 1.21kΩ E96
-    R_min: float = 1600.0       # Tap 256: 390 wiper + 1210 series
-    R_max: float = 101210.0     # Tap 1: 100k + 1210 series
-    N_taps: int = 256           # MCP4251 tap positions
-    R_pot_full: float = 100000.0  # Full-scale pot resistance (ohm)
+    # MCP4251 DS22060B: 256 resistor segments, 257 wiper positions;
+    # 75 ohm typical wiper resistance. PCB ties W to B, so the tail shunts RW.
+    # https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf
+    R_series: float = 2490.0
+    N_taps: int = 256
+    R_pot_full: float = 100000.0
+    R_wiper: float = 75.0
+
+    @property
+    def R_min(self):
+        return self.tap_to_resistance(self.N_taps)
+
+    @property
+    def R_max(self):
+        return self.tap_to_resistance(0)
 
     @property
     def G_min(self):
@@ -26,15 +36,16 @@ class WeightParams:
         return 1.0 / self.R_min
 
     def resistance_to_tap(self, r):
-        """Map continuous resistance to nearest MCP4251 tap (1..N_taps)."""
-        r_pot = r - self.R_series
-        tap = round((self.R_pot_full - r_pot) * self.N_taps / self.R_pot_full)
-        return int(np.clip(tap, 1, self.N_taps))
+        """Nearest nominal resistance, including the tied W/B terminal circuit."""
+        return min(range(self.N_taps + 1), key=lambda t: abs(self.tap_to_resistance(t) - r))
 
     def tap_to_resistance(self, tap):
-        """Map MCP4251 tap position to exact resistance."""
-        r_pot = self.R_pot_full * (1.0 - tap / self.N_taps)
-        return r_pot + self.R_series
+        """Nominal two-terminal resistance; device tolerance needs calibration."""
+        if not 0 <= tap <= self.N_taps:
+            raise ValueError("MCP4251 tap must be in 0..256")
+        tail = self.R_pot_full * tap / self.N_taps
+        shunt = self.R_wiper * tail / (self.R_wiper + tail)
+        return self.R_series + self.R_pot_full - tail + shunt
 
     def quantize_weights(self, weights):
         """Round-trip weights through hardware tap positions.
@@ -182,4 +193,28 @@ def solve_network(net, inputs, weights, nudge=None, x0=None):
         x0 = resistive_initial_guess(net, inputs, weights)
 
     sol = root(kcl, x0, method='hybr', tol=1e-12)
+    # Numerical acceptance budget, not a hardware specification: 0.1 nA
+    # corresponds to 10 uV across 100 kohm, below one ADS1115 LSB at
+    # +/-4.096 V (125 uV; TI ADS1115 datasheet, full-scale-range table).
+    # MINPACK can report stalled progress at an accurate root, so evaluate
+    # physical KCL directly instead of trusting only its success flag.
+    residual = kcl(sol.x)
+    if not np.all(np.isfinite(residual)) or np.max(np.abs(residual)) > 1e-10:
+        # A resistor-only seed can lie deep in exponential diode conduction.
+        # Restart near each diode reference with a trust-region least-squares
+        # solve. Express residuals in microamps for numerical conditioning;
+        # acceptance still uses the original KCL in amperes below.
+        seed = resistive_initial_guess(net, inputs, weights)
+        for idx, reference in net.diode_nodes.items():
+            seed[idx] = reference
+        sol = least_squares(lambda v: kcl(v) / 1e-6, seed,
+                            x_scale='jac', ftol=1e-12, xtol=1e-12,
+                            gtol=1e-12, max_nfev=200)
+        residual = kcl(sol.x)
+    if (not np.all(np.isfinite(sol.x))
+            or not np.all(np.isfinite(residual))
+            or np.max(np.abs(residual)) > 1e-10):
+        raise RuntimeError(
+            f"Equilibrium failed KCL check: {sol.message}; residual={residual} A"
+        )
     return sol.x

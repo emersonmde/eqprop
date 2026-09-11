@@ -1,0 +1,1275 @@
+(kicad_sch
+	(version 20250114)
+	(generator eeschema)
+	(generator_version "9.0")
+	(uuid "a39ef86d-7ed2-551a-a8c1-ec048a6a31b4")
+	(paper "A3")
+	(title_block
+		(title "Hidden-node activation")
+		(date "2026-09-10")
+		(rev "B.1")
+	)
+	(lib_symbols
+		(symbol "Diode:BAT42"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(symbol "BAT42_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635)
+						(xy -1.905 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+						(xy -0.635 -1.27)
+						(xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BAT42_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BAT42"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/85660/bat42.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "30V 0.2A Small Signal Schottky Diode, DO-35"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?35*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BAT42")
+		(at 40.64 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "101950d0-f8bf-51f2-8770-2e042a7dcdeb")
+		(property "Reference" "D1"
+			(at 40.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT42W-G3-08"
+			(at 40.64 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/86405/bat42w-g.pdf"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAT42W-G3-08"
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 40.64 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79b98e39-8c3d-5bf8-bfd5-a19b37734355")
+		)
+		(pin "2"
+			(uuid "d77f6f89-d449-5435-9a43-26da4ea63537")
+		)
+	)
+	(wire
+		(pts
+			(xy 36.83 50.8)
+			(xy 26.67 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d66bfb0-b94f-5669-a15a-d8cbb3f41860")
+	)
+	(global_label "D1_K"
+		(shape bidirectional)
+		(at 26.67 50.8 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "412efde2-1e6b-51ce-be8c-493f95b8e3a4")
+	)
+	(wire
+		(pts
+			(xy 44.45 50.8)
+			(xy 54.61 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79725bd4-80b2-5344-989c-ae31590a608c")
+	)
+	(global_label "H1"
+		(shape bidirectional)
+		(at 54.61 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "07aa0cb6-5bec-5614-be0f-521c323ed6ae")
+	)
+	(symbol
+		(lib_id "Diode:BAT42")
+		(at 137.16 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51bab4d3-fef6-5e37-9806-ce7d0a496954")
+		(property "Reference" "D2"
+			(at 137.16 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT42W-G3-08"
+			(at 137.16 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 137.16 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/86405/bat42w-g.pdf"
+			(at 137.16 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAT42W-G3-08"
+			(at 137.16 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 137.16 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7c29a8d4-3113-50ee-984a-8fc31e5df407")
+		)
+		(pin "2"
+			(uuid "09554ab0-b0f8-5313-b69e-96352bbb51f2")
+		)
+	)
+	(wire
+		(pts
+			(xy 133.35 50.8)
+			(xy 123.19 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09689a04-cf0c-53cb-9403-38f478c277e2")
+	)
+	(global_label "D2_K"
+		(shape bidirectional)
+		(at 123.19 50.8 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "fa86453a-8a03-54fa-bb9e-3aa8fca55f8a")
+	)
+	(wire
+		(pts
+			(xy 140.97 50.8)
+			(xy 151.13 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "045da2e8-932c-5652-a9b3-a0d408806d81")
+	)
+	(global_label "V_MID_H1"
+		(shape bidirectional)
+		(at 151.13 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "0bf7a001-0117-537d-97dc-37081f0469c5")
+	)
+	(symbol
+		(lib_id "Diode:BAT42")
+		(at 233.68 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9256d6f5-353e-571a-9a17-568971a9ac54")
+		(property "Reference" "D3"
+			(at 233.68 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT42W-G3-08"
+			(at 233.68 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 233.68 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/86405/bat42w-g.pdf"
+			(at 233.68 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAT42W-G3-08"
+			(at 233.68 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 233.68 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a7784888-3ca1-5a28-91f8-ce7e8ee33dc5")
+		)
+		(pin "2"
+			(uuid "6ecbe1e8-1393-550d-b28e-453627c7f3bd")
+		)
+	)
+	(wire
+		(pts
+			(xy 229.87 50.8)
+			(xy 219.71 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da67e842-7fa6-574d-b82b-ed5c27884b46")
+	)
+	(global_label "D3_K"
+		(shape bidirectional)
+		(at 219.71 50.8 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "f33ca8ff-5a58-564f-96c0-1be53d585006")
+	)
+	(wire
+		(pts
+			(xy 237.49 50.8)
+			(xy 247.65 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bd78764-cbc6-5ce6-a663-3f3f78d95b4b")
+	)
+	(global_label "H2"
+		(shape bidirectional)
+		(at 247.65 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "49fa1102-e6e6-5950-a23d-ff46a5024311")
+	)
+	(symbol
+		(lib_id "Diode:BAT42")
+		(at 330.2 50.8 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aed88d3d-dfc3-519a-98e5-b2665646ec21")
+		(property "Reference" "D4"
+			(at 330.2 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT42W-G3-08"
+			(at 330.2 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 330.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/86405/bat42w-g.pdf"
+			(at 330.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BAT42W-G3-08"
+			(at 330.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" ""
+			(at 330.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "843f89e6-c51f-56e1-aec1-ec78dacb2da3")
+		)
+		(pin "2"
+			(uuid "b6e30b14-40b4-581b-9208-b4a5688508e3")
+		)
+	)
+	(wire
+		(pts
+			(xy 326.39 50.8)
+			(xy 316.23 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eadd22ad-801b-5e63-b622-b65d4814a61b")
+	)
+	(global_label "D4_K"
+		(shape bidirectional)
+		(at 316.23 50.8 180)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "82e01949-28a1-5377-9c47-32b0e0798aa2")
+	)
+	(wire
+		(pts
+			(xy 334.01 50.8)
+			(xy 344.17 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68b4e0d5-fd10-5328-afe4-da6792504e27")
+	)
+	(global_label "V_MID_H2"
+		(shape bidirectional)
+		(at 344.17 50.8 0)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "e3b152f0-6ce9-5c73-941d-8c6df3665d05")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 93.97999999999999 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab052479-70a9-5e96-91a5-168a6e87cfdb")
+		(property "Reference" "R16"
+			(at 30.48 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 30.48 95.24999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 40.64 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 40.64 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08050000Z0EA"
+			(at 40.64 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 40.64 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c48ccc5-db9a-5f53-9582-b2e469058c03")
+		)
+		(pin "2"
+			(uuid "9c7a8046-5245-5f59-9de6-94940e475653")
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 90.16999999999999)
+			(xy 40.64 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "973827f7-5b4b-5bf1-a551-64753d75e341")
+	)
+	(global_label "D1_K"
+		(shape bidirectional)
+		(at 40.64 85.09 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "e3f16575-e5c5-5f2e-9549-ab107340f4bd")
+	)
+	(wire
+		(pts
+			(xy 40.64 97.78999999999999)
+			(xy 40.64 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9e6c8ee-7438-5d8f-a2a2-9b86162c61d0")
+	)
+	(global_label "V_MID_H1"
+		(shape bidirectional)
+		(at 40.64 102.87 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "b8a69898-0349-5e88-b11a-2a8c45976758")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 137.16 93.97999999999999 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "725e3c2e-9533-5983-8bb1-5e00271d9836")
+		(property "Reference" "R17"
+			(at 127.0 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 127.0 95.24999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 137.16 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 137.16 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08050000Z0EA"
+			(at 137.16 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 137.16 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c8ed176-1030-52b5-bb40-ca5d9a4eb0f3")
+		)
+		(pin "2"
+			(uuid "69631bc8-d146-54f1-b3d1-3d90d6f21dc3")
+		)
+	)
+	(wire
+		(pts
+			(xy 137.16 90.16999999999999)
+			(xy 137.16 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "176c9676-b9c5-544c-b7bf-f275f2d6f29e")
+	)
+	(global_label "H1"
+		(shape bidirectional)
+		(at 137.16 85.09 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "cbd8b6ff-6a82-50b9-bf68-a98b50881d55")
+	)
+	(wire
+		(pts
+			(xy 137.16 97.78999999999999)
+			(xy 137.16 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "293aa692-d315-5e50-8a35-88b48a031c47")
+	)
+	(global_label "D2_K"
+		(shape bidirectional)
+		(at 137.16 102.87 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "f0366fa7-a430-5288-9a01-e3a2b543edc1")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 233.68 93.97999999999999 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1fb13187-d237-5edf-879c-2dda0d701b56")
+		(property "Reference" "R18"
+			(at 223.52 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 223.52 95.24999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 233.68 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 233.68 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08050000Z0EA"
+			(at 233.68 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 233.68 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "914019f4-4671-5be7-9f5b-ba57daeb7b19")
+		)
+		(pin "2"
+			(uuid "a0d2a5ea-5957-574a-a342-023e3b34b6cc")
+		)
+	)
+	(wire
+		(pts
+			(xy 233.68 90.16999999999999)
+			(xy 233.68 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d541c9a-8a16-5ec1-a398-4a6f929a9dc5")
+	)
+	(global_label "H2"
+		(shape bidirectional)
+		(at 233.68 85.09 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "52ee52f6-0469-5f73-8da0-babe7eb46df0")
+	)
+	(wire
+		(pts
+			(xy 233.68 97.78999999999999)
+			(xy 233.68 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daf4b9de-7d12-56f2-8fdc-c54a27470210")
+	)
+	(global_label "D4_K"
+		(shape bidirectional)
+		(at 233.68 102.87 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "3f7ce423-0d9c-5954-a560-c50395c39398")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 330.2 93.97999999999999 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f697473c-6162-52d8-8b26-04dab9a963ef")
+		(property "Reference" "R19"
+			(at 320.03999999999996 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 320.03999999999996 95.24999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 330.2 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 330.2 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CRCW08050000Z0EA"
+			(at 330.2 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "Jumper"
+			(at 330.2 93.97999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "eqprop-xor"
+				(path "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee2fe7ba-0ea7-59f7-bb2b-073728c13f29")
+		)
+		(pin "2"
+			(uuid "4a664bab-3425-5bdd-906a-d75d960ab9ca")
+		)
+	)
+	(wire
+		(pts
+			(xy 330.2 90.16999999999999)
+			(xy 330.2 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3c68f43-7e09-59e7-99fd-102d17d89770")
+	)
+	(global_label "D3_K"
+		(shape bidirectional)
+		(at 330.2 85.09 90)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "48f7d839-eb15-534b-a10b-9ed25a699d46")
+	)
+	(wire
+		(pts
+			(xy 330.2 97.78999999999999)
+			(xy 330.2 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2789a777-7979-5879-9419-b1c4ea108ec9")
+	)
+	(global_label "V_MID_H2"
+		(shape bidirectional)
+		(at 330.2 102.87 270)
+		(fields_autoplaced)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left)
+		)
+		(uuid "e42dcbc2-6d18-578a-9df0-541b7b9fffc2")
+	)
+	(text "Hidden-node activation — see docs/ee-review.md for equations, limits and sources."
+		(at 20 15 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "3790c292-7bd1-5883-9144-e0d3468544ed")
+	)
+)

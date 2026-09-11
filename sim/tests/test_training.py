@@ -113,7 +113,7 @@ class TestQuantization:
         wp = net.weight_params
         _, taps = wp.quantize_weights(result.weights)
         for direction in (+2, -2):
-            shifted_taps = [int(np.clip(t + direction, 1, wp.N_taps)) for t in taps]
+            shifted_taps = [int(np.clip(t + direction, 0, wp.N_taps)) for t in taps]
             shifted_weights = np.array([wp.tap_to_resistance(t) for t in shifted_taps])
             for inputs, target in XOR_DATASET:
                 v = solve_network(net, inputs, shifted_weights)

@@ -23,3 +23,12 @@ fp-info-cache
 # IDE / tools
 .claude/
 .vscode/
+
+# KiCad recovery files (native design files remain versioned)
+_autosave-*.kicad_pcb
+_autosave-*.kicad_sch
+
+# Reproducible local environments and manufacturing exports
+.venv/
+build/
+.DS_Store

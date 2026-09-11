@@ -153,3 +153,36 @@ class TestNudgeSlope:
 
         ratio = (vn[2] - v0[2]) / (vn[0] - v0[0])
         assert abs(ratio - 4.0) < 0.5, f"Nudge ratio {ratio:.2f}, expected ~4.0"
+
+
+@pytest.mark.parametrize("candidate", [[0.0], [float("nan")]])
+def test_rejects_invalid_solver_equilibrium(monkeypatch, candidate):
+    """A solver status cannot certify voltages that violate circuit laws."""
+    from types import SimpleNamespace
+    monkeypatch.setattr("eqprop.network.root", lambda *a, **k:
+                        SimpleNamespace(x=np.array(candidate), success=True,
+                                        message="injected solver result"))
+    monkeypatch.setattr("eqprop.network.least_squares", lambda *a, **k:
+                        SimpleNamespace(x=np.array(candidate), success=True,
+                                        message="injected fallback result"))
+    net = Network(n_fixed=2, n_free=1, connections=[(0, 2), (1, 2)])
+    with pytest.raises(RuntimeError, match="KCL"):
+        solve_network(net, [1.0, 3.0], [10000.0, 10000.0])
+
+
+def test_accepts_accurate_root_despite_progress_warning(monkeypatch):
+    from types import SimpleNamespace
+    monkeypatch.setattr("eqprop.network.root", lambda *a, **k:
+                        SimpleNamespace(x=np.array([2.0]), success=False,
+                                        message="stalled progress"))
+    net = Network(n_fixed=2, n_free=1, connections=[(0, 2), (1, 2)])
+    assert solve_network(net, [1.0, 3.0], [10000.0, 10000.0])[0] == 2.0
+
+
+def test_stalled_primary_solver_recovers_physical_equilibrium(monkeypatch):
+    from types import SimpleNamespace
+    monkeypatch.setattr("eqprop.network.root", lambda *a, **k:
+                        SimpleNamespace(x=np.array([0.0]), success=False,
+                                        message="stalled"))
+    net = Network(n_fixed=2, n_free=1, connections=[(0, 2), (1, 2)])
+    assert solve_network(net, [1.0, 3.0], [10000.0, 10000.0])[0] == pytest.approx(2.0)

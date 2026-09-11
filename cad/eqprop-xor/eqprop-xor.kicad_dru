@@ -1,0 +1,7 @@
+(version 1)
+# GCT USB4085 vendor land pattern: 0.85 mm pitch, 0.70 mm pads.
+# PCBWay standard 1 oz capability: 0.10 mm copper spacing.
+# https://gct.co/connector/usb4085 ; https://www.pcbway.com/capabilities.html
+(rule "USB4085 internal pad spacing"
+ (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('J1') && B.memberOfFootprint('J1')")
+ (constraint clearance (min 0.15mm)))

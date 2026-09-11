@@ -1,0 +1,3254 @@
+{
+  "R17": {
+    "ref": "R17",
+    "value": "0",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      127.0,
+      96.5
+    ],
+    "nets": {
+      "1": "H1",
+      "2": "D2_K"
+    },
+    "sheet": "activation",
+    "tolerance": "Jumper",
+    "mpn": "CRCW08050000Z0EA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0 ohm jumper; see manufacturer current rating",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/725e3c2e-9533-5983-8bb1-5e00271d9836",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W5": {
+    "ref": "R_W5",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      145.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U8_P0A",
+      "2": "X2"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/56ccb4a9-4517-58a8-96e2-38df05d4b899",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W4": {
+    "ref": "R_W4",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      122.0,
+      94.0
+    ],
+    "nets": {
+      "1": "X1_COMP",
+      "2": "U7_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/8d2ccb9f-6f94-5596-adfd-64f2c9c973dd",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP3": {
+    "ref": "TP3",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      116.0,
+      102.0
+    ],
+    "nets": {
+      "1": "V_MID_H1"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/92b8baf4-3ce0-5465-8330-b738fbf7604d"
+  },
+  "R_W3": {
+    "ref": "R_W3",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      130.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U7_P0A",
+      "2": "X1_COMP"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/3704f432-f50e-5449-b491-1e7e160631f8",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W9": {
+    "ref": "R_W9",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      175.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U10_P0A",
+      "2": "V_LOW"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/a8b6c20b-7832-5d73-9384-16e006c30bbf",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U6": {
+    "ref": "U6",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      111.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT1",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U6_P1A",
+      "8": "U6_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/e5b784c4-8ada-591e-92a4-14dd5abb3243",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C22": {
+    "ref": "C22",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      146.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/b9a6d0c6-c6f0-5a11-8b94-a59fbc553a3a",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H1": {
+    "ref": "R_H1",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      173.0,
+      117.0
+    ],
+    "nets": {
+      "1": "DAC_OUTA",
+      "2": "U15A_P"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/cdc14f3b-2d27-5fee-a6d5-0671be783edd",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H6": {
+    "ref": "R_H6",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      190.0,
+      112.0
+    ],
+    "nets": {
+      "1": "V_MID_PUMP",
+      "2": "U15B_N"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080510K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/de516cc9-dde2-5a92-965c-befe8cbfddb2",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C8": {
+    "ref": "C8",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      134.0,
+      56.5
+    ],
+    "nets": {
+      "1": "V_HIGH_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/6ada37a0-0a3c-5755-8f65-fc607c2bdd86",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP1": {
+    "ref": "TP1",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      111.0,
+      71.0
+    ],
+    "nets": {
+      "1": "V_LOW"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/d0d7f1f3-679f-5bdf-bad9-aa23e34089a9"
+  },
+  "D_GRN1": {
+    "ref": "D_GRN1",
+    "value": "Green low-current 3mm",
+    "fp": "LED_THT:LED_D3.0mm",
+    "xy": [
+      109.0,
+      121.0
+    ],
+    "nets": {
+      "1": "D_GRN1_K",
+      "2": "D_GRN1_A"
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "WP710A10LZGCK",
+    "datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf",
+    "symbol": "Device:LED",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/d145020e-af07-5e55-891a-0e6745250bba",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "R_LED_G1": {
+    "ref": "R_LED_G1",
+    "value": "2.2k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      115.0,
+      123.0
+    ],
+    "nets": {
+      "1": "D_GRN1_A",
+      "2": "+5V"
+    },
+    "sheet": "measurement",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K20FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/00503433-3931-53ba-8a2b-c7ccc2733b9d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U10": {
+    "ref": "U10",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      171.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT5",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U10_P1A",
+      "8": "U10_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/b8044c4f-7a59-57c2-8b7e-0ab5725ececa",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H5": {
+    "ref": "R_H5",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      189.0,
+      119.0
+    ],
+    "nets": {
+      "1": "DAC_OUTB",
+      "2": "U15B_P"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/501a8da2-77df-5772-896f-6e20ca1da9c8",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C12": {
+    "ref": "C12",
+    "value": "10uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      111.0,
+      101.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "C0805C106K8PACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU",
+    "rating": "10%, X5R, 10V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/0a33fefc-3567-56d5-80e5-ef61222058e9",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP11": {
+    "ref": "TP11",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      164.0,
+      100.0
+    ],
+    "nets": {
+      "1": "YN"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/f3be3c93-5c47-5536-b4da-22c9536740f8"
+  },
+  "R_W14": {
+    "ref": "R_W14",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      134.0,
+      96.5
+    ],
+    "nets": {
+      "1": "H1",
+      "2": "U12_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/777b2b57-1781-595c-b000-9e7848a6b5e1",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C13": {
+    "ref": "C13",
+    "value": "10uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      183.0,
+      93.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "C0805C106K8PACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU",
+    "rating": "10%, X5R, 10V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/2aa41efb-2a55-5ccd-a9ea-c31087e0001d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP9": {
+    "ref": "TP9",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      191.0,
+      104.0
+    ],
+    "nets": {
+      "1": "DAC_OUTB"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/948a7df2-b23c-5b1b-9e70-7014092f5d4e"
+  },
+  "U1": {
+    "ref": "U1",
+    "value": "TLV9064IDR",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      142.0,
+      66.0
+    ],
+    "nets": {
+      "1": "V_LOW",
+      "2": "V_LOW",
+      "3": "V_LOW_RAW",
+      "4": "+5V",
+      "5": "V_HIGH_RAW",
+      "6": "V_HIGH",
+      "7": "V_HIGH",
+      "8": "PRED",
+      "9": "PRED_MINUS",
+      "10": "PRED_PLUS",
+      "11": "GND",
+      "12": "V_MID_RAW",
+      "13": "PARK_U1",
+      "14": "PARK_U1"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "TLV9064IDR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tlv9064.pdf",
+    "symbol": "Amplifier_Operational:TLV9064",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/e2c83fda-4df9-534a-82fc-07b7149a2985",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D2": {
+    "ref": "D2",
+    "value": "BAT42W-G3-08",
+    "fp": "Diode_SMD:D_SOD-123",
+    "xy": [
+      128.5,
+      100.0
+    ],
+    "nets": {
+      "1": "D2_K",
+      "2": "V_MID_H1"
+    },
+    "sheet": "activation",
+    "tolerance": "",
+    "mpn": "BAT42W-G3-08",
+    "datasheet": "https://www.vishay.com/docs/86405/bat42w-g.pdf",
+    "symbol": "Diode:BAT42",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/51bab4d3-fef6-5e37-9806-ce7d0a496954",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W7": {
+    "ref": "R_W7",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      160.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U9_P0A",
+      "2": "X2_COMP"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/0376eb85-fec3-5d10-b286-20eaccbf5b7f",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U8": {
+    "ref": "U8",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      141.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT3",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U8_P1A",
+      "8": "U8_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/2e1c116a-1636-53e6-b79b-5b9ced41f4c9",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C17": {
+    "ref": "C17",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      165.55,
+      109.05
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/c43ac153-b199-56e4-ace1-d7f2637a7e6a",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_SW1": {
+    "ref": "R_SW1",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      110.5,
+      133.0
+    ],
+    "nets": {
+      "1": "MUX_A",
+      "2": "SW1_B"
+    },
+    "sheet": "io",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/4b023946-fab9-5d52-a9c8-a01870ee44ed",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R20": {
+    "ref": "R20",
+    "value": "4.7k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      168.0,
+      104.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "I2C_SDA"
+    },
+    "sheet": "measurement",
+    "tolerance": "1%",
+    "mpn": "CRCW08054K70FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/8edeec88-e295-57d8-8f22-d510f131d42c",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_SW2": {
+    "ref": "R_SW2",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      123.0,
+      133.0
+    ],
+    "nets": {
+      "1": "MUX_B",
+      "2": "SW2_B"
+    },
+    "sheet": "io",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/7a9f4615-7d08-5f25-99e5-e2b7031b3c2b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "SW1": {
+    "ref": "SW1",
+    "value": "SW_SPDT",
+    "fp": "Button_Switch_THT:SW_E-Switch_EG1271_SPDT",
+    "xy": [
+      110.0,
+      126.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "SW1_B",
+      "3": "GND",
+      "4": "",
+      "5": "",
+      "6": ""
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "EG1271A",
+    "datasheet": "https://www.e-switch.com/wp-content/uploads/2022/06/EG.pdf",
+    "symbol": "Switch:SW_SPDT",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/4df0bcac-e37f-56f2-9f42-547a2b6336e6",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "TP10": {
+    "ref": "TP10",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      163.0,
+      97.5
+    ],
+    "nets": {
+      "1": "YP"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/516da25d-d1db-5898-ac5c-b53e48197857"
+  },
+  "R14": {
+    "ref": "R14",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      150.0,
+      99.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT8"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/160ec6a4-1811-5e8e-8382-3240046afc5b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_CC2": {
+    "ref": "R_CC2",
+    "value": "5.1k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      192.0,
+      134.0
+    ],
+    "nets": {
+      "1": "J1_CC2",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "1%",
+    "mpn": "CRCW08055K10FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/dead96a1-e602-5e6b-ba9a-2756a7812ea4",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R18": {
+    "ref": "R18",
+    "value": "0",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      132.5,
+      106.0
+    ],
+    "nets": {
+      "1": "H2",
+      "2": "D4_K"
+    },
+    "sheet": "activation",
+    "tolerance": "Jumper",
+    "mpn": "CRCW08050000Z0EA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0 ohm jumper; see manufacturer current rating",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/1fb13187-d237-5edf-879c-2dda0d701b56",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C4": {
+    "ref": "C4",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      113.0,
+      106.0
+    ],
+    "nets": {
+      "1": "V_MID_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/81843921-e07c-5489-87db-bd14da5ca71b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R15": {
+    "ref": "R15",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      181.0,
+      100.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_DAC"
+    },
+    "sheet": "nudge",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/d8e8a07c-5d93-59fc-bf91-e90d914342f6",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U13": {
+    "ref": "U13",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      155.0,
+      103.0
+    ],
+    "nets": {
+      "1": "CS_POT8",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "YN",
+      "6": "YN",
+      "7": "U13_P1A",
+      "8": "U13_P0A",
+      "9": "YP",
+      "10": "YP",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/0ed1740e-f536-58cf-8974-0213a9192bac",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U5": {
+    "ref": "U5",
+    "value": "TMUX1133PWR",
+    "fp": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+    "xy": [
+      127.0,
+      63.0
+    ],
+    "nets": {
+      "1": "V_LOW",
+      "2": "V_HIGH",
+      "3": "GND",
+      "4": "GND",
+      "5": "GND",
+      "6": "GND",
+      "7": "GND",
+      "8": "GND",
+      "9": "GND",
+      "10": "MUX_B",
+      "11": "MUX_A",
+      "12": "V_HIGH",
+      "13": "V_LOW",
+      "14": "X1_COMP",
+      "15": "X2_COMP",
+      "16": "+5V"
+    },
+    "sheet": "inputs",
+    "tolerance": "",
+    "mpn": "TMUX1133PWR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tmux1133.pdf",
+    "symbol": "EqProp:TMUX1133",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/87bd17ed-7bbd-5bc1-a9b3-2761425d30ce/f122bc4e-71a7-5ab1-ba26-c821a009f923",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R5": {
+    "ref": "R5",
+    "value": "8.2k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      130.0,
+      54.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "V_HIGH_RAW"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08058K20BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/58e58560-3480-55b2-96f7-04d217363e6f",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R1": {
+    "ref": "R1",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      109.0,
+      105.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "V_MID_RAW"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080510K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/8df3678e-1ba0-5fcf-9e20-aa21e24b19ea",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R19": {
+    "ref": "R19",
+    "value": "0",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      128.0,
+      108.0
+    ],
+    "nets": {
+      "1": "D3_K",
+      "2": "V_MID_H2"
+    },
+    "sheet": "activation",
+    "tolerance": "Jumper",
+    "mpn": "CRCW08050000Z0EA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0 ohm jumper; see manufacturer current rating",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/f697473c-6162-52d8-8b26-04dab9a963ef",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C21": {
+    "ref": "C21",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      131.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/072993d5-e712-572f-b7a8-0f36daaa13fd",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U12": {
+    "ref": "U12",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      138.0,
+      103.0
+    ],
+    "nets": {
+      "1": "CS_POT7",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "YN",
+      "6": "YN",
+      "7": "U12_P1A",
+      "8": "U12_P0A",
+      "9": "YP",
+      "10": "YP",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/09582699-c587-5bb7-9b03-cba30a5d06e5",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W6": {
+    "ref": "R_W6",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      137.0,
+      94.0
+    ],
+    "nets": {
+      "1": "X2",
+      "2": "U8_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/4fdaa6bd-7063-5e85-aae3-2d4900f3276d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C11": {
+    "ref": "C11",
+    "value": "1nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      156.0,
+      113.0
+    ],
+    "nets": {
+      "1": "H2_ADC",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "C0805C102J5GACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
+    "rating": "5%, C0G, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/00b7c66e-9d00-5a89-b310-e7360d09cbf1",
+    "assembly_notes": "Top-side SMD"
+  },
+  "J1": {
+    "ref": "J1",
+    "value": "USB_C_Receptacle_USB2.0_14P",
+    "fp": "EqProp:USB4085_Edge",
+    "xy": [
+      197.0,
+      131.64
+    ],
+    "nets": {
+      "A1": "GND",
+      "A4": "VBUS",
+      "A5": "J1_CC1",
+      "A6": "",
+      "A7": "",
+      "A8": "",
+      "A9": "VBUS",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "VBUS",
+      "B5": "J1_CC2",
+      "B6": "",
+      "B7": "",
+      "B8": "",
+      "B9": "VBUS",
+      "B12": "GND",
+      "S1": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "USB4085-GF-A",
+    "datasheet": "https://gct.co/connector/usb4085",
+    "symbol": "Connector:USB_C_Receptacle_USB2.0_14P",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/05d04bdf-5178-55fc-ae10-72ae022a18bb",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "R11": {
+    "ref": "R11",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      167.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT5"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/72c5f1f1-4124-5840-99c0-2a369144cede",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W10": {
+    "ref": "R_W10",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      167.0,
+      94.0
+    ],
+    "nets": {
+      "1": "V_LOW",
+      "2": "U10_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/66450d6c-cf53-5e70-b340-2ee8d381b0f7",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C23": {
+    "ref": "C23",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      161.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/17551f23-47c2-5db3-837a-7ceb75fff66c",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C10": {
+    "ref": "C10",
+    "value": "1nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      160.5,
+      106.0
+    ],
+    "nets": {
+      "1": "H1_ADC",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "C0805C102J5GACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
+    "rating": "5%, C0G, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/b9dd2e76-8ce6-56cb-aa4c-00d2da08a047",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C19": {
+    "ref": "C19",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      132.2625,
+      59.775
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "inputs",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/87bd17ed-7bbd-5bc1-a9b3-2761425d30ce/920708c7-14dc-5c4d-8e5f-6bac3a297f7b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H3": {
+    "ref": "R_H3",
+    "value": "20k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      177.0,
+      110.0
+    ],
+    "nets": {
+      "1": "R_H3_1",
+      "2": "U15A_N"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080520K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/bae2804b-ab5d-5c74-a5ef-46383871a15a",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP8": {
+    "ref": "TP8",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      182.0,
+      104.0
+    ],
+    "nets": {
+      "1": "DAC_OUTA"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/598c917c-6952-5e8a-8f5f-a968b3bc5d61"
+  },
+  "U11": {
+    "ref": "U11",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      186.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT6",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U11_P1A",
+      "8": "U11_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/99b0c73f-b8c3-5572-93d4-c8c7207c201d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C3": {
+    "ref": "C3",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      114.625,
+      110.05
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/86abd35e-8b42-5637-a0e5-9911f8c30fdf",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U15": {
+    "ref": "U15",
+    "value": "TLV9062IDR",
+    "fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "xy": [
+      181.0,
+      115.0
+    ],
+    "nets": {
+      "1": "R_H3_1",
+      "2": "U15A_N",
+      "3": "U15A_P",
+      "4": "GND",
+      "5": "U15B_P",
+      "6": "U15B_N",
+      "7": "R_H7_1",
+      "8": "+5V"
+    },
+    "sheet": "nudge",
+    "tolerance": "",
+    "mpn": "TLV9062IDR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tlv9062.pdf",
+    "symbol": "Amplifier_Operational:TLV9062xD",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/7111bc3e-7195-5c90-9bff-baa3e9be3d17",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R4": {
+    "ref": "R4",
+    "value": "8.2k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      126.0,
+      54.0
+    ],
+    "nets": {
+      "1": "V_LOW_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08058K20BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/027d4c8b-72d5-54ca-aa1e-fc64b5345a25",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R12": {
+    "ref": "R12",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      182.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT6"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/8613f7f3-7463-5ead-a9cc-213722f6c3a7",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H4": {
+    "ref": "R_H4",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      177.0,
+      124.0
+    ],
+    "nets": {
+      "1": "R_H3_1",
+      "2": "YP"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/0651c03c-02d3-51d7-8500-d4d5b7f9a1ea",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R7": {
+    "ref": "R7",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      107.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT1"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/eb9df3a7-2321-5e1a-828d-70359a400c74",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP6": {
+    "ref": "TP6",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      135.0,
+      109.0
+    ],
+    "nets": {
+      "1": "H1"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/974e051f-d525-5ba4-a0d3-a718b4853073"
+  },
+  "C15": {
+    "ref": "C15",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      186.375,
+      112.145
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "nudge",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/3f9f90a9-d169-5d7c-a1d0-4aa6e2c7cc7a",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C14": {
+    "ref": "C14",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      160.375,
+      98.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "nudge",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/ada9b8f2-ee1c-5e9d-8fdb-374b8feb36b6",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C25": {
+    "ref": "C25",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      191.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/861c9647-e7d9-55d7-80f1-dd881be6662e",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U2": {
+    "ref": "U2",
+    "value": "TLV9064IDR",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      120.0,
+      111.0
+    ],
+    "nets": {
+      "1": "V_MID_H1",
+      "2": "V_MID_H1",
+      "3": "V_MID_RAW",
+      "4": "+5V",
+      "5": "V_MID_RAW",
+      "6": "V_MID_H2",
+      "7": "V_MID_H2",
+      "8": "V_MID_PUMP",
+      "9": "V_MID_PUMP",
+      "10": "V_MID_RAW",
+      "11": "GND",
+      "12": "V_MID_RAW",
+      "13": "PARK_U2",
+      "14": "PARK_U2"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "TLV9064IDR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tlv9064.pdf",
+    "symbol": "Amplifier_Operational:TLV9064",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/b73e8f25-d124-5c19-8df3-511d5c918dcd",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C2": {
+    "ref": "C2",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      136.625,
+      65.05
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/c0f01c4c-8e3d-5a6c-88f2-53120a43d467",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C7": {
+    "ref": "C7",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      156.375,
+      53.145
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/3eafce1d-d0e3-5d02-8326-bed4c73a5a24",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C5": {
+    "ref": "C5",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      142.625,
+      117.05
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/82523bed-5b16-5be6-8397-b7e6379afddd",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C20": {
+    "ref": "C20",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      116.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/248b5f7f-0256-51be-abea-d6fd42ebf5e0",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_LED_R1": {
+    "ref": "R_LED_R1",
+    "value": "2.2k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      104.5,
+      112.0
+    ],
+    "nets": {
+      "1": "D_GRN2_A",
+      "2": "+5V"
+    },
+    "sheet": "measurement",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K20FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/b74466b9-1f72-5e80-871a-fa2c1d656e7b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_LED1": {
+    "ref": "R_LED1",
+    "value": "1k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      197.5,
+      116.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "D_PWR1_A"
+    },
+    "sheet": "power",
+    "tolerance": "1%",
+    "mpn": "CRCW08051K00FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/3dda3bd4-9981-557d-a255-88d021035e72",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W13": {
+    "ref": "R_W13",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      142.0,
+      111.0
+    ],
+    "nets": {
+      "1": "U12_P0A",
+      "2": "H1"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/ca9239f8-da4e-5cc3-9104-d1999fd1a3bf",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H2": {
+    "ref": "R_H2",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      173.0,
+      111.0
+    ],
+    "nets": {
+      "1": "V_MID_PUMP",
+      "2": "U15A_N"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080510K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/7e5e0486-8b87-5890-88ab-6a94a81e3056",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R16": {
+    "ref": "R16",
+    "value": "0",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      132.5,
+      99.5
+    ],
+    "nets": {
+      "1": "D1_K",
+      "2": "V_MID_H1"
+    },
+    "sheet": "activation",
+    "tolerance": "Jumper",
+    "mpn": "CRCW08050000Z0EA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0 ohm jumper; see manufacturer current rating",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/ab052479-70a9-5e96-91a5-168a6e87cfdb",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H7": {
+    "ref": "R_H7",
+    "value": "20k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      186.0,
+      108.0
+    ],
+    "nets": {
+      "1": "R_H7_1",
+      "2": "U15B_N"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080520K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/14b5b9aa-493e-53cc-863e-67abec7d4641",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP5": {
+    "ref": "TP5",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      126.0,
+      116.0
+    ],
+    "nets": {
+      "1": "V_MID_PUMP"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/89e493e2-a412-58a4-99f4-0d1795ca1e05"
+  },
+  "U16": {
+    "ref": "U16",
+    "value": "ADS1115IDGSR",
+    "fp": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+    "xy": [
+      161.0,
+      110.0
+    ],
+    "nets": {
+      "1": "GND",
+      "2": "",
+      "3": "GND",
+      "4": "H1_ADC",
+      "5": "H2_ADC",
+      "6": "YP_ADC",
+      "7": "YN_ADC",
+      "8": "+5V",
+      "9": "I2C_SDA",
+      "10": "I2C_SCL"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "ADS1115IDGSR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/ads1115.pdf",
+    "symbol": "Analog_ADC:ADS1115IDGS",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/ef17975d-9098-50fa-a3d9-7f89ac1ec3fc",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R13": {
+    "ref": "R13",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      134.0,
+      93.5
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT7"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/4e47d6eb-0bac-5890-996b-b9eb88e1da63",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_CC1": {
+    "ref": "R_CC1",
+    "value": "5.1k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      192.0,
+      130.0
+    ],
+    "nets": {
+      "1": "GND",
+      "2": "J1_CC1"
+    },
+    "sheet": "power",
+    "tolerance": "1%",
+    "mpn": "CRCW08055K10FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/e7f537d3-e732-505f-8868-1493fd2aa44d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R21": {
+    "ref": "R21",
+    "value": "4.7k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      168.0,
+      101.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "I2C_SCL"
+    },
+    "sheet": "measurement",
+    "tolerance": "1%",
+    "mpn": "CRCW08054K70FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/6e827383-4820-515c-8582-0a37462e6f9b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP7": {
+    "ref": "TP7",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      135.0,
+      113.0
+    ],
+    "nets": {
+      "1": "H2"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/6f7c2319-b3d6-5511-93a5-69fe9daee376"
+  },
+  "C26": {
+    "ref": "C26",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      143.375,
+      98.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/dde90746-1db1-52ca-89b9-f7b333edd8c0",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U9": {
+    "ref": "U9",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      156.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT4",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U9_P1A",
+      "8": "U9_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/2f1155e6-5ef6-5bdf-9505-adc06a0d13b8",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D3": {
+    "ref": "D3",
+    "value": "BAT42W-G3-08",
+    "fp": "Diode_SMD:D_SOD-123",
+    "xy": [
+      123.0,
+      104.0
+    ],
+    "nets": {
+      "1": "D3_K",
+      "2": "H2"
+    },
+    "sheet": "activation",
+    "tolerance": "",
+    "mpn": "BAT42W-G3-08",
+    "datasheet": "https://www.vishay.com/docs/86405/bat42w-g.pdf",
+    "symbol": "Diode:BAT42",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/9256d6f5-353e-571a-9a17-568971a9ac54",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C18": {
+    "ref": "C18",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      118.2625,
+      59.775
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "inputs",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/87bd17ed-7bbd-5bc1-a9b3-2761425d30ce/92126f83-78a4-5438-9997-3fc650e5effb",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D_GRN2": {
+    "ref": "D_GRN2",
+    "value": "Green low-current 3mm",
+    "fp": "LED_THT:LED_D3.0mm",
+    "xy": [
+      109.0,
+      114.0
+    ],
+    "nets": {
+      "1": "D_GRN2_K",
+      "2": "D_GRN2_A"
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "WP710A10LZGCK",
+    "datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf",
+    "symbol": "Device:LED",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/b9848f7d-decc-57e3-a6c2-d48d850dd222",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "R8": {
+    "ref": "R8",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      122.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT2"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/d76747fb-5eda-5bf3-af3d-63d39e616da1",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C9": {
+    "ref": "C9",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      192.5,
+      121.0
+    ],
+    "nets": {
+      "1": "USB_PROTECTED",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/299eeddf-61cc-55d2-bf6b-99f1ca097304",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U14": {
+    "ref": "U14",
+    "value": "MCP4822-E/SN",
+    "fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "xy": [
+      186.0,
+      99.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_DAC",
+      "3": "SPI_SCK",
+      "4": "SPI_MOSI",
+      "5": "GND",
+      "6": "DAC_OUTB",
+      "7": "GND",
+      "8": "DAC_OUTA"
+    },
+    "sheet": "nudge",
+    "tolerance": "",
+    "mpn": "MCP4822-E/SN",
+    "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf",
+    "symbol": "Analog_DAC:MCP4822",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/feec88a3-4028-54ad-b17f-c641583c1d49",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R9": {
+    "ref": "R9",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      137.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT3"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/0fcb452b-bdd6-5753-b498-97a572a6435c",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP4": {
+    "ref": "TP4",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      117.0,
+      120.0
+    ],
+    "nets": {
+      "1": "V_MID_H2"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/b0ea658b-c05b-525b-8901-5a867a8f1d5c"
+  },
+  "R_W12": {
+    "ref": "R_W12",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      179.0,
+      93.0
+    ],
+    "nets": {
+      "1": "V_HIGH",
+      "2": "U11_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/667edea4-40e2-55bf-941a-3fa35ce4a8b5",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W8": {
+    "ref": "R_W8",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      152.0,
+      94.0
+    ],
+    "nets": {
+      "1": "X2_COMP",
+      "2": "U9_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/2828dfc8-108d-5777-bf5a-d15df4d7e358",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D4": {
+    "ref": "D4",
+    "value": "BAT42W-G3-08",
+    "fp": "Diode_SMD:D_SOD-123",
+    "xy": [
+      128.5,
+      104.0
+    ],
+    "nets": {
+      "1": "D4_K",
+      "2": "V_MID_H2"
+    },
+    "sheet": "activation",
+    "tolerance": "",
+    "mpn": "BAT42W-G3-08",
+    "datasheet": "https://www.vishay.com/docs/86405/bat42w-g.pdf",
+    "symbol": "Diode:BAT42",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/aed88d3d-dfc3-519a-98e5-b2665646ec21",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R2": {
+    "ref": "R2",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      109.0,
+      109.0
+    ],
+    "nets": {
+      "1": "V_MID_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080510K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/be09ca10-f9b4-5862-8d31-03b000e77871",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U3": {
+    "ref": "U3",
+    "value": "Arduino_Nano_v3.x",
+    "fp": "Module:Arduino_Nano",
+    "xy": [
+      162.0,
+      72.5
+    ],
+    "nets": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "GND",
+      "5": "MUX_A",
+      "6": "MUX_B",
+      "7": "CS_POT1",
+      "8": "CS_POT2",
+      "9": "CS_POT3",
+      "10": "CS_POT4",
+      "11": "CS_POT5",
+      "12": "CS_DAC",
+      "13": "CS_POT6",
+      "14": "SPI_MOSI",
+      "15": "SPI_MISO",
+      "16": "SPI_SCK",
+      "17": "",
+      "18": "",
+      "19": "X1",
+      "20": "X2",
+      "21": "CS_POT7",
+      "22": "CS_POT8",
+      "23": "I2C_SDA",
+      "24": "I2C_SCL",
+      "25": "LEARN_BUTTON",
+      "26": "",
+      "27": "+5V",
+      "28": "",
+      "29": "GND",
+      "30": ""
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "A000005",
+    "datasheet": "https://docs.arduino.cc/resources/datasheets/A000005-datasheet.pdf",
+    "symbol": "EqProp:Nano",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/3ebecd76-aab7-5f2f-b1e9-e021da5a0fb2",
+    "assembly_notes": "Fit after SMD reflow; solder module with headers"
+  },
+  "C6": {
+    "ref": "C6",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      134.0,
+      54.0
+    ],
+    "nets": {
+      "1": "V_LOW_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/add6b37a-5f06-5013-ba31-717027c67bbc",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U7": {
+    "ref": "U7",
+    "value": "MCP4251-104E/SL",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "xy": [
+      126.0,
+      85.0
+    ],
+    "nets": {
+      "1": "CS_POT2",
+      "2": "SPI_SCK",
+      "3": "SPI_MOSI",
+      "4": "GND",
+      "5": "H2",
+      "6": "H2",
+      "7": "U7_P1A",
+      "8": "U7_P0A",
+      "9": "H1",
+      "10": "H1",
+      "11": "+5V",
+      "12": "+5V",
+      "13": "SPI_MISO",
+      "14": "+5V"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "MCP4251-104E/SL",
+    "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf",
+    "symbol": "EqProp:MCP4251",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/1da406e9-bd81-5e26-8bf7-f8b73fbe4f2e",
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP2": {
+    "ref": "TP2",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "xy": [
+      127.0,
+      71.0
+    ],
+    "nets": {
+      "1": "V_HIGH"
+    },
+    "sheet": "measurement",
+    "tolerance": "",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/979dfea7-676b-5ef8-9ed5-400606031d25"
+  },
+  "R_W2": {
+    "ref": "R_W2",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      107.0,
+      94.0
+    ],
+    "nets": {
+      "1": "X1",
+      "2": "U6_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/c211b129-eeb8-5995-ae83-dd7d4f7c6c39",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R10": {
+    "ref": "R10",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      152.0,
+      77.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "CS_POT4"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/fe3ecc3a-ee2c-5f5b-af90-928c4f58276b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "SW2": {
+    "ref": "SW2",
+    "value": "SW_SPDT",
+    "fp": "Button_Switch_THT:SW_E-Switch_EG1271_SPDT",
+    "xy": [
+      123.0,
+      126.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "SW2_B",
+      "3": "GND",
+      "4": "",
+      "5": "",
+      "6": ""
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "EG1271A",
+    "datasheet": "https://www.e-switch.com/wp-content/uploads/2022/06/EG.pdf",
+    "symbol": "Switch:SW_SPDT",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/3e95e3ed-6c7d-543d-8340-f59b23a2aa50",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "R_W16": {
+    "ref": "R_W16",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      149.0,
+      108.0
+    ],
+    "nets": {
+      "1": "H2",
+      "2": "U13_P1A"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/9df1c38e-89c5-54d8-8784-abcbd992dbbc",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W1": {
+    "ref": "R_W1",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      115.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U6_P0A",
+      "2": "X1"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/e352c459-f56d-5fae-8928-d76815b4f577",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_SET_B1": {
+    "ref": "R_SET_B1",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      189.0,
+      122.0
+    ],
+    "nets": {
+      "1": "YN",
+      "2": "U15B_P"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/1e1ac822-1d2d-5ca5-8d28-9268fd1a3ff7",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U4": {
+    "ref": "U4",
+    "value": "TMUX1133PWR",
+    "fp": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+    "xy": [
+      113.0,
+      63.0
+    ],
+    "nets": {
+      "1": "V_HIGH",
+      "2": "V_LOW",
+      "3": "GND",
+      "4": "GND",
+      "5": "GND",
+      "6": "GND",
+      "7": "GND",
+      "8": "GND",
+      "9": "GND",
+      "10": "MUX_B",
+      "11": "MUX_A",
+      "12": "V_LOW",
+      "13": "V_HIGH",
+      "14": "X1",
+      "15": "X2",
+      "16": "+5V"
+    },
+    "sheet": "inputs",
+    "tolerance": "",
+    "mpn": "TMUX1133PWR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tmux1133.pdf",
+    "symbol": "EqProp:TMUX1133",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/87bd17ed-7bbd-5bc1-a9b3-2761425d30ce/fce65eeb-9bda-5740-8714-c82a41bf087d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C24": {
+    "ref": "C24",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      176.375,
+      80.24
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "weights",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/56c5f7e8-e690-5d55-913c-4e0128e93101",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W15": {
+    "ref": "R_W15",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      162.0,
+      103.0
+    ],
+    "nets": {
+      "1": "U13_P0A",
+      "2": "H2"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/c268b098-783d-54c9-9a1b-3bf2e179bc9b",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_SET_A1": {
+    "ref": "R_SET_A1",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      173.0,
+      121.0
+    ],
+    "nets": {
+      "1": "U15A_P",
+      "2": "YP"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/2fb83e17-4629-5ad2-9afc-7d6b6e1434fc",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R6": {
+    "ref": "R6",
+    "value": "33k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      138.0,
+      54.0
+    ],
+    "nets": {
+      "1": "V_HIGH_RAW",
+      "2": "GND"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080533K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/c17808db-70a2-5014-8ae8-2bca8010fc52",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C1": {
+    "ref": "C1",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      199.5,
+      124.5
+    ],
+    "nets": {
+      "1": "VBUS",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/8901fbca-f1f8-515a-a832-8ed3c9097a73",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_H8": {
+    "ref": "R_H8",
+    "value": "1M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      185.0,
+      127.0
+    ],
+    "nets": {
+      "1": "R_H7_1",
+      "2": "YN"
+    },
+    "sheet": "nudge",
+    "tolerance": "0.1%",
+    "mpn": "TNPW08051M00BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/593468b0-1b37-56c9-b00b-9e4f0688df5e",
+    "assembly_notes": "Top-side SMD"
+  },
+  "C16": {
+    "ref": "C16",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      180.625,
+      96.145
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "nudge",
+    "tolerance": "",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea/6a198450-6029-5b7c-937e-a3866d9560c2",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D_PWR1": {
+    "ref": "D_PWR1",
+    "value": "Green low-current 3mm",
+    "fp": "LED_THT:LED_D3.0mm",
+    "xy": [
+      200.0,
+      113.0
+    ],
+    "nets": {
+      "1": "GND",
+      "2": "D_PWR1_A"
+    },
+    "sheet": "io",
+    "tolerance": "",
+    "mpn": "WP710A10LZGCK",
+    "datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf",
+    "symbol": "Device:LED",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/abc5cb32-450c-540f-bcaa-73aee21e6953",
+    "assembly_notes": "Through-hole assembly"
+  },
+  "R3": {
+    "ref": "R3",
+    "value": "33k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      122.0,
+      54.0
+    ],
+    "nets": {
+      "1": "+5V",
+      "2": "V_LOW_RAW"
+    },
+    "sheet": "references",
+    "tolerance": "0.1%",
+    "mpn": "TNPW080533K0BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173/a479fe2e-71e3-55f7-b21f-4b67b2060682",
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_W11": {
+    "ref": "R_W11",
+    "value": "2.49k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "xy": [
+      190.0,
+      94.0
+    ],
+    "nets": {
+      "1": "U11_P0A",
+      "2": "V_HIGH"
+    },
+    "sheet": "weights",
+    "tolerance": "1%",
+    "mpn": "CRCW08052K49FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9/833075c3-18ae-5386-8146-7c926e323549",
+    "assembly_notes": "Top-side SMD"
+  },
+  "D1": {
+    "ref": "D1",
+    "value": "BAT42W-G3-08",
+    "fp": "Diode_SMD:D_SOD-123",
+    "xy": [
+      123.0,
+      100.0
+    ],
+    "nets": {
+      "1": "D1_K",
+      "2": "H1"
+    },
+    "sheet": "activation",
+    "tolerance": "",
+    "mpn": "BAT42W-G3-08",
+    "datasheet": "https://www.vishay.com/docs/86405/bat42w-g.pdf",
+    "symbol": "Diode:BAT42",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b/101950d0-f8bf-51f2-8770-2e042a7dcdeb",
+    "assembly_notes": "Top-side SMD"
+  },
+  "U17": {
+    "ref": "U17",
+    "value": "TLV9064IDR",
+    "fp": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+    "nets": {
+      "1": "H1_BUF",
+      "2": "H1_BUF",
+      "3": "H1",
+      "4": "+5V",
+      "5": "H2",
+      "6": "H2_BUF",
+      "7": "H2_BUF",
+      "8": "YP_BUF",
+      "9": "YP_BUF",
+      "10": "YP",
+      "11": "GND",
+      "12": "YN",
+      "13": "YN_BUF",
+      "14": "YN_BUF"
+    },
+    "sheet": "measurement",
+    "mpn": "TLV9064IDR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tlv9064.pdf",
+    "tolerance": "",
+    "symbol": "Amplifier_Operational:TLV9064",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/f671fd52-402b-56e8-b46c-86ceed9686ee",
+    "xy": [
+      148.0,
+      118.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_ADC1": {
+    "ref": "R_ADC1",
+    "value": "100",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "H1_BUF",
+      "2": "H1_ADC"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW0805100RFKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/b47781ba-5404-5917-9992-a3ad7de7dd64",
+    "xy": [
+      149.0,
+      105.5
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_ADC2": {
+    "ref": "R_ADC2",
+    "value": "100",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "H2_BUF",
+      "2": "H2_ADC"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW0805100RFKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/2f28e845-1abb-5571-91c1-baf7ae31261c",
+    "xy": [
+      154.0,
+      110.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_ADC3": {
+    "ref": "R_ADC3",
+    "value": "100",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "YP_BUF",
+      "2": "YP_ADC"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW0805100RFKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/e6fc2af9-56a7-56b9-b3f9-3ddec8999c82",
+    "xy": [
+      159.5,
+      116.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C27": {
+    "ref": "C27",
+    "value": "1nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "YP_ADC",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "C0805C102J5GACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
+    "tolerance": "",
+    "rating": "5%, C0G, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/230dacbf-736b-52ec-ad08-f27535db48d5",
+    "xy": [
+      163.0,
+      117.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_ADC4": {
+    "ref": "R_ADC4",
+    "value": "100",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "YN_BUF",
+      "2": "YN_ADC"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW0805100RFKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/df2be4dc-2f65-53b3-b097-d433b994b539",
+    "xy": [
+      169.0,
+      110.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C28": {
+    "ref": "C28",
+    "value": "1nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "YN_ADC",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "C0805C102J5GACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
+    "tolerance": "",
+    "rating": "5%, C0G, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/dcd33ef1-34bf-5f89-8b42-41ba98630833",
+    "xy": [
+      166.0,
+      113.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_D1": {
+    "ref": "R_D1",
+    "value": "100k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "YP_BUF",
+      "2": "PRED_PLUS"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW0805100KBEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/340d33bf-abf3-5281-9820-d6df0cbe24e5",
+    "xy": [
+      142.0,
+      73.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_D2": {
+    "ref": "R_D2",
+    "value": "100k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "V_MID_PUMP",
+      "2": "PRED_PLUS"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW0805100KBEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/5ae4cc1d-89d6-52b7-9d48-637182591d85",
+    "xy": [
+      148.0,
+      73.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_D3": {
+    "ref": "R_D3",
+    "value": "100k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "YN_BUF",
+      "2": "PRED_MINUS"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW0805100KBEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/06eaab95-d244-5bbd-b254-3ca5d1c060cb",
+    "xy": [
+      142.0,
+      77.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_D4": {
+    "ref": "R_D4",
+    "value": "100k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PRED",
+      "2": "PRED_MINUS"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW0805100KBEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/e03e22c4-40ed-5dd6-8482-f5da0964bae0",
+    "xy": [
+      148.0,
+      77.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_TH1": {
+    "ref": "R_TH1",
+    "value": "4.99k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "+5V",
+      "2": "THRESHOLD"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW08054K99BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/3a90a53f-33ad-5d21-a2a4-abc634e07688",
+    "xy": [
+      142.0,
+      53.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_TH2": {
+    "ref": "R_TH2",
+    "value": "5.62k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "THRESHOLD",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "TNPW08055K62BEEA",
+    "datasheet": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "tolerance": "0.1%",
+    "rating": "0.125 W minimum; 25 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/c9053583-7092-58b9-92a5-a5f4e0ab5bb2",
+    "xy": [
+      142.0,
+      56.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "U18": {
+    "ref": "U18",
+    "value": "TLV3202AIDR",
+    "fp": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+    "nets": {
+      "1": "D_GRN1_K",
+      "2": "PRED",
+      "3": "THRESHOLD_HYS",
+      "4": "GND",
+      "5": "V_MID_PUMP",
+      "6": "D_GRN1_K",
+      "7": "D_GRN2_K",
+      "8": "+5V"
+    },
+    "sheet": "measurement",
+    "mpn": "TLV3202AIDR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tlv3202.pdf",
+    "tolerance": "",
+    "symbol": "EqProp:TLV3202",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/61bd1bf4-15b9-57ba-b83b-8c5542c345f8",
+    "xy": [
+      151.0,
+      55.5
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "F1": {
+    "ref": "F1",
+    "value": "250mA PTC",
+    "fp": "Fuse:Fuse_1206_3216Metric",
+    "nets": {
+      "1": "VBUS",
+      "2": "VBUS_FUSED"
+    },
+    "sheet": "power",
+    "mpn": "MF-NSMF025X-2",
+    "datasheet": "https://www.bourns.com/docs/product-datasheets/mf-nsmf.pdf",
+    "tolerance": "",
+    "symbol": "Device:Polyfuse",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/fdaa4e8c-1ec3-52bd-8d5d-d60c4b8a2978",
+    "xy": [
+      202.0,
+      124.5
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "U19": {
+    "ref": "U19",
+    "value": "TPS22918DBVR",
+    "fp": "Package_TO_SOT_SMD:SOT-23-6",
+    "nets": {
+      "1": "USB_PROTECTED",
+      "2": "GND",
+      "3": "USB_PROTECTED",
+      "4": "SLEW_CT",
+      "5": "",
+      "6": "+5V"
+    },
+    "sheet": "power",
+    "mpn": "TPS22918DBVR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tps22918.pdf",
+    "tolerance": "",
+    "symbol": "EqProp:TPS22918",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/44952c2e-b5f5-5af8-b197-c0d1ce627773",
+    "xy": [
+      196.0,
+      124.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C29": {
+    "ref": "C29",
+    "value": "10nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "SLEW_CT",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "mpn": "C0805C103K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C103K5RACTU",
+    "tolerance": "",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/f5a2d200-f371-550e-b248-d1754ece1ff9",
+    "xy": [
+      192.5,
+      125.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C30": {
+    "ref": "C30",
+    "value": "10uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "+5V",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "mpn": "C0805C106K8PACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU",
+    "tolerance": "",
+    "rating": "10%, X5R, 10V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/fff8ac96-e2bd-506c-ad55-78f2e05451c2",
+    "xy": [
+      197.0,
+      128.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "TP12": {
+    "ref": "TP12",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "nets": {
+      "1": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "tolerance": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/5e687b71-66f3-5ca6-805a-a8f78ead9e80",
+    "xy": [
+      136.0,
+      118.0
+    ]
+  },
+  "TP13": {
+    "ref": "TP13",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "nets": {
+      "1": "+5V"
+    },
+    "sheet": "measurement",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "tolerance": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/e541d6cd-3965-5ca0-94a9-0429188887f7",
+    "xy": [
+      195.0,
+      117.0
+    ]
+  },
+  "TP14": {
+    "ref": "TP14",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "nets": {
+      "1": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "tolerance": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/c1ff23e3-3d21-5eeb-aa74-0fc759aaf4e3",
+    "xy": [
+      195.0,
+      120.0
+    ]
+  },
+  "TP15": {
+    "ref": "TP15",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "nets": {
+      "1": "PRED"
+    },
+    "sheet": "measurement",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "tolerance": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/21059f48-0a5a-565c-b0ea-059214263623",
+    "xy": [
+      150.0,
+      69.0
+    ]
+  },
+  "TP16": {
+    "ref": "TP16",
+    "value": "TestPoint",
+    "fp": "TestPoint:TestPoint_Pad_1.0x1.0mm",
+    "nets": {
+      "1": "THRESHOLD"
+    },
+    "sheet": "measurement",
+    "mpn": "PCB copper feature (no component)",
+    "datasheet": "",
+    "tolerance": "",
+    "symbol": "Connector:TestPoint",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/c23d39dd-fee6-5cb7-a79a-32ad7ba41c56",
+    "xy": [
+      145.5,
+      53.0
+    ]
+  },
+  "R_HYS1": {
+    "ref": "R_HYS1",
+    "value": "10k",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "THRESHOLD",
+      "2": "THRESHOLD_HYS"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW080510K0FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/33e5c286-f781-5259-ba2a-88100abfe692",
+    "xy": [
+      154.0,
+      62.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "R_HYS2": {
+    "ref": "R_HYS2",
+    "value": "2M",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "D_GRN1_K",
+      "2": "THRESHOLD_HYS"
+    },
+    "sheet": "measurement",
+    "mpn": "CRCW08052M00FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "tolerance": "1%",
+    "rating": "0.125 W; 100 ppm/K",
+    "symbol": "Device:R",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/35580a44-171f-51e7-85ea-161c04a5a52c",
+    "xy": [
+      154.0,
+      66.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C31": {
+    "ref": "C31",
+    "value": "100nF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "THRESHOLD",
+      "2": "GND"
+    },
+    "sheet": "measurement",
+    "mpn": "C0805C104K5RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+    "tolerance": "",
+    "rating": "10%, X7R, 50V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953/4607dbb7-bc5b-5e5b-8fca-8bf1de7c64af",
+    "xy": [
+      145.5,
+      57.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "U20": {
+    "ref": "U20",
+    "value": "LM66100DCKR",
+    "fp": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+    "nets": {
+      "1": "VBUS_FUSED",
+      "2": "GND",
+      "3": "USB_PROTECTED",
+      "4": "",
+      "5": "GND",
+      "6": "USB_PROTECTED"
+    },
+    "sheet": "power",
+    "mpn": "LM66100DCKR",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/lm66100.pdf",
+    "tolerance": "",
+    "symbol": "EqProp:LM66100_GroundedST",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/3c5a08fd-747b-584b-a739-343e47a5a512",
+    "xy": [
+      200.0,
+      120.0
+    ],
+    "assembly_notes": "Top-side SMD"
+  },
+  "C32": {
+    "ref": "C32",
+    "value": "1uF",
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "xy": [
+      203.5,
+      119.05
+    ],
+    "nets": {
+      "1": "VBUS_FUSED",
+      "2": "GND"
+    },
+    "sheet": "power",
+    "tolerance": "",
+    "mpn": "C0805C105K4RACTU",
+    "datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU",
+    "rating": "10%, X7R, 16V",
+    "symbol": "Device:C",
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549/8bed449c-55db-5d32-b619-41d18483ef0d",
+    "assembly_notes": "Top-side SMD"
+  },
+  "SW3": {
+    "ref": "SW3",
+    "value": "LEARN / STOP",
+    "symbol": "Switch:SW_Push",
+    "fp": "Button_Switch_SMD:SW_SPST_B3U-1000P",
+    "mpn": "B3U-1000P",
+    "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf",
+    "sheet": "io",
+    "nets": {
+      "1": "LEARN_BUTTON",
+      "2": "GND"
+    },
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/be77f2d5-7e23-4bf4-a4da-8b5295bee364",
+    "tolerance": "",
+    "xy": [
+      175.0,
+      52.8
+    ],
+    "assembly_notes": "Top SMD; not washable: install after any wet cleaning"
+  },
+  "R_BUTTON1": {
+    "ref": "R_BUTTON1",
+    "value": "2.2k",
+    "symbol": "Device:R",
+    "fp": "Resistor_SMD:R_0805_2012Metric",
+    "mpn": "CRCW08052K20FKEA",
+    "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "sheet": "io",
+    "nets": {
+      "1": "+5V",
+      "2": "LEARN_BUTTON"
+    },
+    "path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2/0613c161-8864-4ece-94b9-eddc512a48f9",
+    "tolerance": "1%",
+    "xy": [
+      169.6,
+      52.8
+    ],
+    "rating": "0.125 W; 100 ppm/K",
+    "assembly_notes": "Top SMD"
+  }
+}

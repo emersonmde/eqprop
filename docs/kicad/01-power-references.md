@@ -1,143 +1,33 @@
-# Section 1: Power + Voltage References
+# Revision B: power references
 
-## Components in this section
+Use the native hierarchical schematic. Older wiring instructions do not apply to this revision. See [design](../design.md) and [bring-up](../bring-up.md).
 
-| Ref | Component | KiCad Symbol | Value |
-|-----|-----------|-------------|-------|
-| J1 | USB-C connector | `Connector:USB_C_Receptacle_USB2.0` (or simpler power-only) | — |
-| U1 | MCP6004 #1 | `Amplifier_Operational:MCP6004-xP` | Rail-to-rail I/O (required for V_HIGH ≈4.0V buffer) |
-| U2 | LM324 #2 | `Amplifier_Operational:LM324` | OK for 2.5V V_MID buffers |
-| R1 | V_MID divider top | `Device:R` | 10kΩ 1% |
-| R2 | V_MID divider bottom | `Device:R` | 10kΩ 1% |
-| R3 | V_LOW divider top | `Device:R` | 33kΩ 1% |
-| R4 | V_LOW divider bottom | `Device:R` | 8.2kΩ 1% |
-| R5 | V_HIGH divider top | `Device:R` | 8.2kΩ 1% |
-| R6 | V_HIGH divider bottom | `Device:R` | 33kΩ 1% |
-| R_CC1 | USB-C CC1 pull-down | `Device:R` | 5.1kΩ |
-| R_CC2 | USB-C CC2 pull-down | `Device:R` | 5.1kΩ |
-| R_LED1 | Power LED resistor | `Device:R` | 1kΩ |
-| D_PWR | Power LED | `Device:LED` | Green 3mm |
-| C1 | Bulk cap after USB-C | `Device:C_Polarized` | 100µF |
-| C2 | U1 VCC decoupling | `Device:C` | 100nF |
-| C3 | U2 VCC decoupling | `Device:C` | 100nF |
-| C4 | V_MID_H1 electrolytic | `Device:C_Polarized` | 10µF |
-| C5 | V_MID_H1 ceramic | `Device:C` | 100nF |
-| C6 | V_MID_H2 electrolytic | `Device:C_Polarized` | 10µF |
-| C7 | V_MID_H2 ceramic | `Device:C` | 100nF |
-| C8 | V_MID_PUMP electrolytic | `Device:C_Polarized` | 10µF |
-| C9 | V_MID_PUMP ceramic | `Device:C` | 100nF |
-| C10 | V_LOW decoupling | `Device:C` | 100nF |
-| C11 | V_HIGH decoupling | `Device:C` | 100nF |
-| C12 | Bulk cap near U1/U2 | `Device:C_Polarized` | 100µF |
-| C13 | Bulk cap near digital cluster | `Device:C_Polarized` | 100µF |
-
-## USB-C Power Input
-
-If using a full USB-C receptacle symbol:
-- VBUS → `+5V`
-- GND → `GND`
-- CC1 → 5.1kΩ (R_CC1) → `GND`
-- CC2 → 5.1kΩ (R_CC2) → `GND`
-- All other pins (D+, D-, SBU1, SBU2, SHIELD) → leave unconnected or tie SHIELD to GND
-
-Simpler alternative: use `Connector_Generic:Conn_01x02` labeled "USB-C Power" and handle
-the CC resistors on the footprint. The full receptacle symbol is better for PCB correctness.
-
-C1 (100µF polarized): `+5V` to `GND`, placed close to connector.
-
-## Voltage Dividers
-
-### V_MID (2.5V)
-```
-+5V ─── R1 (10kΩ) ─── V_MID_RAW ─── R2 (10kΩ) ─── GND
-```
-
-### V_LOW (≈1.0V)
-```
-+5V ─── R3 (33kΩ) ─── V_LOW_RAW ─── R4 (8.2kΩ) ─── GND
-```
-Actual voltage: 5V × 8.2k / (33k + 8.2k) = 0.995V
-
-### V_HIGH (≈4.0V)
-```
-+5V ─── R5 (8.2kΩ) ─── V_HIGH_RAW ─── R6 (33kΩ) ─── GND
-```
-Actual voltage: 5V × 33k / (33k + 8.2k) = 4.005V
-
-## MCP6004 #1 (U1) — V_LOW/V_HIGH buffers + spare + comparator
-
-**Why MCP6004 instead of LM324:** The LM324 cannot output 4.0V on a 5V supply (VOH ≈ 3.5V)
-and its input common-mode range (0V to VCC−1.5V = 3.5V) is exceeded by V_HIGH_RAW = 4.0V.
-The MCP6004 is a pin-compatible DIP-14 quad op-amp with rail-to-rail I/O.
-
-KiCad splits the MCP6004 into 5 units: A, B, C, D (op-amp sections) + E (power pins).
-Pinout is identical to LM324 (standard quad op-amp DIP-14 pinout).
-
-### Power unit (U1E)
-- VDD → `+5V`
-- VSS → `GND`
-- C2 (100nF): `+5V` to `GND` close to pin
-
-### Section A (U1A) — V_LOW buffer
-- Non-inverting input (+) → `V_LOW_RAW`
-- Inverting input (−) → output (direct wire, voltage follower)
-- Output → net `V_LOW`
-- C10 (100nF): `V_LOW` to `GND`
-
-### Section B (U1B) — V_HIGH buffer
-- Non-inverting input (+) → `V_HIGH_RAW`
-- Inverting input (−) → output (voltage follower)
-- Output → net `V_HIGH`
-- C11 (100nF): `V_HIGH` to `GND`
-
-### Section C (U1C) — Spare (parked)
-- Non-inverting input (+) → `GND`
-- Inverting input (−) → output (follower configuration, output at GND)
-- Output → leave floating (no load)
-
-### Section D (U1D) — LED comparator (wired in Section 7)
-- Leave pins unconnected for now, wire in Section 7
-
-## LM324 #2 (U2) — V_MID buffers + comparator
-
-### Power unit (U2E)
-- V+ → `+5V`
-- V- → `GND`
-- C3 (100nF): `+5V` to `GND` close to pin
-
-### Section A (U2A) — V_MID_H1 buffer
-- Non-inverting input (+) → `V_MID_RAW`
-- Inverting input (−) → output (voltage follower)
-- Output → net `V_MID_H1`
-- C4 (10µF polarized): `V_MID_H1` to `GND`
-- C5 (100nF): `V_MID_H1` to `GND`
-
-### Section B (U2B) — V_MID_H2 buffer
-- Non-inverting input (+) → `V_MID_RAW`
-- Inverting input (−) → output (voltage follower)
-- Output → net `V_MID_H2`
-- C6 (10µF polarized): `V_MID_H2` to `GND`
-- C7 (100nF): `V_MID_H2` to `GND`
-
-### Section C (U2C) — V_MID_PUMP buffer
-- Non-inverting input (+) → `V_MID_RAW`
-- Inverting input (−) → output (voltage follower)
-- Output → net `V_MID_PUMP`
-- C8 (10µF polarized): `V_MID_PUMP` to `GND`
-- C9 (100nF): `V_MID_PUMP` to `GND`
-
-### Section D (U2D) — LED comparator (wired in Section 7)
-- Leave pins unconnected for now
-
-## Power LED
-```
-+5V ─── R_LED1 (1kΩ) ─── D_PWR anode ─── D_PWR cathode ─── GND
-```
-
-## Bulk Capacitors
-- C1 (100µF): after USB-C connector, `+5V` to `GND`
-- C12 (100µF): near U1/U2 analog op-amp cluster, `+5V` to `GND`
-- C13 (100µF): near digital IC cluster (MCP4251s / Arduino area), `+5V` to `GND`
-
-## Test Points for this section
-Add test point symbols (`Connector:TestPoint`) on: `V_LOW`, `V_HIGH`, `V_MID_H1`, `V_MID_H2`, `V_MID_PUMP`
+| Reference | Value / MPN | Pin-to-net map |
+|---|---|---|
+| C8 | 1uF / C0805C105K4RACTU | 1=V_HIGH_RAW, 2=GND |
+| C12 | 10uF / C0805C106K8PACTU | 1=+5V, 2=GND |
+| C13 | 10uF / C0805C106K8PACTU | 1=+5V, 2=GND |
+| U1 | TLV9064IDR / TLV9064IDR | 1=V_LOW, 2=V_LOW, 3=V_LOW_RAW, 4=+5V, 5=V_HIGH_RAW, 6=V_HIGH, 7=V_HIGH, 8=PRED, 9=PRED_MINUS, 10=PRED_PLUS, 11=GND, 12=V_MID_RAW, 13=PARK_U1, 14=PARK_U1 |
+| R_CC2 | 5.1k / CRCW08055K10FKEA | 1=J1_CC2, 2=GND |
+| C4 | 1uF / C0805C105K4RACTU | 1=V_MID_RAW, 2=GND |
+| R5 | 8.2k / TNPW08058K20BEEA | 1=+5V, 2=V_HIGH_RAW |
+| R1 | 10k / TNPW080510K0BEEA | 1=+5V, 2=V_MID_RAW |
+| J1 | USB_C_Receptacle_USB2.0_14P / USB4085-GF-A | A1=GND, A4=VBUS, A5=J1_CC1, A9=VBUS, A12=GND, B1=GND, B4=VBUS, B5=J1_CC2, B9=VBUS, B12=GND, S1=GND |
+| C3 | 100nF / C0805C104K5RACTU | 1=+5V, 2=GND |
+| R4 | 8.2k / TNPW08058K20BEEA | 1=V_LOW_RAW, 2=GND |
+| U2 | TLV9064IDR / TLV9064IDR | 1=V_MID_H1, 2=V_MID_H1, 3=V_MID_RAW, 4=+5V, 5=V_MID_RAW, 6=V_MID_H2, 7=V_MID_H2, 8=V_MID_PUMP, 9=V_MID_PUMP, 10=V_MID_RAW, 11=GND, 12=V_MID_RAW, 13=PARK_U2, 14=PARK_U2 |
+| C2 | 100nF / C0805C104K5RACTU | 1=+5V, 2=GND |
+| R_LED1 | 1k / CRCW08051K00FKEA | 1=+5V, 2=D_PWR1_A |
+| R_CC1 | 5.1k / CRCW08055K10FKEA | 1=GND, 2=J1_CC1 |
+| C9 | 1uF / C0805C105K4RACTU | 1=USB_PROTECTED, 2=GND |
+| R2 | 10k / TNPW080510K0BEEA | 1=V_MID_RAW, 2=GND |
+| C6 | 1uF / C0805C105K4RACTU | 1=V_LOW_RAW, 2=GND |
+| R6 | 33k / TNPW080533K0BEEA | 1=V_HIGH_RAW, 2=GND |
+| C1 | 1uF / C0805C105K4RACTU | 1=VBUS, 2=GND |
+| R3 | 33k / TNPW080533K0BEEA | 1=+5V, 2=V_LOW_RAW |
+| F1 | 250mA PTC / MF-NSMF025X-2 | 1=VBUS, 2=VBUS_FUSED |
+| U19 | TPS22918DBVR / TPS22918DBVR | 1=USB_PROTECTED, 2=GND, 3=USB_PROTECTED, 4=SLEW_CT, 6=+5V |
+| C29 | 10nF / C0805C103K5RACTU | 1=SLEW_CT, 2=GND |
+| C30 | 10uF / C0805C106K8PACTU | 1=+5V, 2=GND |
+| U20 | LM66100DCKR / LM66100DCKR | 1=VBUS_FUSED, 2=GND, 3=USB_PROTECTED, 5=GND, 6=USB_PROTECTED |
+| C32 | 1uF / C0805C105K4RACTU | 1=VBUS_FUSED, 2=GND |

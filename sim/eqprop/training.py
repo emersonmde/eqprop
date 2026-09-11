@@ -28,7 +28,8 @@ def eqprop_gradient(net, inputs, weights, target, beta, free_eq=None):
         inputs: Clamped input voltages.
         weights: Current resistance values.
         target: Target differential voltage.
-        beta: Nudge strength.
+        beta: Nudge strength in A/V. Default 1 uA/V keeps the revision B
+            DAC/current-source commands inside the checked operating envelope.
         free_eq: Optional free-phase equilibrium (avoids re-solving).
 
     Returns:
@@ -64,7 +65,7 @@ def train(
     dataset: List[Tuple],
     n_epochs: int = 50000,
     lr: float = 5e-9,
-    beta: float = 1e-5,
+    beta: float = 1e-6,
     seed: int = 42,
     patience: int = 500,
     min_delta: float = 1e-6,
@@ -82,7 +83,8 @@ def train(
         dataset: List of (inputs, target) tuples.
         n_epochs: Maximum training epochs.
         lr: Learning rate for conductance updates.
-        beta: Nudge strength.
+        beta: Nudge strength in A/V. Default 1 uA/V keeps the revision B
+            DAC/current-source commands inside the checked operating envelope.
         seed: Random seed for weight initialization.
         patience: Epochs without improvement before stopping.
         min_delta: Minimum loss improvement to reset patience.
@@ -121,7 +123,7 @@ def train(
         for w_idx in range(net.n_weights):
             G = 1.0 / weights[w_idx]
             G = np.clip(G - lr * grad_acc[w_idx], wp.G_min, wp.G_max)
-            weights[w_idx] = 1.0 / G
+            weights[w_idx] = np.clip(1.0 / G, wp.R_min, wp.R_max)
 
         # Plateau detection
         if epoch_loss < best_loss - min_delta:

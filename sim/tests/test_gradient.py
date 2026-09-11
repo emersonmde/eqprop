@@ -26,7 +26,7 @@ def init_weights(net):
     return 1.0 / G_init
 
 
-def _numerical_gradient(net, inputs, weights, target, eps=1e-5):
+def _numerical_gradient(net, inputs, weights, target, eps=1e-7):
     """Finite-difference gradient dC/dG for each weight."""
     num_grad = np.zeros(net.n_weights)
     for w_idx in range(net.n_weights):
@@ -45,16 +45,17 @@ def _numerical_gradient(net, inputs, weights, target, eps=1e-5):
     return num_grad
 
 
-# Skip pattern (4,1) which has known solver sensitivity with seed=42
+# Exercise all four patterns with perturbations small relative to conductance.
 @pytest.mark.parametrize("v_x1,v_x2,target", [
     (V_LOW, V_LOW, 0.0),    # (0,0)
     (V_LOW, V_HIGH, 0.3),   # (0,1)
+    (V_HIGH, V_LOW, 0.3),   # (1,0)
     (V_HIGH, V_HIGH, 0.0),  # (1,1)
 ])
 def test_eqprop_vs_finite_difference(net, init_weights, v_x1, v_x2, target):
-    """EqProp gradient should match numerical gradient within 50% per weight."""
+    """EqProp gradient should match numerical gradient within 5% per weight."""
     inputs = make_inputs(v_x1, v_x2)
-    beta = 1e-5
+    beta = 1e-6
 
     eqprop_grad, _, _ = eqprop_gradient(
         net, inputs, init_weights, target, beta
@@ -69,10 +70,10 @@ def test_eqprop_vs_finite_difference(net, init_weights, v_x1, v_x2, target):
         if abs(eq) < 1e-10 and abs(nm) < 1e-10:
             continue
 
-        # Relative error check (50% tolerance, same as original code)
+        # Relative error check (5% tolerance)
         if abs(nm) > 1e-10:
             rel_err = abs(eq - nm) / abs(nm)
-            assert rel_err < 0.5, (
+            assert rel_err < 0.05, (
                 f"W{w_idx+1} pattern ({v_x1},{v_x2}): "
                 f"EqProp={eq:+.6f} Numerical={nm:+.6f} rel_err={rel_err:.2f}"
             )

@@ -58,64 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "clearance|193505000|125900000|a5e09b07-8b1d-49f0-9812-dc2340437555|29853533-5b30-43b8-b547-a2285f7c8fde",
-          ""
-        ],
-        [
-          "clearance|193505000|127250000|9a4826c4-ff80-4312-b9ad-410fc9cfc2f4|a34b3b35-1ea4-476d-aacd-eb797939f0ac",
-          ""
-        ],
-        [
-          "clearance|194355000|125900000|29853533-5b30-43b8-b547-a2285f7c8fde|e8a8f668-e24f-45b0-97c5-a260686fa3fa",
-          ""
-        ],
-        [
-          "clearance|194355000|127250000|9bc33250-cf9d-4813-badb-c7897584d2b5|9a4826c4-ff80-4312-b9ad-410fc9cfc2f4",
-          ""
-        ],
-        [
-          "clearance|195205000|125900000|e8a8f668-e24f-45b0-97c5-a260686fa3fa|4bfd6dc4-5ddc-4b67-9a43-ec6698e38eac",
-          ""
-        ],
-        [
-          "clearance|195205000|127250000|050f8b85-677f-4ad9-977f-694be6d5d251|9bc33250-cf9d-4813-badb-c7897584d2b5",
-          ""
-        ],
-        [
-          "clearance|196055000|125900000|4bfd6dc4-5ddc-4b67-9a43-ec6698e38eac|2e120213-4793-45ad-bb2b-652f3e754f8d",
-          ""
-        ],
-        [
-          "clearance|196055000|127250000|9edb9f2f-4688-4e78-9de1-5e43f0d4c531|050f8b85-677f-4ad9-977f-694be6d5d251",
-          ""
-        ],
-        [
-          "clearance|196905000|125900000|2e120213-4793-45ad-bb2b-652f3e754f8d|b5e15eac-f1ee-4e20-9cbe-a2bc68c082d6",
-          ""
-        ],
-        [
-          "clearance|196905000|127250000|f7cf2eea-03f3-4dad-8e44-9b41a58e45db|9edb9f2f-4688-4e78-9de1-5e43f0d4c531",
-          ""
-        ],
-        [
-          "clearance|197755000|125900000|b5e15eac-f1ee-4e20-9cbe-a2bc68c082d6|e56447fb-c2e6-4932-abfc-fa0de79482f9",
-          ""
-        ],
-        [
-          "clearance|197755000|127250000|b732151e-010c-498a-b0ae-984cc2213fde|f7cf2eea-03f3-4dad-8e44-9b41a58e45db",
-          ""
-        ],
-        [
-          "clearance|198605000|125900000|e56447fb-c2e6-4932-abfc-fa0de79482f9|53b72347-961f-4ddc-870f-d7830bf20484",
-          ""
-        ],
-        [
-          "clearance|198605000|127250000|6db72d03-3055-4568-8e09-9531ca3ffbcc|b732151e-010c-498a-b0ae-984cc2213fde",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -180,7 +123,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.25,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -583,7 +526,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -594,7 +537,25 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.3,
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.25,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "ADC",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -605,7 +566,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5
+        "track_width": 0.25
       }
     ],
     "meta": {
@@ -613,7 +574,20 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "ADC",
+        "pattern": "/I2C_SDA"
+      },
+      {
+        "netclass": "ADC",
+        "pattern": "/I2C_SCL"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

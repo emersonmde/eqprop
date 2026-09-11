@@ -1,0 +1,13 @@
+{
+  "footprints": 151,
+  "pads": 530,
+  "tracks": 2055,
+  "vias": 347,
+  "ground_vias": 151,
+  "copper_layers": 2,
+  "outline_mm": [
+    106,
+    88
+  ],
+  "trace_length_mm": 5420.0
+}

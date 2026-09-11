@@ -32,8 +32,9 @@ def make_xor_network(hardware=False):
         0=H1, 1=H2, 2=YP, 3=YN
 
     Args:
-        hardware: If True, include CD4053B mux on-resistance (100 ohm)
-            on the input connections (W1-W8). Default False preserves
+        hardware: If True, include TMUX1133 mux on-resistance (2 ohm)
+            as a per-branch approximation on W1-W8. Full SPICE models the shared
+            mux output resistance explicitly. Default False preserves
             existing ideal behavior.
     """
     connections = [
@@ -55,10 +56,10 @@ def make_xor_network(hardware=False):
         (7, 9),   # W16: H2 -> YN
     ]
 
-    # CD4053B mux is on W1-W8 (input connections through mux)
+    # TMUX1133 mux is on W1-W8 (input connections through mux)
     # W9-W16 connect directly (bias rails, hidden-to-output)
     mux_conns = frozenset(range(8)) if hardware else frozenset()
-    mux_r = 100.0 if hardware else 0.0
+    mux_r = 2.0 if hardware else 0.0
 
     return Network(
         n_fixed=6,
@@ -153,7 +154,7 @@ def main():
         print("SUCCESS: Network learned XOR via equilibrium propagation.")
     else:
         if not result.converged:
-            print("Did not converge. Try: lr=5e-10 or beta=5e-5")
+            print("Did not converge. Review learning rate and calibrated pump compliance before changing beta.")
         print("FAILED: XOR not learned.")
 
     sys.exit(0 if passed else 1)

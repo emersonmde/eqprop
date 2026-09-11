@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.kicad.org/erc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-10T23:11:26-0400",
+  "kicad_version": "9.0.7",
+  "sheets": [
+    {
+      "path": "/USB power and protection/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/cace6350-bffd-5419-9b39-b9e3534e0549",
+      "violations": []
+    },
+    {
+      "path": "/Buffered voltage references/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/849c8501-c33d-5f9b-93f6-feffb2c6d173",
+      "violations": []
+    },
+    {
+      "path": "/Complementary input selection/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/87bd17ed-7bbd-5bc1-a9b3-2761425d30ce",
+      "violations": []
+    },
+    {
+      "path": "/Sixteen programmable weights/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/f111e46a-65a0-50d5-8471-4e551c3f2be9",
+      "violations": []
+    },
+    {
+      "path": "/Hidden-node activation/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7c3a19cd-d594-5bcf-bd85-6e552ce5404b",
+      "violations": []
+    },
+    {
+      "path": "/Balanced nudge current sources/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/da719485-771d-5d58-9d9a-47f2758cdeea",
+      "violations": []
+    },
+    {
+      "path": "/Buffered measurement and classifier/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/7e5ebdfa-a567-50ab-bb71-758ead3a1953",
+      "violations": []
+    },
+    {
+      "path": "/Nano and operator controls/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86/4b9122b9-f70e-5268-9ef1-98d5e8628fd2",
+      "violations": []
+    },
+    {
+      "path": "/",
+      "uuid_path": "/57f530d2-07fd-57ad-a840-da7d712ecc86",
+      "violations": []
+    }
+  ],
+  "source": "cad/eqprop-xor/eqprop-xor.kicad_sch"
+}

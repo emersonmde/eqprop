@@ -1,128 +1,49 @@
-# Section 7: Measurement + Output Indication
+# Revision B: measurement output
 
-## Components
+Use the native hierarchical schematic. Older wiring instructions do not apply to this revision. See [design](../design.md) and [bring-up](../bring-up.md).
 
-| Ref | Component | KiCad Symbol | Notes |
-|-----|-----------|-------------|-------|
-| U16 | ADS1115 (16-bit ADC) | `Analog_ADC:ADS1115IDGS` | VSSOP-10 (SMD) |
-| R_SDA | I2C SDA pull-up | `Device:R` | 4.7kΩ |
-| R_SCL | I2C SCL pull-up | `Device:R` | 4.7kΩ |
-| C_U16 | ADC decoupling | `Device:C` | 100nF |
-| D_GRN1 | Green LED (XOR=1) | `Device:LED` | 3mm green |
-| D_GRN2 | Green LED (XOR=0) | `Device:LED` | 3mm green |
-| R_LED_G1 | Green LED resistor (XOR=1) | `Device:R` | 470Ω |
-| R_LED_R1 | Green LED resistor (XOR=0) | `Device:R` | 470Ω |
-
-## ADS1115 (U16) — 16-bit ADC
-
-### Pin Connections
-
-| ADS1115 Pin | Net | Notes |
-|-------------|-----|-------|
-| ADDR | `GND` | I2C address = 0x48 |
-| ALERT/RDY | unconnected | (or connect to Arduino interrupt pin if desired) |
-| GND | `GND` | |
-| AIN0 | `H1` | Hidden node 1 voltage |
-| AIN1 | `H2` | Hidden node 2 voltage |
-| AIN2 | `YP` | Output node Y+ |
-| AIN3 | `YN` | Output node Y- |
-| VDD | `+5V` | |
-| SDA | `I2C_SDA` | |
-| SCL | `I2C_SCL` | |
-
-### Decoupling
-C_U16 (100nF): VDD to GND, placed as close to the IC as possible.
-
-### I2C Pull-Up Resistors
-- R_SDA (4.7kΩ): `I2C_SDA` → `+5V`
-- R_SCL (4.7kΩ): `I2C_SCL` → `+5V`
-
-### PGA Setting Note (firmware, not schematic)
-Use ±6.144V PGA range (NOT ±4.096V). The tighter range clips voltages near V_HIGH≈4.0V.
-At ±6.144V: LSB = 187.5µV, full 0-5V range covered with headroom.
-
-### PCB Note
-The ADS1115IDGS is VSSOP-10 (0.5mm pitch SMD). This is the one component that
-genuinely benefits from factory assembly. Keep analog input traces short and away
-from SPI/digital traces to minimize noise coupling.
-
-## LED Output Comparators
-
-These use the remaining op-amp sections from the two LM324s placed in Section 1.
-The comparators are wired **active-low** for consistency. The LM324 (#2) output can
-only reach ~3.5V on the high side, while the MCP6004 (#1) is rail-to-rail. Active-low
-sinking works reliably for both ICs.
-
-### Comparator A — Green LED "XOR = 1" (U1D, MCP6004 #1 Section D)
-
-This was left unwired in Section 1. Now complete the connections:
-
-| U1D Pin | Net | Notes |
-|---------|-----|-------|
-| Non-inverting input (+) | `YN` | Y- output node |
-| Inverting input (-) | `YP` | Y+ output node |
-| Output | → D_GRN cathode | Sinks current when Y+ > Y- |
-
-When Y+ > Y- (positive prediction, XOR=1):
-- (+) input (YN) < (-) input (YP) → output goes LOW
-- Output sinks current through LED → LED ON
-
-LED wiring:
-```
-+5V ─── R_LED_G (470Ω) ─── D_GRN anode ─── D_GRN cathode ─── U1D output
-```
-
-LED current: (5V - 2.0V LED drop - ~0.05V MCP6004 output low) / 470Ω ≈ 6.3mA (bright).
-When output is HIGH (~4.95V for MCP6004): only ~0.05V across LED+resistor → LED OFF.
-
-### Comparator B — Green LED "XOR = 0" (U2D, LM324 #2 Section D)
-
-| U2D Pin | Net | Notes |
-|---------|-----|-------|
-| Non-inverting input (+) | `YP` | Y+ output node |
-| Inverting input (-) | `YN` | Y- output node |
-| Output | → D_GRN2 cathode | Sinks current when Y- > Y+ |
-
-When Y- > Y+ (negative or zero prediction):
-- (+) input (YP) < (-) input (YN) → output goes LOW → LED ON
-
-LED wiring:
-```
-+5V ─── R_LED_R1 (470Ω) ─── D_GRN2 anode ─── D_GRN2 cathode ─── U2D output
-```
-
-### LED Behavior Summary
-
-| Condition | Y+ vs Y- | D_GRN1 (XOR=1) | D_GRN2 (XOR=0) |
-|-----------|----------|-----------------|-----------------|
-| XOR = 1 (target 0.3V) | Y+ > Y- | ON | OFF |
-| XOR = 0 (target 0V) | Y+ ≈ Y- or Y- > Y+ | OFF | ON (or dim) |
-
-Both LEDs work with no Arduino — pure analog readout after training.
-Comparator inputs draw negligible current from output nodes (>1MΩ for LM324, >10TΩ for MCP6004).
-
-## Test Points
-
-Add test points on: `YP`, `YN` (if not already added in Section 6).
-
-Also useful: test points on U1D output and U2D output for debugging comparator behavior.
-
-## Complete I2C Bus
-
-The I2C bus only has one device (ADS1115). Connections:
-- Arduino A4 → `I2C_SDA` → R_SDA (4.7kΩ) → `+5V`
-- Arduino A5 → `I2C_SCL` → R_SCL (4.7kΩ) → `+5V`
-- ADS1115 SDA → `I2C_SDA`
-- ADS1115 SCL → `I2C_SCL`
-
-## Full Component Count Summary (All Sections)
-
-| Category | Count |
-|----------|-------|
-| ICs + modules | 14 ICs + 1 Arduino module (1x MCP6004, 1x LM324, 8x MCP4251, 1x MCP4822, 1x MCP6002, 1x ADS1115, 2x CD4053B, 1x Arduino Nano) |
-| Diodes | 4x BAT42 |
-| LEDs | 3 (1x green power, 1x green XOR=1, 1x green XOR=0) |
-| Resistors | 50 (16x 1.21kΩ series, 9x 10kΩ CS pull-up, 8x 10kΩ 0.1% Howland, 2x 1MΩ 0.1% R_SET, 2x 10kΩ V_MID divider, 2x 33kΩ V_LOW/V_HIGH divider, 2x 8.2kΩ V_LOW/V_HIGH divider, 2x 5.1kΩ USB-C CC, 2x 4.7kΩ I2C, 1x 1kΩ power LED, 2x 470Ω output LEDs, 2x 10kΩ switch isolation) + 4x solder bridge pads (diode series) |
-| Capacitors | 26 (20x 100nF ceramic [15 IC decoupling + 5 voltage ref output], 3x 10µF electrolytic [V_MID rails], 3x 100µF electrolytic [1 after USB-C + 2 near IC clusters]) |
-| Switches | 2x SPDT toggle |
-| Connectors | 1x USB-C + Arduino pin headers + test points |
+| Reference | Value / MPN | Pin-to-net map |
+|---|---|---|
+| TP3 | TestPoint / PCB copper feature (no component) | 1=V_MID_H1 |
+| TP1 | TestPoint / PCB copper feature (no component) | 1=V_LOW |
+| R_LED_G1 | 2.2k / CRCW08052K20FKEA | 1=D_GRN1_A, 2=+5V |
+| TP11 | TestPoint / PCB copper feature (no component) | 1=YN |
+| TP9 | TestPoint / PCB copper feature (no component) | 1=DAC_OUTB |
+| C17 | 100nF / C0805C104K5RACTU | 1=+5V, 2=GND |
+| R20 | 4.7k / CRCW08054K70FKEA | 1=+5V, 2=I2C_SDA |
+| TP10 | TestPoint / PCB copper feature (no component) | 1=YP |
+| C11 | 1nF / C0805C102J5GACTU | 1=H2_ADC, 2=GND |
+| C10 | 1nF / C0805C102J5GACTU | 1=H1_ADC, 2=GND |
+| TP8 | TestPoint / PCB copper feature (no component) | 1=DAC_OUTA |
+| TP6 | TestPoint / PCB copper feature (no component) | 1=H1 |
+| C7 | 100nF / C0805C104K5RACTU | 1=+5V, 2=GND |
+| C5 | 100nF / C0805C104K5RACTU | 1=+5V, 2=GND |
+| R_LED_R1 | 2.2k / CRCW08052K20FKEA | 1=D_GRN2_A, 2=+5V |
+| TP5 | TestPoint / PCB copper feature (no component) | 1=V_MID_PUMP |
+| U16 | ADS1115IDGSR / ADS1115IDGSR | 1=GND, 3=GND, 4=H1_ADC, 5=H2_ADC, 6=YP_ADC, 7=YN_ADC, 8=+5V, 9=I2C_SDA, 10=I2C_SCL |
+| R21 | 4.7k / CRCW08054K70FKEA | 1=+5V, 2=I2C_SCL |
+| TP7 | TestPoint / PCB copper feature (no component) | 1=H2 |
+| TP4 | TestPoint / PCB copper feature (no component) | 1=V_MID_H2 |
+| TP2 | TestPoint / PCB copper feature (no component) | 1=V_HIGH |
+| U17 | TLV9064IDR / TLV9064IDR | 1=H1_BUF, 2=H1_BUF, 3=H1, 4=+5V, 5=H2, 6=H2_BUF, 7=H2_BUF, 8=YP_BUF, 9=YP_BUF, 10=YP, 11=GND, 12=YN, 13=YN_BUF, 14=YN_BUF |
+| R_ADC1 | 100 / CRCW0805100RFKEA | 1=H1_BUF, 2=H1_ADC |
+| R_ADC2 | 100 / CRCW0805100RFKEA | 1=H2_BUF, 2=H2_ADC |
+| R_ADC3 | 100 / CRCW0805100RFKEA | 1=YP_BUF, 2=YP_ADC |
+| C27 | 1nF / C0805C102J5GACTU | 1=YP_ADC, 2=GND |
+| R_ADC4 | 100 / CRCW0805100RFKEA | 1=YN_BUF, 2=YN_ADC |
+| C28 | 1nF / C0805C102J5GACTU | 1=YN_ADC, 2=GND |
+| R_D1 | 100k / TNPW0805100KBEEA | 1=YP_BUF, 2=PRED_PLUS |
+| R_D2 | 100k / TNPW0805100KBEEA | 1=V_MID_PUMP, 2=PRED_PLUS |
+| R_D3 | 100k / TNPW0805100KBEEA | 1=YN_BUF, 2=PRED_MINUS |
+| R_D4 | 100k / TNPW0805100KBEEA | 1=PRED, 2=PRED_MINUS |
+| R_TH1 | 4.99k / TNPW08054K99BEEA | 1=+5V, 2=THRESHOLD |
+| R_TH2 | 5.62k / TNPW08055K62BEEA | 1=THRESHOLD, 2=GND |
+| U18 | TLV3202AIDR / TLV3202AIDR | 1=D_GRN1_K, 2=PRED, 3=THRESHOLD_HYS, 4=GND, 5=V_MID_PUMP, 6=D_GRN1_K, 7=D_GRN2_K, 8=+5V |
+| TP12 | TestPoint / PCB copper feature (no component) | 1=GND |
+| TP13 | TestPoint / PCB copper feature (no component) | 1=+5V |
+| TP14 | TestPoint / PCB copper feature (no component) | 1=GND |
+| TP15 | TestPoint / PCB copper feature (no component) | 1=PRED |
+| TP16 | TestPoint / PCB copper feature (no component) | 1=THRESHOLD |
+| R_HYS1 | 10k / CRCW080510K0FKEA | 1=THRESHOLD, 2=THRESHOLD_HYS |
+| R_HYS2 | 2M / CRCW08052M00FKEA | 1=D_GRN1_K, 2=THRESHOLD_HYS |
+| C31 | 100nF / C0805C104K5RACTU | 1=THRESHOLD, 2=GND |

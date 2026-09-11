@@ -1,0 +1,132 @@
+References,Quantity,Value,Footprint,Manufacturer part number,Tolerance / rating,Datasheet,Assembly notes
+C1,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+C10,1,1nF,Capacitor_SMD:C_0805_2012Metric,C0805C102J5GACTU,"5%, C0G, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU,Top-side SMD
+C11,1,1nF,Capacitor_SMD:C_0805_2012Metric,C0805C102J5GACTU,"5%, C0G, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU,Top-side SMD
+C12,1,10uF,Capacitor_SMD:C_0805_2012Metric,C0805C106K8PACTU,"10%, X5R, 10V",https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU,Top-side SMD
+C13,1,10uF,Capacitor_SMD:C_0805_2012Metric,C0805C106K8PACTU,"10%, X5R, 10V",https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU,Top-side SMD
+C14,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C15,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C16,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C17,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C18,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C19,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C2,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C20,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C21,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C22,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C23,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C24,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C25,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C26,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C27,1,1nF,Capacitor_SMD:C_0805_2012Metric,C0805C102J5GACTU,"5%, C0G, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU,Top-side SMD
+C28,1,1nF,Capacitor_SMD:C_0805_2012Metric,C0805C102J5GACTU,"5%, C0G, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU,Top-side SMD
+C29,1,10nF,Capacitor_SMD:C_0805_2012Metric,C0805C103K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C103K5RACTU,Top-side SMD
+C3,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C30,1,10uF,Capacitor_SMD:C_0805_2012Metric,C0805C106K8PACTU,"10%, X5R, 10V",https://search.kemet.com/component-documentation/download/specsheet/C0805C106K8PACTU,Top-side SMD
+C31,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C32,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+C4,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+C5,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C6,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+C7,1,100nF,Capacitor_SMD:C_0805_2012Metric,C0805C104K5RACTU,"10%, X7R, 50V",https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU,Top-side SMD
+C8,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+C9,1,1uF,Capacitor_SMD:C_0805_2012Metric,C0805C105K4RACTU,"10%, X7R, 16V",https://search.kemet.com/component-documentation/download/specsheet/C0805C105K4RACTU,Top-side SMD
+D1,1,BAT42W-G3-08,Diode_SMD:D_SOD-123,BAT42W-G3-08,,https://www.vishay.com/docs/86405/bat42w-g.pdf,Top-side SMD
+D2,1,BAT42W-G3-08,Diode_SMD:D_SOD-123,BAT42W-G3-08,,https://www.vishay.com/docs/86405/bat42w-g.pdf,Top-side SMD
+D3,1,BAT42W-G3-08,Diode_SMD:D_SOD-123,BAT42W-G3-08,,https://www.vishay.com/docs/86405/bat42w-g.pdf,Top-side SMD
+D4,1,BAT42W-G3-08,Diode_SMD:D_SOD-123,BAT42W-G3-08,,https://www.vishay.com/docs/86405/bat42w-g.pdf,Top-side SMD
+D_GRN1,1,Green low-current 3mm,LED_THT:LED_D3.0mm,WP710A10LZGCK,,https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf,Through-hole assembly
+D_GRN2,1,Green low-current 3mm,LED_THT:LED_D3.0mm,WP710A10LZGCK,,https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf,Through-hole assembly
+D_PWR1,1,Green low-current 3mm,LED_THT:LED_D3.0mm,WP710A10LZGCK,,https://www.kingbrightusa.com/images/catalog/SPEC/WP710A10LZGCK.pdf,Through-hole assembly
+F1,1,250mA PTC,Fuse:Fuse_1206_3216Metric,MF-NSMF025X-2,,https://www.bourns.com/docs/product-datasheets/mf-nsmf.pdf,Top-side SMD
+J1,1,USB_C_Receptacle_USB2.0_14P,EqProp:USB4085_Edge,USB4085-GF-A,,https://gct.co/connector/usb4085,Through-hole assembly
+R1,1,10k,Resistor_SMD:R_0805_2012Metric,TNPW080510K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R10,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R11,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R12,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R13,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R14,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R15,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R16,1,0,Resistor_SMD:R_0805_2012Metric,CRCW08050000Z0EA,Jumper; 0 ohm jumper; see manufacturer current rating,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R17,1,0,Resistor_SMD:R_0805_2012Metric,CRCW08050000Z0EA,Jumper; 0 ohm jumper; see manufacturer current rating,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R18,1,0,Resistor_SMD:R_0805_2012Metric,CRCW08050000Z0EA,Jumper; 0 ohm jumper; see manufacturer current rating,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R19,1,0,Resistor_SMD:R_0805_2012Metric,CRCW08050000Z0EA,Jumper; 0 ohm jumper; see manufacturer current rating,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R2,1,10k,Resistor_SMD:R_0805_2012Metric,TNPW080510K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R20,1,4.7k,Resistor_SMD:R_0805_2012Metric,CRCW08054K70FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R21,1,4.7k,Resistor_SMD:R_0805_2012Metric,CRCW08054K70FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R3,1,33k,Resistor_SMD:R_0805_2012Metric,TNPW080533K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R4,1,8.2k,Resistor_SMD:R_0805_2012Metric,TNPW08058K20BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R5,1,8.2k,Resistor_SMD:R_0805_2012Metric,TNPW08058K20BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R6,1,33k,Resistor_SMD:R_0805_2012Metric,TNPW080533K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R7,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R8,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R9,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_ADC1,1,100,Resistor_SMD:R_0805_2012Metric,CRCW0805100RFKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_ADC2,1,100,Resistor_SMD:R_0805_2012Metric,CRCW0805100RFKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_ADC3,1,100,Resistor_SMD:R_0805_2012Metric,CRCW0805100RFKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_ADC4,1,100,Resistor_SMD:R_0805_2012Metric,CRCW0805100RFKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_BUTTON1,1,2.2k,Resistor_SMD:R_0805_2012Metric,CRCW08052K20FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top SMD
+R_CC1,1,5.1k,Resistor_SMD:R_0805_2012Metric,CRCW08055K10FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_CC2,1,5.1k,Resistor_SMD:R_0805_2012Metric,CRCW08055K10FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_D1,1,100k,Resistor_SMD:R_0805_2012Metric,TNPW0805100KBEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_D2,1,100k,Resistor_SMD:R_0805_2012Metric,TNPW0805100KBEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_D3,1,100k,Resistor_SMD:R_0805_2012Metric,TNPW0805100KBEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_D4,1,100k,Resistor_SMD:R_0805_2012Metric,TNPW0805100KBEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H1,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H2,1,10k,Resistor_SMD:R_0805_2012Metric,TNPW080510K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H3,1,20k,Resistor_SMD:R_0805_2012Metric,TNPW080520K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H4,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H5,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H6,1,10k,Resistor_SMD:R_0805_2012Metric,TNPW080510K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H7,1,20k,Resistor_SMD:R_0805_2012Metric,TNPW080520K0BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_H8,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_HYS1,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_HYS2,1,2M,Resistor_SMD:R_0805_2012Metric,CRCW08052M00FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_LED1,1,1k,Resistor_SMD:R_0805_2012Metric,CRCW08051K00FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_LED_G1,1,2.2k,Resistor_SMD:R_0805_2012Metric,CRCW08052K20FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_LED_R1,1,2.2k,Resistor_SMD:R_0805_2012Metric,CRCW08052K20FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_SET_A1,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_SET_B1,1,1M,Resistor_SMD:R_0805_2012Metric,TNPW08051M00BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_SW1,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_SW2,1,10k,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_TH1,1,4.99k,Resistor_SMD:R_0805_2012Metric,TNPW08054K99BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_TH2,1,5.62k,Resistor_SMD:R_0805_2012Metric,TNPW08055K62BEEA,0.1%; 0.125 W minimum; 25 ppm/K,https://www.vishay.com/docs/28758/tnpw_e3.pdf,Top-side SMD
+R_W1,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W10,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W11,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W12,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W13,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W14,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W15,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W16,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W2,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W3,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W4,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W5,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W6,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W7,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W8,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+R_W9,1,2.49k,Resistor_SMD:R_0805_2012Metric,CRCW08052K49FKEA,1%; 0.125 W; 100 ppm/K,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Top-side SMD
+SW1,1,SW_SPDT,Button_Switch_THT:SW_E-Switch_EG1271_SPDT,EG1271A,,https://www.e-switch.com/wp-content/uploads/2022/06/EG.pdf,Through-hole assembly
+SW2,1,SW_SPDT,Button_Switch_THT:SW_E-Switch_EG1271_SPDT,EG1271A,,https://www.e-switch.com/wp-content/uploads/2022/06/EG.pdf,Through-hole assembly
+SW3,1,LEARN / STOP,Button_Switch_SMD:SW_SPST_B3U-1000P,B3U-1000P,,https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf,Top SMD; not washable: install after any wet cleaning
+U1,1,TLV9064IDR,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,TLV9064IDR,,https://www.ti.com/lit/ds/symlink/tlv9064.pdf,Top-side SMD
+U10,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U11,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U12,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U13,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U14,1,MCP4822-E/SN,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,MCP4822-E/SN,,https://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf,Top-side SMD
+U15,1,TLV9062IDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,TLV9062IDR,,https://www.ti.com/lit/ds/symlink/tlv9062.pdf,Top-side SMD
+U16,1,ADS1115IDGSR,Package_SO:TSSOP-10_3x3mm_P0.5mm,ADS1115IDGSR,,https://www.ti.com/lit/ds/symlink/ads1115.pdf,Top-side SMD
+U17,1,TLV9064IDR,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,TLV9064IDR,,https://www.ti.com/lit/ds/symlink/tlv9064.pdf,Top-side SMD
+U18,1,TLV3202AIDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,TLV3202AIDR,,https://www.ti.com/lit/ds/symlink/tlv3202.pdf,Top-side SMD
+U19,1,TPS22918DBVR,Package_TO_SOT_SMD:SOT-23-6,TPS22918DBVR,,https://www.ti.com/lit/ds/symlink/tps22918.pdf,Top-side SMD
+U2,1,TLV9064IDR,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,TLV9064IDR,,https://www.ti.com/lit/ds/symlink/tlv9064.pdf,Top-side SMD
+U20,1,LM66100DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,LM66100DCKR,,https://www.ti.com/lit/ds/symlink/lm66100.pdf,Top-side SMD
+U3,1,Arduino_Nano_v3.x,Module:Arduino_Nano,A000005,,https://docs.arduino.cc/resources/datasheets/A000005-datasheet.pdf,Fit after SMD reflow; solder module with headers
+U4,1,TMUX1133PWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,TMUX1133PWR,,https://www.ti.com/lit/ds/symlink/tmux1133.pdf,Top-side SMD
+U5,1,TMUX1133PWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,TMUX1133PWR,,https://www.ti.com/lit/ds/symlink/tmux1133.pdf,Top-side SMD
+U6,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U7,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U8,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD
+U9,1,MCP4251-104E/SL,Package_SO:SOIC-14_3.9x8.7mm_P1.27mm,MCP4251-104E/SL,,https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22060b.pdf,Top-side SMD

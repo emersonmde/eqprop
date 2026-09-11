@@ -8,11 +8,13 @@ import numpy as np
 class DiodeParams:
     """Parameters for a Schottky diode (antiparallel pair activation).
 
-    Default values from BAT42 datasheet.
+    Inherited nominal simulation assumptions, not guaranteed BAT42 datasheet
+    parameters. Fit against the purchased diode or a traceable vendor model
+    before using this model to predict hardware accuracy.
     """
     Is: float = 1e-7      # Saturation current (A)
     N: float = 1.1         # Ideality factor
-    VT: float = 0.02585    # Thermal voltage at 27C (V)
+    VT: float = 0.02585    # Assumed room-temperature thermal voltage (V)
 
 
 # Standard BAT42 parameters used throughout the project

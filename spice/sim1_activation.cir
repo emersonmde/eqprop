@@ -1,3 +1,5 @@
+* Historical exploratory circuit; not the revision B release netlist.
+* Use sim/eqprop/spice_full.py and the revision B KiCad hierarchy.
 * sim1_activation.cir -- Activation Function Visualization
 * =========================================================
 * Single weight path with antiparallel Schottky diode clamp.
